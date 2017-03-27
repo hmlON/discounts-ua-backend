@@ -1,0 +1,44 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.supermarket-name {
+  text-align: center;
+}
+
+.discount-type {
+  text-align: center;
+}
+
+.discounts {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.discount {
+  max-width: 200px;
+  margin: 5px;
+  text-align: center;
+}
+
+.discount-img {
+  width: 100%;
+  height: auto;
+}
+
+.discount-prices {
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.discount-price-new {
+  font-size: 1.5em;
+}
+
+.discount-price-old {
+  text-decoration: line-through;
+}

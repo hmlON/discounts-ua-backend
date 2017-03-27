@@ -1,5 +1,7 @@
 require 'sinatra'
+require './websites/silpo'
 
 get '/' do
-  slim :index
+  discounts = Silpo.new.discounts
+  slim :index, locals: { discounts: discounts }
 end
