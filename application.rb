@@ -1,5 +1,5 @@
 require 'sinatra'
 
 get '/' do
-  'Silpo discounts'
+  slim :index
 end
