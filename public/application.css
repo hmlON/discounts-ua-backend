@@ -1,6 +1,5 @@
 .container {
   max-width: 900px;
-  margin: 0 auto;
 }
 
 .supermarket-name {
@@ -18,14 +17,9 @@
 }
 
 .discount {
-  max-width: 200px;
+  width: 200px;
   margin: 5px;
   text-align: center;
-}
-
-.discount-img {
-  width: 100%;
-  height: auto;
 }
 
 .discount-prices {
@@ -41,4 +35,11 @@
 
 .discount-price-old {
   text-decoration: line-through;
+}
+
+@media (max-width: 478px) {
+  .discount {
+    width: 45%;
+    margin: 5px;
+  }
 }
