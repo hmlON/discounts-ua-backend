@@ -5,17 +5,21 @@ class Silpo
   attr_reader :discounts
 
   def initialize
-    @discounts = price_of_the_week
+    @discounts = price_of_the_week + hot_proposal
   end
 
   def price_of_the_week
-    page = Nokogiri::HTML(open(BASE_URL + 'priceoftheweek'))
-    discounts = []
-    pages_count = page.css('.ots .page div').count
-    1.upto(pages_count) do |i|
-      discounts += parse_page("priceoftheweek/?PAGEN_1=#{i}")
-    end
-    discounts
+    parse_discount_type('priceoftheweek')
+  end
+
+  def hot_proposal
+    options = {
+      price_new_css: { hrn: '.price-hot-new .hrn',
+                       kop: '.price-hot-new .kop' },
+      price_old_css: { hrn: '.price-hot-old .hrn',
+                       kop: '.price-hot-old .kop' }
+    }
+    parse_discount_type('hotproposal', options)
   end
 
   private
@@ -32,6 +36,16 @@ class Silpo
     price_old_css: { hrn: '.price_2014_old .hrn',
                      kop: '.price_2014_old .kop' }
   }
+
+  def parse_discount_type(url, options = {})
+    page = Nokogiri::HTML(open(BASE_URL + 'hotproposal'))
+    discounts = []
+    pages_count = page.css('.ots .page div').count
+    1.upto(pages_count) do |i|
+      discounts += parse_page("#{url}/?PAGEN_1=#{i}", options)
+    end
+    discounts
+  end
 
   def parse_page(url, options = {})
     options = DEFAULT_OPTIONS.merge(options)
