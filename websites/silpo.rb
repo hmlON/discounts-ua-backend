@@ -9,15 +9,31 @@ class Silpo
   end
 
   def price_of_the_week
-    parse_discount_type('priceoftheweek')
+    page = Nokogiri::HTML(open(BASE_DISCOUNTS_URL + 'priceoftheweek'))
+    dates = page.css('.ots').children[3].children[3].children[0].text
+                .scan(/\d{1,2}\.\d{1,2}\.\d{4}/)
+                .map { |date| Date.parse(date) }
+
+    options = {
+      start_date: dates.min,
+      end_date: dates.max,
+    }
+    parse_discount_type('priceoftheweek', options)
   end
 
   def hot_proposal
+    page = Nokogiri::HTML(open(BASE_DISCOUNTS_URL + 'hotproposal'))
+    dates = page.css('.ots').children[1].children[1].text
+                .scan(/\d{1,2}\.\d{1,2}\.\d{4}/)
+                .map { |date| Date.parse(date) }
+
     options = {
       price_new_css: { hrn: '.price-hot-new .hrn',
                        kop: '.price-hot-new .kop' },
       price_old_css: { hrn: '.price-hot-old .hrn',
-                       kop: '.price-hot-old .kop' }
+                       kop: '.price-hot-old .kop' },
+      start_date: dates.min,
+      end_date: dates.max,
     }
     parse_discount_type('hotproposal', options)
   end
@@ -38,12 +54,14 @@ class Silpo
   }
 
   def parse_discount_type(url, options = {})
-    page = Nokogiri::HTML(open(BASE_DISCOUNTS_URL + 'hotproposal'))
     discounts = []
+    page = Nokogiri::HTML(open(BASE_DISCOUNTS_URL + url))
+
     pages_count = page.css('.ots .page div').count
     1.upto(pages_count) do |i|
       discounts += parse_page("#{BASE_DISCOUNTS_URL + url}/?PAGEN_1=#{i}", options)
     end
+
     discounts
   end
 
@@ -57,8 +75,11 @@ class Silpo
         price_new: discount.css(options[:price_new_css][:hrn]).first.text + '.' +
                    discount.css(options[:price_new_css][:kop]).first.text,
         price_old: discount.css(options[:price_old_css][:hrn]).first.text + '.' +
-                   discount.css(options[:price_old_css][:kop]).first.text }
+                   discount.css(options[:price_old_css][:kop]).first.text,
+        start_date: options[:start_date],
+        end_date: options[:end_date] }
     end
+    # p page_discounts
     page_discounts
   end
 end
