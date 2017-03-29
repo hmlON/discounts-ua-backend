@@ -24,8 +24,8 @@ class Silpo
 
   private
 
-  BASE_URL = 'http://silpo.ua/ru/actions/'
-  BASE_IMG_URL = 'http://silpo.ua/'
+  BASE_DISCOUNTS_URL = 'http://silpo.ua/ru/actions/'
+  BASE_URL = 'http://silpo.ua/'
 
   DEFAULT_OPTIONS = {
     all_discounts_css: '.ots .photo',
@@ -38,11 +38,11 @@ class Silpo
   }
 
   def parse_discount_type(url, options = {})
-    page = Nokogiri::HTML(open(BASE_URL + 'hotproposal'))
+    page = Nokogiri::HTML(open(BASE_DISCOUNTS_URL + 'hotproposal'))
     discounts = []
     pages_count = page.css('.ots .page div').count
     1.upto(pages_count) do |i|
-      discounts += parse_page("#{url}/?PAGEN_1=#{i}", options)
+      discounts += parse_page("#{BASE_DISCOUNTS_URL + url}/?PAGEN_1=#{i}", options)
     end
     discounts
   end
@@ -50,10 +50,10 @@ class Silpo
   def parse_page(url, options = {})
     options = DEFAULT_OPTIONS.merge(options)
     page_discounts = []
-    page = Nokogiri::HTML(open(BASE_URL + url))
+    page = Nokogiri::HTML(open(url))
     page.css(options[:all_discounts_css]).each do |discount|
       page_discounts << { name: discount.css(options[:name_css]).first.text,
-        img_url: BASE_IMG_URL + discount.css(options[:img_url_css]).first.attributes['href'].value,
+        img_url: BASE_URL + discount.css(options[:img_url_css]).first.attributes['href'].value,
         price_new: discount.css(options[:price_new_css][:hrn]).first.text + '.' +
                    discount.css(options[:price_new_css][:kop]).first.text,
         price_old: discount.css(options[:price_old_css][:hrn]).first.text + '.' +
