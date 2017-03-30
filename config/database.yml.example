@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: POSTGRES_USERNAME
+  password: POSTGRES_PASSWORD
+
+development:
+  <<: *default
+  database: discounts_ua_development
+
+test:
+  <<: *default
+  database: discounts_ua_test
+
+production:
+  <<: *default
+  database: discounts_ua_production

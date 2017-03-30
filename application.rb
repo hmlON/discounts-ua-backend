@@ -1,5 +1,6 @@
 require 'dotenv/load'
 require 'sinatra'
+require 'sinatra/activerecord'
 require './websites/silpo'
 
 get '/' do
