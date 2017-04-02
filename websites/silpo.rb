@@ -17,6 +17,7 @@ class Silpo
     options = {
       start_date: dates.min,
       end_date: dates.max,
+      discount_type: 'price_of_the_week'
     }
     parse_discount_type('priceoftheweek', options)
   end
@@ -34,6 +35,7 @@ class Silpo
                        kop: '.price-hot-old .kop' },
       start_date: dates.min,
       end_date: dates.max,
+      discount_type: 'hot_proposal'
     }
     parse_discount_type('hotproposal', options)
   end
@@ -42,6 +44,7 @@ class Silpo
 
   BASE_DISCOUNTS_URL = 'http://silpo.ua/ru/actions/'
   BASE_URL = 'http://silpo.ua/'
+  SHOP_NAME = 'silpo'
 
   DEFAULT_OPTIONS = {
     all_discounts_css: '.ots .photo',
@@ -70,14 +73,18 @@ class Silpo
     page_discounts = []
     page = Nokogiri::HTML(open(url))
     page.css(options[:all_discounts_css]).each do |discount|
-      page_discounts << { name: discount.css(options[:name_css]).first.text,
+      Discount.find_or_create_by(
+        name: discount.css(options[:name_css]).first.text,
         img_url: BASE_URL + discount.css(options[:img_url_css]).first.attributes['href'].value,
         price_new: discount.css(options[:price_new_css][:hrn]).first.text + '.' +
                    discount.css(options[:price_new_css][:kop]).first.text,
         price_old: discount.css(options[:price_old_css][:hrn]).first.text + '.' +
                    discount.css(options[:price_old_css][:kop]).first.text,
+        shop_name: SHOP_NAME,
+        discount_type: options[:discount_type],
         start_date: options[:start_date],
-        end_date: options[:end_date] }
+        end_date: options[:end_date]
+      )
     end
     # p page_discounts
     page_discounts

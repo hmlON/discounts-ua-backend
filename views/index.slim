@@ -19,4 +19,4 @@ html
               .discount-prices
                 span.discount-price-new = discount[:price_new]
                 span.discount-price-old = discount[:price_old]
-              .discount-end-date = "Ends in #{(discount[:end_date] - Date.today).to_i} days"
+              .discount-end-date = "Ends #{discount[:end_date].strftime('%d %b %Y')}"

@@ -8,5 +8,6 @@ require './websites/silpo'
 
 get '/' do
   discounts = Silpo.new.discounts
+  discounts = Discount.all
   slim :index, locals: { discounts: discounts }
 end
