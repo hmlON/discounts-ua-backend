@@ -2,19 +2,26 @@
 class Shop
   attr_reader :name, :discount_types
 
-  def initialize(name:, discount_types:)
+  def initialize(name:)
     self.name = name
-    self.discount_types = discount_types
+    self.discount_types = []
   end
 
   def self.all
     [
-      Shop.new(name: 'silpo',
-               discount_types: [
-                 DiscountType.new(name: 'price_of_the_week'),
-                 DiscountType.new(name: 'hot_proposal')
-               ])
+      self.silpo
     ]
+  end
+
+  def create_discount_type(name)
+    self.discount_types << DiscountType.new(name: name, shop: self)
+  end
+
+  def self.silpo
+    Shop.new(name: 'silpo').tap do |silpo|
+      silpo.create_discount_type('price_of_the_week')
+      silpo.create_discount_type('hot_proposal')
+    end
   end
 
   private
