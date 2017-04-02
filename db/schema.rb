@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170402182651) do
+ActiveRecord::Schema.define(version: 20170402185343) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "discount_type_periods", force: :cascade do |t|
+    t.datetime "start_date",       null: false
+    t.datetime "end_date",         null: false
+    t.integer  "discount_type_id", null: false
+    t.index ["discount_type_id"], name: "index_discount_type_periods_on_discount_type_id", using: :btree
+  end
 
   create_table "discount_types", force: :cascade do |t|
     t.string  "name",    null: false
@@ -38,5 +45,6 @@ ActiveRecord::Schema.define(version: 20170402182651) do
     t.string "name", null: false
   end
 
+  add_foreign_key "discount_type_periods", "discount_types"
   add_foreign_key "discount_types", "shops"
 end

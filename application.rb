@@ -1,9 +1,7 @@
 require 'dotenv/load'
 require 'sinatra'
 require 'sinatra/activerecord'
-require './models/shop'
-require './models/discount_type'
-require './models/discount'
+Dir['./models/*.rb'].each { |file| require file }
 require './websites/silpo'
 
 get '/' do
