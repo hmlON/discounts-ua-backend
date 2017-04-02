@@ -1,13 +1,5 @@
 # Shop has many discount types
-class DiscountType
-  attr_reader :name, :shop
-
-  def initialize(name:, shop:)
-    self.name = name
-    self.shop = shop
-  end
-
-  private
-
-  attr_writer :name, :shop
+# e.g. Silpo has "price_of_the_week" and "hot_proposal"
+class DiscountType < ActiveRecord::Base
+  belongs_to :shop
 end
