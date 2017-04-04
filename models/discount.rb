@@ -8,4 +8,6 @@
 # t.integer  "discount_type_period_id", null: false
 class Discount < ActiveRecord::Base
   belongs_to :discount_type_period
+
+  default_scope { order(:id) }
 end
