@@ -1,9 +1,9 @@
 SHOPS_DATA = [
   { name: 'silpo',
-    base_url: 'http://silpo.ua/ru/',
+    base_url: 'http://silpo.ua',
     discount_types: [
-      { name: 'price_of_the_week', url: 'actions/priceoftheweek' },
-      { name: 'hot_proposal', url: 'actions/hotproposal' }
+      { name: 'price_of_the_week', url: '/ru/actions/priceoftheweek' },
+      { name: 'hot_proposal', url: '/ru/actions/hotproposal' }
     ] }
 ]
 
