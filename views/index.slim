@@ -7,14 +7,18 @@ html
     meta name="viewport" content="width=device-width, initial-scale=1"
 
   body
-    .container
-      - shops.each do |shop|
-        h1.supermarket-name = p shop.name.titleize
-        - shop.discount_types.each do |discount_type|
-          h3.discount-type
-            = discount_type.name.humanize
-            span.discount-end-date = " (ends #{discount_type.active_period.end_date.strftime('%d %b %Y')})"
-          .discounts
+    - shops.each do |shop|
+      .active-title.discount-type-title
+      - shop.discount_types.each do |discount_type|
+        .discount-type
+          .discount-type-title
+            span.shop-name = shop.name.titleize
+            | : 
+            span.discount-type-name = discount_type.name.humanize
+            |  (ends 
+            span.discount-end-date = discount_type.active_period.end_date.strftime('%d %b %Y')
+            | )
+          .container.discounts
             - discount_type.active_period.discounts.each do |discount|
               .discount
                 img.discount-img src=discount.img_url
@@ -22,3 +26,5 @@ html
                 .discount-prices
                   span.discount-price-new = discount.price_new
                   span.discount-price-old = discount.price_old
+
+    script src='application.js'
