@@ -4,6 +4,8 @@ require 'sinatra/activerecord'
 Dir['./models/*.rb'].each { |file| require file }
 require './websites/silpo'
 
+Time.zone = 'Europe/Kiev'
+
 get '/' do
   check_existance_of_active_periods
   shops = Shop.includes(discount_types: { periods: :discounts }).all
