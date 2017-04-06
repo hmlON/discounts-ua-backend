@@ -24,7 +24,7 @@ html
                 img.discount-img src=discount.img_url
                 .discount-name = discount.name
                 .discount-prices
-                  span.discount-price-new = discount.price_new
-                  span.discount-price-old = discount.price_old
+                  span.discount-price-new = format_price(discount.price_new)
+                  span.discount-price-old = format_price(discount.price_old)
 
     script src='application.js'
