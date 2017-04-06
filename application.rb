@@ -1,6 +1,7 @@
 require 'dotenv/load'
-require 'sinatra'
-require 'sinatra/activerecord'
+require 'bundler'
+Bundler.require(:default)
+require "sinatra/reloader" if development?
 Dir['./models/*.rb'].each { |file| require file }
 require './websites/silpo'
 
