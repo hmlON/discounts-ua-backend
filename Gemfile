@@ -12,4 +12,3 @@ gem 'sinatra-activerecord'
 
 gem 'slim'
 gem 'nokogiri'
-gem 'dotenv'

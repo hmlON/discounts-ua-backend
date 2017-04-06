@@ -1,4 +1,3 @@
-require 'dotenv/load'
 require 'bundler'
 Bundler.require(:default)
 require "sinatra/reloader" if development?
