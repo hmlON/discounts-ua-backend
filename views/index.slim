@@ -4,11 +4,12 @@ html
     title Silpo Discounts
     link href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.1.0/dist/mini-default.min.css" rel="stylesheet" type='text/css'
     link href="application.css" rel='stylesheet' type='text/css'
+    link href="modal.css" rel='stylesheet' type='text/css'
     meta name="viewport" content="width=device-width, initial-scale=1"
 
   body
+    .active-title.discount-type-title
     - shops.each do |shop|
-      .active-title.discount-type-title
       - shop.discount_types.each do |discount_type|
         .discount-type
           .discount-type-title
@@ -21,10 +22,14 @@ html
           .container.discounts
             - discount_type.active_period.discounts.each do |discount|
               .discount
-                img.discount-img src=discount.img_url
+                img.discount-img src=discount.img_url alt=discount.name
                 .discount-name = discount.name
                 .discount-prices
                   span.discount-price-new = format_price(discount.price_new)
                   span.discount-price-old = format_price(discount.price_old)
+
+    #discount-img-modal.modal
+      img.modal-img
+      .modal-caption
 
     script src='application.js'

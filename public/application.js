@@ -1,3 +1,4 @@
+// Header with discount type login
 var active_title = document.querySelector('.active-title'),
     first_title = document.querySelector('.discount-type .discount-type-title'),
     discount_types = document.querySelectorAll('.discount-type');
@@ -13,3 +14,20 @@ window.onscroll = function() {
     }
   })
 }
+
+// Modal logic
+var images = document.querySelectorAll('.discount-img'),
+    modal = document.querySelector('#discount-img-modal'),
+    modal_img = modal.querySelector('.modal-img'),
+    modal_caption = modal.querySelector('.modal-caption');
+images.forEach(function(img) {
+  img.addEventListener('click', function (e) {
+    modal.style.display = 'flex';
+    modal_img.setAttribute('src', img.src);
+    modal_caption.innerHTML = img.alt
+  });
+});
+
+modal.addEventListener('click', function(e) {
+  modal.style.display = 'none';
+});

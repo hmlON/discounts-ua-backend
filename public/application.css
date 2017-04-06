@@ -22,6 +22,7 @@ body {
 .active-title {
   position: fixed;
   top: 0; left: 0;
+  z-index: 1;
 }
 
 .discounts {
@@ -35,6 +36,12 @@ body {
   margin: 5px;
   text-align: center;
 }
+
+.discount-img {
+    cursor: pointer;
+    transition: 0.3s;
+}
+.discount-img:hover { opacity: 0.7; }
 
 .discount-prices {
   border-top: 1px solid black;
