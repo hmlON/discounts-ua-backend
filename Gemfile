@@ -12,3 +12,7 @@ gem 'sinatra-activerecord'
 
 gem 'slim'
 gem 'nokogiri'
+
+group :test do
+  gem 'rspec'
+end
