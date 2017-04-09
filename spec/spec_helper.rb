@@ -1,5 +1,7 @@
 require 'rack/test'
-require 'rspec'
+require 'bundler'
+Bundler.require(:test)
+require 'capybara/rspec'
 
 ENV['RACK_ENV'] = 'test'
 require File.expand_path '../../application.rb', __FILE__
@@ -7,6 +9,18 @@ require File.expand_path '../../application.rb', __FILE__
 RSpec.configure do |config|
   include Rack::Test::Methods
   def app; Sinatra::Application end
+
+  Capybara.app = app
+
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
+    begin
+      DatabaseCleaner.start
+    ensure
+      DatabaseCleaner.clean
+    end
+  end
 
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
