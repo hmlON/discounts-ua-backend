@@ -6,11 +6,11 @@ var active_title = document.querySelector('.active-title'),
 active_title.innerHTML = first_title.innerHTML
 
 window.onscroll = function() {
-  discount_types.forEach(function(el) {
-    var distance_to_top = el.getBoundingClientRect().top;
+  discount_types.forEach(function(discounTypeContainer) {
+    var distance_to_top = discounTypeContainer.getBoundingClientRect().top;
 
     if (distance_to_top <= 10 && distance_to_top >= -el.offsetHeight) { // magic happens here
-      active_title.innerHTML = el.querySelector('.discount-type-title').innerHTML
+      active_title.innerHTML = discounTypeContainer.querySelector('.discount-type-title').innerHTML
     }
   })
 }
