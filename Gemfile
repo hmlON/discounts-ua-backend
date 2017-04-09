@@ -14,5 +14,9 @@ gem 'slim'
 gem 'nokogiri'
 
 group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'fabrication'
+  gem 'faker'
   gem 'rspec'
 end
