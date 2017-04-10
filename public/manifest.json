@@ -1,0 +1,16 @@
+{
+  "name": "Discounts UA",
+  "short_name": "Discounts UA",
+  "display": "standalone",
+  "start_url": "/",
+  "theme_color": "#f57c00",
+  "background_color": "#fdfdfd",
+  "description": "An application with discounts form ukrainian shops.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
