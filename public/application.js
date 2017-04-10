@@ -31,3 +31,6 @@ images.forEach(function(img) {
 modal.addEventListener('click', function(e) {
   modal.style.display = 'none';
 });
+
+// Add service worker
+navigator.serviceWorker && navigator.serviceWorker.register('/service_worker.js')
