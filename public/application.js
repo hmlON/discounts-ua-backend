@@ -9,7 +9,7 @@ window.onscroll = function() {
   discount_types.forEach(function(discounTypeContainer) {
     var distance_to_top = discounTypeContainer.getBoundingClientRect().top;
 
-    if (distance_to_top <= 10 && distance_to_top >= -el.offsetHeight) { // magic happens here
+    if (distance_to_top <= 10 && distance_to_top >= -discounTypeContainer.offsetHeight) { // magic happens here
       active_title.innerHTML = discounTypeContainer.querySelector('.discount-type-title').innerHTML
     }
   })
