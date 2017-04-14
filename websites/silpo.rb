@@ -2,16 +2,6 @@ require 'nokogiri'
 require 'open-uri'
 
 class Silpo
-  attr_reader :discounts, :shop
-
-  def initialize
-    @discounts = price_of_the_week + hot_proposal
-  end
-
-  def shop
-    @shop ||= Shop.find_by(name: 'silpo')
-  end
-
   def price_of_the_week
     discount_type = shop.discount_types.find_by(name: 'price_of_the_week')
 
@@ -53,6 +43,10 @@ class Silpo
     price_old_css: { hrn: '.price_2014_old .hrn',
                      kop: '.price_2014_old .kop' }
   }
+
+  def shop
+    @shop ||= Shop.find_by(name: 'silpo')
+  end
 
   def parse_discount_type(active_period, options = {})
     url = shop.base_url + active_period.discount_type.url
