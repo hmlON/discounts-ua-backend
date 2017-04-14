@@ -19,4 +19,6 @@ group :test do
   gem 'fabrication'
   gem 'faker'
   gem 'rspec'
+  gem 'vcr'
+  gem 'webmock'
 end

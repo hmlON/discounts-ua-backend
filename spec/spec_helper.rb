@@ -6,6 +6,11 @@ require 'capybara/rspec'
 ENV['RACK_ENV'] = 'test'
 require File.expand_path '../../application.rb', __FILE__
 
+VCR.configure do |c|
+  c.cassette_library_dir = 'spec/cassettes'
+  c.hook_into :webmock
+end
+
 RSpec.configure do |config|
   include Rack::Test::Methods
   def app; Sinatra::Application end
