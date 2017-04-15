@@ -1,8 +1,8 @@
 require 'bundler'
 Bundler.require(:default)
-require "sinatra/reloader" if development?
+require 'sinatra/reloader' if development?
 Dir['./models/*.rb'].each { |file| require file }
-Dir['./shops/*.rb'].each { |file| require file }
+Dir['./shops/*/*.rb'].each { |file| require file }
 
 Time.zone = 'Europe/Kiev'
 
@@ -20,13 +20,16 @@ end
 def check_existance_of_active_periods
   Shop.all.each do |shop|
     shop.discount_types.each do |discount_type|
-      Silpo.new.public_send(discount_type.name.to_sym) unless discount_type.active_period
+      unless discount_type.active_period
+        shop.name.titleize.constantize
+            .send(discount_type.name.to_sym)
+      end
     end
   end
 end
 
 helpers do
   def format_price(price)
-    format("%.2f", price)
+    format('%.2f', price)
   end
 end

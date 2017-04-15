@@ -6,7 +6,7 @@ RSpec.describe Silpo do
   describe '.price_of_the_week' do
     it 'parses' do
       VCR.use_cassette('silpo_price_of_the_week') do
-        expect { Silpo.new.price_of_the_week }.to change { Discount.count }
+        expect { Silpo.price_of_the_week }.to change { Discount.count }
       end
     end
   end
@@ -14,7 +14,7 @@ RSpec.describe Silpo do
   describe '.hot_proposal' do
     it 'parses' do
       VCR.use_cassette('silpo_hot_proposal') do
-        expect { Silpo.new.price_of_the_week }.to change { Discount.count }
+        expect { Silpo.price_of_the_week }.to change { Discount.count }
       end
     end
   end
