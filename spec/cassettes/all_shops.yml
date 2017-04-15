@@ -29,9 +29,9 @@ http_interactions:
       Content-Length:
       - '201'
       Date:
-      - Sat, 15 Apr 2017 19:27:21 GMT
+      - Sat, 15 Apr 2017 19:47:18 GMT
       X-Varnish:
-      - 610102332 610102306
+      - '610128322'
       Age:
       - '0'
       Via:
@@ -49,7 +49,7 @@ http_interactions:
         <p>The document has moved <a href="http://silpo.ua/ru/actions/hotproposal/">here</a>.</p>
         </body></html>
     http_version: 
-  recorded_at: Sat, 15 Apr 2017 19:27:21 GMT
+  recorded_at: Sat, 15 Apr 2017 19:47:18 GMT
 - request:
     method: get
     uri: http://silpo.ua/ru/actions/hotproposal/
@@ -76,8 +76,8 @@ http_interactions:
       X-Powered-Cms:
       - Bitrix Site Manager (DEMO)
       Set-Cookie:
-      - PHPSESSID=46ts20e4g3danf7he48300l9b5; path=/
-      - actions_city=2003; expires=Tue, 25-Apr-2017 19:27:21 GMT; path=/; domain=silpo.ua;
+      - PHPSESSID=3c78tp1ko7ct3sekb7mkmovtb3; path=/
+      - actions_city=2003; expires=Tue, 25-Apr-2017 19:47:18 GMT; path=/; domain=silpo.ua;
         httponly
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
@@ -96,9 +96,9 @@ http_interactions:
       Content-Length:
       - '6470'
       Date:
-      - Sat, 15 Apr 2017 19:27:21 GMT
+      - Sat, 15 Apr 2017 19:47:18 GMT
       X-Varnish:
-      - '610102333'
+      - '610128324'
       Age:
       - '0'
       Via:
@@ -812,7 +812,7 @@ http_interactions:
         ZGl2PgogICAgICAgIDwvZGl2PgogICAgPC9kaXY+ICAgIAogICAgPGJyLz4K
         PC9jZW50ZXI+CjwvZGl2Pgo8L2JvZHk+CjwvaHRtbD4=
     http_version: 
-  recorded_at: Sat, 15 Apr 2017 19:27:21 GMT
+  recorded_at: Sat, 15 Apr 2017 19:47:18 GMT
 - request:
     method: get
     uri: http://silpo.ua/ru/actions/hotproposal
@@ -842,11 +842,11 @@ http_interactions:
       Content-Length:
       - '201'
       Date:
-      - Sat, 15 Apr 2017 19:27:21 GMT
+      - Sat, 15 Apr 2017 19:47:18 GMT
       X-Varnish:
-      - 610102338 610102306
+      - 610128330 610128322
       Age:
-      - '1'
+      - '0'
       Via:
       - 1.1 varnish
       Connection:
@@ -862,7 +862,7 @@ http_interactions:
         <p>The document has moved <a href="http://silpo.ua/ru/actions/hotproposal/">here</a>.</p>
         </body></html>
     http_version: 
-  recorded_at: Sat, 15 Apr 2017 19:27:21 GMT
+  recorded_at: Sat, 15 Apr 2017 19:47:18 GMT
 - request:
     method: get
     uri: http://silpo.ua/ru/actions/hotproposal/
@@ -889,8 +889,8 @@ http_interactions:
       X-Powered-Cms:
       - Bitrix Site Manager (DEMO)
       Set-Cookie:
-      - PHPSESSID=v1l0lfrch27tv06btdd6afup55; path=/
-      - actions_city=2003; expires=Tue, 25-Apr-2017 19:27:21 GMT; path=/; domain=silpo.ua;
+      - PHPSESSID=on40sr6ctl8u0t1d12pcg70kb3; path=/
+      - actions_city=2003; expires=Tue, 25-Apr-2017 19:47:18 GMT; path=/; domain=silpo.ua;
         httponly
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
@@ -909,9 +909,9 @@ http_interactions:
       Content-Length:
       - '6470'
       Date:
-      - Sat, 15 Apr 2017 19:27:21 GMT
+      - Sat, 15 Apr 2017 19:47:18 GMT
       X-Varnish:
-      - '610102340'
+      - '610128337'
       Age:
       - '0'
       Via:
@@ -1625,7 +1625,7 @@ http_interactions:
         ZGl2PgogICAgICAgIDwvZGl2PgogICAgPC9kaXY+ICAgIAogICAgPGJyLz4K
         PC9jZW50ZXI+CjwvZGl2Pgo8L2JvZHk+CjwvaHRtbD4=
     http_version: 
-  recorded_at: Sat, 15 Apr 2017 19:27:21 GMT
+  recorded_at: Sat, 15 Apr 2017 19:47:18 GMT
 - request:
     method: get
     uri: http://silpo.ua/ru/actions/hotproposal/?PAGEN_1=1
@@ -1652,8 +1652,8 @@ http_interactions:
       X-Powered-Cms:
       - Bitrix Site Manager (DEMO)
       Set-Cookie:
-      - PHPSESSID=59dlh4pbis1kkf1kn19ctfrqu7; path=/
-      - actions_city=2003; expires=Tue, 25-Apr-2017 19:27:21 GMT; path=/; domain=silpo.ua;
+      - PHPSESSID=s5a4e9o9c8lim4iep2qfr4d762; path=/
+      - actions_city=2003; expires=Tue, 25-Apr-2017 19:47:18 GMT; path=/; domain=silpo.ua;
         httponly
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
@@ -1672,9 +1672,9 @@ http_interactions:
       Content-Length:
       - '6470'
       Date:
-      - Sat, 15 Apr 2017 19:27:21 GMT
+      - Sat, 15 Apr 2017 19:47:18 GMT
       X-Varnish:
-      - '610102347'
+      - '610128344'
       Age:
       - '0'
       Via:
@@ -2388,7 +2388,7 @@ http_interactions:
         ZGl2PgogICAgICAgIDwvZGl2PgogICAgPC9kaXY+ICAgIAogICAgPGJyLz4K
         PC9jZW50ZXI+CjwvZGl2Pgo8L2JvZHk+CjwvaHRtbD4=
     http_version: 
-  recorded_at: Sat, 15 Apr 2017 19:27:21 GMT
+  recorded_at: Sat, 15 Apr 2017 19:47:18 GMT
 - request:
     method: get
     uri: http://silpo.ua/ru/actions/hotproposal/?PAGEN_1=2
@@ -2415,8 +2415,8 @@ http_interactions:
       X-Powered-Cms:
       - Bitrix Site Manager (DEMO)
       Set-Cookie:
-      - PHPSESSID=5aqk4unab0ubq2tl3abj20fkt7; path=/
-      - actions_city=2003; expires=Tue, 25-Apr-2017 19:27:21 GMT; path=/; domain=silpo.ua;
+      - PHPSESSID=kodnv986pr9bjkvqkh9hpu5t25; path=/
+      - actions_city=2003; expires=Tue, 25-Apr-2017 19:47:18 GMT; path=/; domain=silpo.ua;
         httponly
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
@@ -2435,9 +2435,9 @@ http_interactions:
       Content-Length:
       - '6577'
       Date:
-      - Sat, 15 Apr 2017 19:27:21 GMT
+      - Sat, 15 Apr 2017 19:47:18 GMT
       X-Varnish:
-      - '610102370'
+      - '610128348'
       Age:
       - '0'
       Via:
@@ -3163,7 +3163,7 @@ http_interactions:
         cz0iY2xyIj48L2Rpdj4KICAgICAgICA8L2Rpdj4KICAgIDwvZGl2PiAgICAK
         ICAgIDxici8+CjwvY2VudGVyPgo8L2Rpdj4KPC9ib2R5Pgo8L2h0bWw+
     http_version: 
-  recorded_at: Sat, 15 Apr 2017 19:27:21 GMT
+  recorded_at: Sat, 15 Apr 2017 19:47:18 GMT
 - request:
     method: get
     uri: http://silpo.ua/ru/actions/hotproposal/?PAGEN_1=3
@@ -3190,8 +3190,8 @@ http_interactions:
       X-Powered-Cms:
       - Bitrix Site Manager (DEMO)
       Set-Cookie:
-      - PHPSESSID=tdj81cs0sm86di9p1k6gnjsal1; path=/
-      - actions_city=2003; expires=Tue, 25-Apr-2017 19:27:22 GMT; path=/; domain=silpo.ua;
+      - PHPSESSID=r24hfg0fbdiesbh5vh4lj1pba7; path=/
+      - actions_city=2003; expires=Tue, 25-Apr-2017 19:47:18 GMT; path=/; domain=silpo.ua;
         httponly
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
@@ -3210,9 +3210,9 @@ http_interactions:
       Content-Length:
       - '6427'
       Date:
-      - Sat, 15 Apr 2017 19:27:22 GMT
+      - Sat, 15 Apr 2017 19:47:18 GMT
       X-Varnish:
-      - '610102409'
+      - '610128351'
       Age:
       - '0'
       Via:
@@ -3918,5 +3918,5 @@ http_interactions:
         ICA8L2Rpdj4gICAgCiAgICA8YnIvPgo8L2NlbnRlcj4KPC9kaXY+CjwvYm9k
         eT4KPC9odG1sPg==
     http_version: 
-  recorded_at: Sat, 15 Apr 2017 19:27:22 GMT
+  recorded_at: Sat, 15 Apr 2017 19:47:18 GMT
 recorded_with: VCR 3.0.3
