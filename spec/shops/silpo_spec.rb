@@ -1,6 +1,6 @@
 RSpec.describe Silpo do
-  before :each do
-    load "#{app.settings.root}/db/seeds.rb"
+  before(:each) do
+    Shop.create_all
   end
 
   describe '.price_of_the_week' do

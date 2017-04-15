@@ -2,7 +2,9 @@ RSpec.describe "Application", type: :feature do
   it "should display all discounts on the homepage" do
     shop = Fabricate(:shop)
 
-    visit '/'
+    VCR.use_cassette('all_shops') do
+      visit '/'
+    end
 
     expect(page).to have_content shop.name.titleize
     shop.discount_types.each do |discount_type|

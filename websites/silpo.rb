@@ -3,7 +3,7 @@ require 'open-uri'
 
 class Silpo
   def price_of_the_week
-    discount_type = shop.discount_types.find_by(name: 'price_of_the_week')
+    discount_type = shop.discount_types.find_or_create_by(name: 'price_of_the_week', url: '/ru/actions/priceoftheweek')
 
     page = Nokogiri::HTML(open(shop.base_url + discount_type.url))
     dates = page.css('.ots').children[3].children[3].children[0].text
@@ -15,7 +15,7 @@ class Silpo
   end
 
   def hot_proposal
-    discount_type = shop.discount_types.find_by(name: 'hot_proposal')
+    discount_type = shop.discount_types.find_or_create_by(name: 'hot_proposal', url: '/ru/actions/hotproposal')
 
     page = Nokogiri::HTML(open(shop.base_url + discount_type.url))
     dates = page.css('.ots').children[1].children[1].text
@@ -45,7 +45,7 @@ class Silpo
   }
 
   def shop
-    @shop ||= Shop.find_by(name: 'silpo')
+    Shop.find_by(name: 'silpo')
   end
 
   def parse_discount_type(active_period, options = {})
