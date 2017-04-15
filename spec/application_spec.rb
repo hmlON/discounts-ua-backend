@@ -2,7 +2,7 @@ RSpec.describe "Application", type: :feature do
   it "should display all discounts on the homepage" do
     shop = Fabricate(:shop)
 
-    VCR.use_cassette('all_shops') do
+    VCR.use_cassette('all_shops', record: :new_episodes) do
       visit '/'
     end
 
