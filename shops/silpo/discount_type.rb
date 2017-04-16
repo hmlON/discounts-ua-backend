@@ -23,6 +23,10 @@ module Silpo
         Shop.find_by(name: SHOP_NAME)
       end
 
+      def discount_type
+        shop.discount_types.find_by(name: discount_type_name)
+      end
+
       def parse_discount_type(active_period)
         url = active_period.discount_type.url
         page = Nokogiri::HTML(open(url))

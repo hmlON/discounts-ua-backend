@@ -3,8 +3,8 @@ module Silpo
     class << self
       private
 
-      def discount_type
-        shop.discount_types.find_or_create_by(name: 'price_of_the_week', path: '/ru/actions/priceoftheweek')
+      def discount_type_name
+        'price_of_the_week'
       end
 
       def parse_options
