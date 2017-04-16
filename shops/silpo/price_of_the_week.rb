@@ -2,8 +2,6 @@ module Silpo
   class PriceOfTheWeek < DiscountTypeParser
     class << self
       def parse_discounts
-        discount_type = shop.discount_types.find_or_create_by(name: 'price_of_the_week', url: '/ru/actions/priceoftheweek')
-
         page = Nokogiri::HTML(open(shop.base_url + discount_type.url))
         dates = parse_dates(page)
 
@@ -12,6 +10,10 @@ module Silpo
       end
 
       private
+
+      def discount_type
+        shop.discount_types.find_or_create_by(name: 'price_of_the_week', url: '/ru/actions/priceoftheweek')
+      end
 
       def parse_options
         {
