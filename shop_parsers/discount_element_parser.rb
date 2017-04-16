@@ -1,4 +1,3 @@
-# TODO: create ability to change this to custom
 class DiscountElementParser
   attr_reader :discount_element, :parse_options, :discount_period
 
@@ -17,22 +16,25 @@ class DiscountElementParser
     )
   end
 
+  private
+
+  # Should return text of currently parsed discount
   def parse_discount_text
-    discount_element.css(parse_options[:name_css]).first.text
+    raise NotImplementedError, 'Abstract method is not defined!'
   end
 
+  # Should return url to image of currently parsed discount
   def parse_discount_img_url
-    discount_period.discount_type.shop.url + \
-      discount_element.css(parse_options[:img_url_css]).first.attributes['href'].value
+    raise NotImplementedError, 'Abstract method is not defined!'
   end
 
+  # Should return new price of currently parsed discount
   def parse_discount_price_new
-    discount_element.css(parse_options[:price_new_css][:hrn]).first.text + '.' + \
-      discount_element.css(parse_options[:price_new_css][:kop]).first.text
+    raise NotImplementedError, 'Abstract method is not defined!'
   end
 
+  # Should return old price of currently parsed discount
   def parse_discount_price_old
-    discount_element.css(parse_options[:price_old_css][:hrn]).first.text + '.' + \
-      discount_element.css(parse_options[:price_old_css][:kop]).first.text
+    raise NotImplementedError, 'Abstract method is not defined!'
   end
 end

@@ -53,13 +53,17 @@ class DiscountTypeParser
       discount_type.periods.find_or_create_by(start_date: dates.min, end_date: dates.max)
     end
 
+    def discount_element_parser
+      shop_name.camelize.constantize::DiscountElementParser
+    end
+
     def parse_page(url)
       options = common_parse_options.merge(parse_options)
       page = Nokogiri::HTML(open(url))
       page.css(options[:all_discounts_css]).each do |discount_element|
-        DiscountElementParser.new(discount_element,
-                                  parse_options: options,
-                                  discount_period: active_period).parse_and_create
+        discount_element_parser.new(discount_element,
+                                    parse_options: options,
+                                    discount_period: active_period).parse_and_create
       end
     end
   end
