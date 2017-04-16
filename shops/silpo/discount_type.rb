@@ -28,21 +28,35 @@ module Silpo
       def parse_page(url, active_period)
         options = COMMON_PARSE_OPTIONS.merge(parse_options)
         page = Nokogiri::HTML(open(url))
-        page.css(options[:all_discounts_css]).each do |discount|
+        page.css(options[:all_discounts_css]).each do |discount_element|
           active_period.discounts.create(
-            name: discount.css(options[:name_css]).first.text,
-            img_url: shop.base_url + discount.css(options[:img_url_css]).first.attributes['href'].value,
-            price_new: discount.css(options[:price_new_css][:hrn]).first.text + '.' +
-                       discount.css(options[:price_new_css][:kop]).first.text,
-            price_old: discount.css(options[:price_old_css][:hrn]).first.text + '.' +
-                       discount.css(options[:price_old_css][:kop]).first.text,
+            name: parse_discount_text(discount_element, options),
+            img_url: parse_discount_img_url(discount_element, options),
+            price_new: parse_discount_price_new(discount_element, options),
+            price_old: parse_discount_price_old(discount_element, options)
           )
         end
       end
 
-      def parse_discount_text(discount_page_element, options)
-        discount_page_element.css(options[:name_css]).first.text
+      # Move to DiscountElementParser class
+      def parse_discount_text(discount_element, options)
+        discount_element.css(options[:name_css]).first.text
       end
+
+      def parse_discount_img_url(discount_element, options)
+        shop.base_url + discount_element.css(options[:img_url_css]).first.attributes['href'].value
+      end
+
+      def parse_discount_price_new(discount_element, options)
+        discount_element.css(options[:price_new_css][:hrn]).first.text + '.' + \
+          discount_element.css(options[:price_new_css][:kop]).first.text
+      end
+
+      def parse_discount_price_old(discount_element, options)
+        discount_element.css(options[:price_old_css][:hrn]).first.text + '.' + \
+          discount_element.css(options[:price_old_css][:kop]).first.text
+      end
+      # end: Move to DiscountElementParser class
     end
   end
 end
