@@ -13,7 +13,9 @@ end
 
 RSpec.configure do |config|
   include Rack::Test::Methods
-  def app; Sinatra::Application end
+  def app
+    Sinatra::Application
+  end
 
   Capybara.app = app
 
@@ -39,9 +41,7 @@ RSpec.configure do |config|
   config.filter_run_when_matching :focus
   config.disable_monkey_patching!
   config.warnings = true
-  if config.files_to_run.one?
-    config.default_formatter = 'doc'
-  end
+  config.default_formatter = 'doc' if config.files_to_run.one?
   config.order = :random
   Kernel.srand config.seed
 end

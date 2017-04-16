@@ -1,17 +1,17 @@
 # frozen_string_literal: true
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem 'sinatra'
-gem 'sinatra-contrib'
 gem 'puma'
 gem 'rake'
+gem 'sinatra'
+gem 'sinatra-contrib'
 
-gem 'pg'
 gem 'activerecord'
+gem 'pg'
 gem 'sinatra-activerecord'
 
-gem 'slim'
 gem 'nokogiri'
+gem 'slim'
 
 group :test do
   gem 'capybara'

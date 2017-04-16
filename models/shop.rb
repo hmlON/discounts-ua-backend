@@ -3,12 +3,12 @@ class Shop < ActiveRecord::Base
   has_many :discount_types, dependent: :destroy
 
   SHOPS_DATA = [
-  { name: 'silpo',
-    url: 'http://silpo.ua',
-    discount_types: [
-      { name: 'price_of_the_week', path: '/ru/actions/priceoftheweek' },
-      { name: 'hot_proposal', path: '/ru/actions/hotproposal' }
-    ] }
+    { name: 'silpo',
+      url: 'http://silpo.ua',
+      discount_types: [
+        { name: 'price_of_the_week', path: '/ru/actions/priceoftheweek' },
+        { name: 'hot_proposal', path: '/ru/actions/hotproposal' }
+      ] }
   ]
 
   def self.create_all
