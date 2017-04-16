@@ -1,5 +1,7 @@
 module Silpo
   class DiscountTypeParser
+    SHOP_NAME = 'silpo'
+
     DEFAULT_OPTIONS = {
       all_discounts_css: '.ots .photo',
       name_css: '.img h3',
@@ -11,7 +13,7 @@ module Silpo
     }
 
     def self.shop
-      Shop.find_by(name: 'silpo')
+      Shop.find_by(name: SHOP_NAME)
     end
 
     def self.parse_discount_type(active_period, options = {})
