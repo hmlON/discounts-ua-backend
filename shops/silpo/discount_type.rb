@@ -9,6 +9,14 @@ module Silpo
         img_url_css: '.img .pirobox'
       }
 
+      def parse_discounts
+        page = Nokogiri::HTML(open(discount_type.url))
+        dates = parse_dates(page)
+
+        active_discount_type = discount_type.periods.find_or_create_by(start_date: dates.min, end_date: dates.max)
+        parse_discount_type(active_discount_type)
+      end
+
       private
 
       def shop
