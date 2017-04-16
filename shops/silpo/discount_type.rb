@@ -16,7 +16,7 @@ module Silpo
       end
 
       def parse_discount_type(active_period)
-        url = shop.base_url + active_period.discount_type.url
+        url = shop.url + active_period.discount_type.path
         page = Nokogiri::HTML(open(url))
 
         pages_count = page.css('.ots .page div').count
@@ -44,7 +44,7 @@ module Silpo
       end
 
       def parse_discount_img_url(discount_element, options)
-        shop.base_url + discount_element.css(options[:img_url_css]).first.attributes['href'].value
+        shop.url + discount_element.css(options[:img_url_css]).first.attributes['href'].value
       end
 
       def parse_discount_price_new(discount_element, options)
