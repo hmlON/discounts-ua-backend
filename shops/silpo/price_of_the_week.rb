@@ -1,5 +1,5 @@
 module Silpo
-  class PriceOfTheWeek < DiscountTypeParser
+  class PriceOfTheWeekParser < DiscountTypeParser
     class << self
       private
 

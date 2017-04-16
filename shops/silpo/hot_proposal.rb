@@ -1,5 +1,5 @@
 module Silpo
-  class HotProposal < DiscountTypeParser
+  class HotProposalParser < DiscountTypeParser
     class << self
       private
 
