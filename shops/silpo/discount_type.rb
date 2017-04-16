@@ -19,6 +19,21 @@ module Silpo
 
       private
 
+      # Should return name of discount type by which it can be found
+      def discount_type_name
+        raise NotImplementedError, 'Abstract method is not defined!'
+      end
+
+      # Should return range from start date to end date of current period
+      # which is being parsed
+      def parse_dates(page)
+        raise NotImplementedError, 'Abstract method is not defined!'
+      end
+
+      # If page is parsed not only with COMMON_PARSE_OPTIONS it should return
+      # hash of missing options
+      def parse_options; end
+
       def shop
         Shop.find_by(name: SHOP_NAME)
       end
