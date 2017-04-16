@@ -1,3 +1,4 @@
+# TODO: create ability to change this to custom
 class DiscountElementParser
   attr_reader :discount_element, :parse_options, :discount_period
 
