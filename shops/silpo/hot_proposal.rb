@@ -1,5 +1,17 @@
 module Silpo
   class HotProposal < DiscountTypeParser
+    def self.default_options
+      {
+        all_discounts_css: '.ots .photo',
+        name_css: '.img h3',
+        img_url_css: '.img .pirobox',
+        price_new_css: { hrn: '.price_2014_new .hrn',
+                         kop: '.price_2014_new .kop' },
+        price_old_css: { hrn: '.price_2014_old .hrn',
+                         kop: '.price_2014_old .kop' }
+      }
+    end
+
     def self.parse_discounts
       discount_type = shop.discount_types.find_or_create_by(name: 'hot_proposal', url: '/ru/actions/hotproposal')
 
