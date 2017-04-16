@@ -3,7 +3,7 @@ Metrics/LineLength:
 
 Style/Documentation:
   Exclude:
-    - 'shops/*/*.rb'
+    - 'shop_parsers/*/*.rb'
 
 Style/MutableConstant:
   Enabled: false
