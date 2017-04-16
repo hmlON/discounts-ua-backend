@@ -3,24 +3,30 @@ module Silpo
     class << self
       SHOP_NAME = 'silpo'
 
+      COMMON_PARSE_OPTIONS = {
+        all_discounts_css: '.ots .photo',
+        name_css: '.img h3',
+        img_url_css: '.img .pirobox'
+      }
+
       private
 
       def shop
         Shop.find_by(name: SHOP_NAME)
       end
 
-      def parse_discount_type(active_period, options = {})
+      def parse_discount_type(active_period)
         url = shop.base_url + active_period.discount_type.url
         page = Nokogiri::HTML(open(url))
 
         pages_count = page.css('.ots .page div').count
         1.upto(pages_count) do |i|
-          parse_page("#{url}/?PAGEN_1=#{i}", active_period, options)
+          parse_page("#{url}/?PAGEN_1=#{i}", active_period)
         end
       end
 
-      def parse_page(url, active_period, options = {})
-        options = default_options.merge(options)
+      def parse_page(url, active_period)
+        options = COMMON_PARSE_OPTIONS.merge(parse_options)
         page = Nokogiri::HTML(open(url))
         page.css(options[:all_discounts_css]).each do |discount|
           active_period.discounts.create(

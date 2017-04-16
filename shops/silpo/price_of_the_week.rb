@@ -1,10 +1,7 @@
 module Silpo
   class PriceOfTheWeek < DiscountTypeParser
-    def self.default_options
+    def self.parse_options
       {
-        all_discounts_css: '.ots .photo',
-        name_css: '.img h3',
-        img_url_css: '.img .pirobox',
         price_new_css: { hrn: '.price_2014_new .hrn',
                          kop: '.price_2014_new .kop' },
         price_old_css: { hrn: '.price_2014_old .hrn',

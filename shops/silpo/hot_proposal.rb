@@ -1,14 +1,11 @@
 module Silpo
   class HotProposal < DiscountTypeParser
-    def self.default_options
+    def self.parse_options
       {
-        all_discounts_css: '.ots .photo',
-        name_css: '.img h3',
-        img_url_css: '.img .pirobox',
-        price_new_css: { hrn: '.price_2014_new .hrn',
-                         kop: '.price_2014_new .kop' },
-        price_old_css: { hrn: '.price_2014_old .hrn',
-                         kop: '.price_2014_old .kop' }
+        price_new_css: { hrn: '.price-hot-new .hrn',
+                         kop: '.price-hot-new .kop' },
+        price_old_css: { hrn: '.price-hot-old .hrn',
+                         kop: '.price-hot-old .kop' }
       }
     end
 
@@ -21,13 +18,7 @@ module Silpo
                   .map { |date| Date.parse(date) }
 
       active_discount_type = discount_type.periods.create(start_date: dates.min, end_date: dates.max)
-      options = {
-        price_new_css: { hrn: '.price-hot-new .hrn',
-                         kop: '.price-hot-new .kop' },
-        price_old_css: { hrn: '.price-hot-old .hrn',
-                         kop: '.price-hot-old .kop' }
-      }
-      parse_discount_type(active_discount_type, options)
+      parse_discount_type(active_discount_type)
     end
   end
 end
