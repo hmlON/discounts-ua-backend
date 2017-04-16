@@ -16,7 +16,7 @@ module Silpo
       end
 
       def parse_discount_type(active_period)
-        url = shop.url + active_period.discount_type.path
+        url = active_period.discount_type.url
         page = Nokogiri::HTML(open(url))
 
         pages_count = page.css('.ots .page div').count

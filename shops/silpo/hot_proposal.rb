@@ -2,7 +2,7 @@ module Silpo
   class HotProposal < DiscountTypeParser
     class << self
       def parse_discounts
-        page = Nokogiri::HTML(open(shop.url + discount_type.path))
+        page = Nokogiri::HTML(open(discount_type.url))
         dates = parse_dates(page)
 
         active_discount_type = discount_type.periods.create(start_date: dates.min, end_date: dates.max)
