@@ -1,24 +1,28 @@
 module Silpo
   class PriceOfTheWeek < DiscountTypeParser
-    def self.parse_options
-      {
-        price_new_css: { hrn: '.price_2014_new .hrn',
-                         kop: '.price_2014_new .kop' },
-        price_old_css: { hrn: '.price_2014_old .hrn',
-                         kop: '.price_2014_old .kop' }
-      }
-    end
+    class << self
+      def parse_discounts
+        discount_type = shop.discount_types.find_or_create_by(name: 'price_of_the_week', url: '/ru/actions/priceoftheweek')
 
-    def self.parse_discounts
-      discount_type = shop.discount_types.find_or_create_by(name: 'price_of_the_week', url: '/ru/actions/priceoftheweek')
+        page = Nokogiri::HTML(open(shop.base_url + discount_type.url))
+        dates = page.css('.ots').children[3].children[3].children[0].text
+                    .scan(/\d{1,2}\.\d{1,2}\.\d{4}/)
+                    .map { |date| Date.parse(date) }
 
-      page = Nokogiri::HTML(open(shop.base_url + discount_type.url))
-      dates = page.css('.ots').children[3].children[3].children[0].text
-                  .scan(/\d{1,2}\.\d{1,2}\.\d{4}/)
-                  .map { |date| Date.parse(date) }
+        active_discount_type = discount_type.periods.find_or_create_by(start_date: dates.min, end_date: dates.max)
+        parse_discount_type(active_discount_type)
+      end
 
-      active_discount_type = discount_type.periods.create(start_date: dates.min, end_date: dates.max)
-      parse_discount_type(active_discount_type)
+      private
+
+      def parse_options
+        {
+          price_new_css: { hrn: '.price_2014_new .hrn',
+                           kop: '.price_2014_new .kop' },
+          price_old_css: { hrn: '.price_2014_old .hrn',
+                           kop: '.price_2014_old .kop' }
+        }
+      end
     end
   end
 end
