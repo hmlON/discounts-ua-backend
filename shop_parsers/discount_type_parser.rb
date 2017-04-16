@@ -1,3 +1,5 @@
+require 'open-uri'
+
 class DiscountTypeParser
   class << self
     private

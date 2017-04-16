@@ -1,6 +1,3 @@
-# TODO: move this out of here
-require 'open-uri'
-
 # TODO: make changes to be able to delete this file
 module Silpo
   def self.price_of_the_week
