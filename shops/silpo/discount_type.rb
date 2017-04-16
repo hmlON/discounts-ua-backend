@@ -13,8 +13,12 @@ module Silpo
         page = Nokogiri::HTML(open(discount_type.url))
         dates = parse_dates(page)
 
-        active_discount_type = discount_type.periods.find_or_create_by(start_date: dates.min, end_date: dates.max)
-        parse_discount_type(active_discount_type)
+        active_period = discount_type.periods.find_or_create_by(start_date: dates.min, end_date: dates.max)
+
+        pages_count = page.css('.ots .page div').count
+        1.upto(pages_count) do |i|
+          parse_page("#{discount_type.url}/?PAGEN_1=#{i}", active_period)
+        end
       end
 
       private
@@ -40,16 +44,6 @@ module Silpo
 
       def discount_type
         shop.discount_types.find_by(name: discount_type_name)
-      end
-
-      def parse_discount_type(active_period)
-        url = active_period.discount_type.url
-        page = Nokogiri::HTML(open(url))
-
-        pages_count = page.css('.ots .page div').count
-        1.upto(pages_count) do |i|
-          parse_page("#{url}/?PAGEN_1=#{i}", active_period)
-        end
       end
 
       def parse_page(url, active_period)
