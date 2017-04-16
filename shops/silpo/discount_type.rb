@@ -26,7 +26,7 @@ module Silpo
 
       # Should return range from start date to end date of current period
       # which is being parsed
-      def parse_dates(page)
+      def parse_dates(_page)
         raise NotImplementedError, 'Abstract method is not defined!'
       end
 
