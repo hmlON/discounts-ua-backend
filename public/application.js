@@ -17,8 +17,12 @@ window.onscroll = function() {
 
 // Replace low res images with high on image load
 document.querySelectorAll('.discount-img').forEach(function(img) {
-  img.onload = function() {
+  if (img.complete) {
     img.src = img.dataset.highSrc;
+  } else {
+    img.onload = function() {
+      img.src = img.dataset.highSrc;
+    }
   }
 });
 
