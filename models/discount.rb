@@ -1,6 +1,7 @@
 # Schema
 # t.string   "name",                    null: false
 # t.string   "img_url",                 null: false
+# t.string   "small_img_url"
 # t.float    "price_new",               null: false
 # t.float    "price_old",               null: false
 # t.datetime "created_at",              null: false
