@@ -1,6 +1,6 @@
 require 'open-uri'
 
-class DiscountTypeParser
+class BaseDiscountTypeParser
   class << self
     private
 

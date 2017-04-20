@@ -1,3 +1,5 @@
+require_relative './discount_type_parser'
+
 module Silpo
   class PriceOfTheWeekParser < DiscountTypeParser
     class << self

@@ -1,5 +1,5 @@
 module Silpo
-  class DiscountElementParser < ::DiscountElementParser
+  class DiscountElementParser < BaseDiscountElementParser
     private
 
     def parse_discount_text

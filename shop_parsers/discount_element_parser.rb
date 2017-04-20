@@ -1,4 +1,4 @@
-class DiscountElementParser
+class BaseDiscountElementParser
   attr_reader :discount_element, :parse_options, :discount_period
 
   def initialize(discount_element, parse_options:, discount_period:)

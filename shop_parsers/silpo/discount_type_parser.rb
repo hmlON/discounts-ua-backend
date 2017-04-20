@@ -1,5 +1,5 @@
 module Silpo
-  class DiscountTypeParser < ::DiscountTypeParser
+  class DiscountTypeParser < BaseDiscountTypeParser
     class << self
       def shop_name
         'silpo'
