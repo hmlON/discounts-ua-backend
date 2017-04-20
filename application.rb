@@ -22,7 +22,7 @@ def check_existance_of_active_periods
   Shop.all.each do |shop|
     shop.discount_types.each do |discount_type|
       unless discount_type.active_period
-        shop.name.titleize.constantize
+        shop.name.camelize.constantize
             .send(discount_type.name.to_sym)
       end
     end
