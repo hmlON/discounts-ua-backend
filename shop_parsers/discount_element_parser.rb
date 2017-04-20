@@ -10,6 +10,7 @@ class BaseDiscountElementParser
   def parse_and_create
     discount_period.discounts.create(
       name: parse_discount_text,
+      small_img_url: parse_discount_small_img_url,
       img_url: parse_discount_img_url,
       price_new: parse_discount_price_new,
       price_old: parse_discount_price_old
