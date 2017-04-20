@@ -40,6 +40,7 @@ body {
 .discount-img {
     cursor: pointer;
     transition: 0.3s;
+    width: 100%;
 }
 .discount-img:hover { opacity: 0.7; }
 

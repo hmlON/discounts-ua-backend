@@ -24,7 +24,7 @@ html
           .container.discounts
             - discount_type.active_period.discounts.each do |discount|
               .discount
-                img.discount-img src=discount.img_url alt=discount.name
+                img.discount-img src=discount.small_img_url data-high-src=discount.img_url alt=discount.name
                 .discount-name = discount.name
                 .discount-prices
                   span.discount-price-new = format_price(discount.price_new)
