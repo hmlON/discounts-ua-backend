@@ -14,6 +14,18 @@ get '/' do
   slim :index, locals: { shops: shops }
 end
 
+get '/image-proxy/' do
+    headers['Content-Type'] = 'image/jpeg'
+    headers['Cache-Control'] = 'public'
+    # TODO: add expires header
+    # headers['Expires'] = 'Mon, 28 Jul 2020 23:30:00 GMT'
+    open(params[:url]).read
+end
+
+def image_proxy_url(url)
+  "/image-proxy/?url=#{url}"
+end
+
 def check_existance_of_shops
   Shop.create_all
 end
