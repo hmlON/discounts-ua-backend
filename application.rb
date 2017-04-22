@@ -17,8 +17,7 @@ end
 get '/image-proxy/' do
     headers['Content-Type'] = 'image/jpeg'
     headers['Cache-Control'] = 'public'
-    # TODO: add expires header
-    # headers['Expires'] = 'Mon, 28 Jul 2020 23:30:00 GMT'
+    headers['Expires'] = Date.today + 1.year
     open(params[:url]).read
 end
 
