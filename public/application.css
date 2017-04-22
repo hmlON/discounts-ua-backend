@@ -6,6 +6,15 @@ body {
   max-width: 900px;
 }
 
+.footer-text {
+  color: #ccc;
+  text-align: right;
+}
+
+footer a.footer-link {
+  color: #fff;
+}
+
 .shop-name {
 }
 
