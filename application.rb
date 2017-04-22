@@ -18,11 +18,11 @@ get '/image-proxy/' do
     headers['Content-Type'] = 'image/jpeg'
     headers['Cache-Control'] = 'public'
     headers['Expires'] = Date.today + 1.year
-    open(params[:url]).read
+    open(Base64.urlsafe_decode64 params[:url]).read
 end
 
 def image_proxy_url(url)
-  "/image-proxy/?url=#{url}"
+  "/image-proxy/?url=#{Base64.urlsafe_encode64 url}"
 end
 
 def check_existance_of_shops
