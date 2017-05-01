@@ -5,8 +5,6 @@ Dir['./models/*.rb'].each { |file| require file }
 Dir['./shop_parsers/*.rb'].each { |file| require file }
 Dir['./shop_parsers/**/*.rb'].each { |file| require file }
 
-Time.zone = 'Europe/Kiev'
-
 get '/' do
   check_existance_of_shops
   check_existance_of_active_periods
