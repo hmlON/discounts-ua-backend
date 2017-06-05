@@ -22,3 +22,5 @@ group :test do
   gem 'vcr'
   gem 'webmock'
 end
+
+gem 'byebug', require: false

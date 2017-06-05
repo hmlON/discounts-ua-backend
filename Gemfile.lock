@@ -15,6 +15,7 @@ GEM
     addressable (2.4.0)
     arel (7.1.4)
     backports (3.7.0)
+    byebug (9.0.6)
     capybara (2.12.1)
       addressable
       mime-types (>= 1.16)
@@ -97,6 +98,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
+  byebug
   capybara
   database_cleaner
   fabrication
