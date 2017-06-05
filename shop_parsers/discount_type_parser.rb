@@ -54,7 +54,7 @@ class BaseDiscountTypeParser
       return discount_type.active_period if discount_type.active_period
 
       dates = parse_dates(discount_type_page)
-      discount_type.periods.find_or_create_by(start_date: dates.min, end_date: dates.max)
+      discount_type.periods.find_or_create_by(start_date: dates.begin, end_date: dates.end)
     end
 
     def discount_element_parser
