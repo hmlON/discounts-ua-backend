@@ -9,33 +9,38 @@ class BaseDiscountElementParser
 
   def parse_and_create
     discount_period.discounts.create(
-      name: parse_discount_text,
-      small_img_url: parse_discount_small_img_url,
-      img_url: parse_discount_img_url,
-      price_new: parse_discount_price_new,
-      price_old: parse_discount_price_old
+      name: parse_text,
+      small_img_url: parse_small_img_url,
+      img_url: parse_img_url,
+      price_new: parse_price_new,
+      price_old: parse_price_old
     )
   end
 
   private
 
   # Should return text of currently parsed discount
-  def parse_discount_text
+  def parse_text
     raise NotImplementedError, 'Abstract method is not defined!'
   end
 
   # Should return url to image of currently parsed discount
-  def parse_discount_img_url
+  def parse_img_url
+    raise NotImplementedError, 'Abstract method is not defined!'
+  end
+
+  # Should return small url to image of currently parsed discount
+  def parse__small_img_url
     raise NotImplementedError, 'Abstract method is not defined!'
   end
 
   # Should return new price of currently parsed discount
-  def parse_discount_price_new
+  def parse_price_new
     raise NotImplementedError, 'Abstract method is not defined!'
   end
 
   # Should return old price of currently parsed discount
-  def parse_discount_price_old
+  def parse_price_old
     raise NotImplementedError, 'Abstract method is not defined!'
   end
 end
