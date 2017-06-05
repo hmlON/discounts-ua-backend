@@ -8,6 +8,11 @@ class Shop < ActiveRecord::Base
       discount_types: [
         { name: 'price_of_the_week', path: '/ru/actions/priceoftheweek' },
         { name: 'hot_proposal', path: '/ru/actions/hotproposal' }
+      ] },
+    { name: 'ATB',
+      url: 'http://www.atbmarket.com/',
+      discount_types: [
+        { name: 'economy', path: '/ru/hot/akcii/economy' }
       ] }
   ]
 

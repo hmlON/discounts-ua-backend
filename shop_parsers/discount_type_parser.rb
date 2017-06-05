@@ -34,7 +34,9 @@ class BaseDiscountTypeParser
 
     # If page is parsed not only with common_parse_options it should return
     # hash of missing options
-    def parse_options; end
+    def parse_options
+      {}
+    end
 
     def shop
       Shop.find_by(name: shop_name)
@@ -62,7 +64,7 @@ class BaseDiscountTypeParser
     def parse_page(url)
       options = common_parse_options.merge(parse_options)
       page = Nokogiri::HTML(open(url))
-      page.css(options[:all_discounts_css]).each do |discount_element|
+      all_discount_elements(page).each do |discount_element|
         discount_element_parser.new(discount_element,
                                     parse_options: options,
                                     discount_period: active_period).parse_and_create

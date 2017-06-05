@@ -8,11 +8,14 @@ module Silpo
       # TODO: move this options to element parser
       def common_parse_options
         {
-          all_discounts_css: '.ots .photo',
           name_css: '.img h3',
           img_url_css: '.img .pirobox',
           small_img_url_css: '.img .pirobox'
         }
+      end
+
+      def all_discount_elements(page)
+        page.css('.ots .photo')
       end
 
       def parse_discounts
