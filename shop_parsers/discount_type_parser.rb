@@ -2,6 +2,10 @@ require 'open-uri'
 
 class BaseDiscountTypeParser
   class << self
+    def parse_discounts
+      parse_page(discount_type.url)
+    end
+
     private
 
     # Should return name of the shop by which it can be found
