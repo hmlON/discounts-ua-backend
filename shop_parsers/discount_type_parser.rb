@@ -29,7 +29,7 @@ class BaseDiscountTypeParser
     # - price_new_css
     # - price_old_css
     def common_parse_options
-      raise NotImplementedError, 'Abstract method is not defined!'
+      {}
     end
 
     # If page is parsed not only with common_parse_options it should return

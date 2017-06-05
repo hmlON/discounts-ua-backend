@@ -9,13 +9,6 @@ module ATB
         page.css('.promo_list').reverse.drop(1).reverse
       end
 
-      # TODO: move this options to element parser
-      def common_parse_options
-        {
-          all_discounts_css: '.promo_list'
-        }
-      end
-
       def parse_discounts
         parse_page(discount_type.url)
       end
