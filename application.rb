@@ -16,14 +16,14 @@ end
 
 get '/api/discounts' do
   shops = Shop.includes(discount_types: { periods: :discounts }).all
-  { shops: shops }.to_json
+  json shops, root: :shops
 end
 
 get '/image-proxy/' do
-    headers['Content-Type'] = 'image/jpeg'
-    headers['Cache-Control'] = 'public'
-    headers['Expires'] = Date.today + 1.year
-    open(Base64.urlsafe_decode64 params[:url]).read
+  headers['Content-Type'] = 'image/jpeg'
+  headers['Cache-Control'] = 'public'
+  headers['Expires'] = Date.today + 1.year
+  open(Base64.urlsafe_decode64 params[:url]).read
 end
 
 def image_proxy_url(url)
