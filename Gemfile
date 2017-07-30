@@ -7,9 +7,9 @@ gem 'rake'
 gem 'sinatra'
 gem 'sinatra-contrib'
 
+gem 'active_model_serializers', '~> 0.10.0'
 gem 'activerecord'
 gem 'pg'
-gem 'sinatra-active-model-serializers', '0.2.0'
 gem 'sinatra-activerecord'
 
 gem 'nokogiri'

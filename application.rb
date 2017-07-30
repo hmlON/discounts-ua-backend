@@ -1,8 +1,8 @@
 require 'bundler'
 Bundler.require(:default)
 require 'sinatra/reloader' if development?
-Dir['./models/*.rb'].each { |file| require file }
-Dir['./models/serializers/*.rb'].each { |file| require file }
+Dir['./app/models/*.rb'].each { |file| require file }
+Dir['./app/serializers/*.rb'].each { |file| require file }
 Dir['./shop_parsers/*.rb'].each { |file| require file }
 Dir['./shop_parsers/**/*.rb'].each { |file| require file }
 set :serializers_path, './models/serializers'
@@ -14,9 +14,10 @@ get '/' do
   slim :index, locals: { shops: shops }
 end
 
-get '/api/discounts' do
+get '/api/shops' do
   shops = Shop.includes(discount_types: { periods: :discounts }).all
-  json shops, root: :shops
+  serializers = shops.map { |shop| ShopSerializer.new(shop) }
+  json serializers, root: 'niads'
 end
 
 get '/image-proxy/' do
