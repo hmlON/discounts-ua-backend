@@ -12,6 +12,11 @@ get '/' do
   slim :index, locals: { shops: shops }
 end
 
+get '/api/discounts' do
+  shops = Shop.includes(discount_types: { periods: :discounts }).all
+  { shops: shops }.to_json
+end
+
 get '/image-proxy/' do
     headers['Content-Type'] = 'image/jpeg'
     headers['Cache-Control'] = 'public'
