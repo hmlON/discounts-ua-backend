@@ -15,6 +15,11 @@ get '/' do
 end
 
 get '/api/shops' do
+  headers['Access-Control-Allow-Origin'] = '*'
+  headers['Access-Control-Allow-Methods'] = 'GET'
+  headers['Access-Control-Request-Method'] = '*'
+  headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
+
   shops = Shop.includes(discount_types: { periods: :discounts }).all
   serializers = shops.map { |shop| ShopSerializer.new(shop) }
   json serializers, root: 'niads'
