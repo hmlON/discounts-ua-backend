@@ -15,6 +15,8 @@ get '/' do
 end
 
 get '/api/shops' do
+  check_existance_of_shops
+  check_existance_of_active_periods
   headers['Access-Control-Allow-Origin'] = '*'
   headers['Access-Control-Allow-Methods'] = 'GET'
   headers['Access-Control-Request-Method'] = '*'
