@@ -6,8 +6,8 @@ class Shop < ActiveRecord::Base
     { name: 'silpo',
       url: 'http://silpo.ua',
       discount_types: [
-        { name: 'price_of_the_week', path: '/ru/actions/priceoftheweek' },
-        { name: 'hot_proposal', path: '/ru/actions/hotproposal' }
+        { name: 'price_of_the_week', path: '/offers/cina-tizhnya' },
+        { name: 'hot_proposal', path: '/offers/garyacha-propoziciya' }
       ] },
     { name: 'ATB',
       url: 'http://www.atbmarket.com/',
