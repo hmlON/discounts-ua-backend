@@ -13,10 +13,12 @@ gem 'pg'
 gem 'sinatra-activerecord'
 
 gem 'nokogiri'
+gem 'capybara'
+gem 'poltergeist'
+
 gem 'slim'
 
 group :test do
-  gem 'capybara'
   gem 'database_cleaner'
   gem 'fabrication'
   gem 'faker'
