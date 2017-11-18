@@ -15,33 +15,33 @@ ActiveRecord::Schema.define(version: 20170420205317) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "discount_type_periods", force: :cascade do |t|
-    t.datetime "start_date",       null: false
-    t.datetime "end_date",         null: false
-    t.integer  "discount_type_id", null: false
-    t.index ["discount_type_id"], name: "index_discount_type_periods_on_discount_type_id", using: :btree
+  create_table "discount_type_periods", id: :serial, force: :cascade do |t|
+    t.datetime "start_date", null: false
+    t.datetime "end_date", null: false
+    t.integer "discount_type_id", null: false
+    t.index ["discount_type_id"], name: "index_discount_type_periods_on_discount_type_id"
   end
 
-  create_table "discount_types", force: :cascade do |t|
-    t.string  "name",    null: false
+  create_table "discount_types", id: :serial, force: :cascade do |t|
+    t.string "name", null: false
     t.integer "shop_id", null: false
-    t.string  "path"
-    t.index ["shop_id"], name: "index_discount_types_on_shop_id", using: :btree
+    t.string "path"
+    t.index ["shop_id"], name: "index_discount_types_on_shop_id"
   end
 
-  create_table "discounts", force: :cascade do |t|
-    t.string   "name",                    null: false
-    t.string   "img_url",                 null: false
-    t.float    "price_new",               null: false
-    t.float    "price_old",               null: false
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
-    t.integer  "discount_type_period_id", null: false
-    t.string   "small_img_url"
-    t.index ["discount_type_period_id"], name: "index_discounts_on_discount_type_period_id", using: :btree
+  create_table "discounts", id: :serial, force: :cascade do |t|
+    t.string "name", null: false
+    t.string "img_url", null: false
+    t.float "price_new", null: false
+    t.float "price_old", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "discount_type_period_id", null: false
+    t.string "small_img_url"
+    t.index ["discount_type_period_id"], name: "index_discounts_on_discount_type_period_id"
   end
 
-  create_table "shops", force: :cascade do |t|
+  create_table "shops", id: :serial, force: :cascade do |t|
     t.string "name", null: false
     t.string "url"
   end
