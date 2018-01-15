@@ -1,5 +1,7 @@
 require 'open-uri'
 require 'capybara/poltergeist'
+require './lib/discounts_page'
+require './lib/discount_parser'
 
 Capybara.register_driver :poltergeist do |app|
   Capybara::Poltergeist::Driver.new(
@@ -29,11 +31,12 @@ class DiscountTypeParser
           new_price_fraction_xpath: "//div[contains(@class, 'product-price__fraction')]",
           old_price_xpath: "//div[contains(@class, 'product-price__other')]/div[contains(@class, 'product-price__old')]",
         },
-        pagination: true,
-        pagination_parameter: 'offset',
-        pagination_starts_at: 0,
-        pagination_step: 6,
-        pages_count_xpath: "//a[contains(@class, 'pagination-link')][3]"
+        pagination: {
+          parameter: 'offset',
+          starts_at: 0,
+          step: 6,
+          pages_count_xpath: "//a[contains(@class, 'pagination-link')][3]"
+        }
       }
     ]
   }
@@ -43,25 +46,26 @@ class DiscountTypeParser
 
     page = DiscountsPage.new(shop_url: DATA[:url],
                              discounts_path: discount_type_data[:path],
-                             current_page_number: discount_type_data[:pagination_starts_at],
+                             current_page_number: discount_type_data[:pagination][:starts_at],
                              **discount_type_data)
     discounts += parse_page(page)
 
-    if pagination?
-      pages_count = page.total_pages_count
-      2.upto(pages_count) do
-        page = page.next
-        discounts += parse_page(page)
-      end
-    end
+    # if pagination?
+    #   pages_count = page.total_pages_count
+    #   2.upto(pages_count) do
+    #     page = page.next
+    #     discounts += parse_page(page)
+    #   end
+    # end
 
+    puts discounts.count
     discounts
   end
 
   def page
      DiscountsPage.new(shop_url: DATA[:url],
                              discounts_path: discount_type_data[:path],
-                             current_page_number: discount_type_data[:pagination_starts_at],
+                             current_page_number: discount_type_data[:pagination][:starts_at],
                              **discount_type_data)
   end
 
@@ -83,112 +87,4 @@ class DiscountTypeParser
   end
 end
 
-class DiscountParser
-  attr_reader :discount_element, :data
-
-  def initialize(discount_element, data)
-    @discount_element = discount_element
-    @data = data
-  end
-
-  def call
-    {
-      name: name,
-      old_price: old_price,
-      new_price: new_price,
-      image: image
-    }
-  end
-
-  def name
-    discount_element.find('.' + data[:name_xpath]).text
-  end
-
-  def new_price
-    if data[:new_price_divided]
-      integer = discount_element.find('.' + data[:new_price_integer_xpath]).text
-      fraction = discount_element.find('.' + data[:new_price_fraction_xpath]).text
-      "#{integer}.#{fraction}"
-    end
-  end
-
-  def old_price
-    discount_element.find('.' + data[:old_price_xpath]).text
-  end
-
-  def image
-    discount_element.find('.' + data[:image_xpath])[:src]
-  end
-end
-
-class DiscountsPage
-  attr_reader :shop_url, :discounts_path, :pagination, :pagination_options
-
-  def initialize(shop_url:, discounts_path:, current_page_number: nil, **options)
-    @shop_url, @discounts_path = shop_url, discounts_path
-    @pagination = options[:pagination]
-    if pagination?
-      @pagination_options = {
-        pagination_parameter: options[:pagination_parameter],
-        current_page_number: current_page_number || 1,
-        pagination_step: options[:pagination_step] || 1,
-        pages_count_xpath: options[:pages_count_xpath],
-      }
-    end
-  end
-
-  def url
-    url = shop_url + discounts_path
-
-    if pagination?
-      parameter = pagination_options[:pagination_parameter]
-      page_number = pagination_options[:current_page_number] * pagination_options[:pagination_step]
-      url = "#{url}?#{parameter}=#{page_number}"
-    end
-
-    url
-  end
-
-  def to_html
-    @to_html = begin
-      browser = Capybara.current_session
-      browser.visit url
-      wait_for_loading
-      browser
-    end
-  end
-
-  def pagination?
-    @pagination
-  end
-
-  def next
-    return unless pagination?
-
-    self.class.new(
-      **pagination_options,
-      shop_url: shop_url,
-      discounts_path: discounts_path,
-      pagination: true,
-      current_page_number: pagination_options[:current_page_number] + 1
-    )
-  end
-
-  def total_pages_count
-    to_html.find(pagination_options[:pages_count_xpath]).text.to_i
-  end
-
-  private
-
-  # def wait_until
-  #   require "timeout"
-  #   Timeout.timeout(Capybara.default_max_wait_time) do
-  #     sleep(0.1) until value = yield
-  #     value
-  #   end
-  # end
-
-  def wait_for_loading
-    sleep 5
-  end
-end
+DiscountTypeParser.new.call.count
