@@ -3,8 +3,9 @@ Bundler.require(:default)
 require 'sinatra/reloader' if development?
 Dir['./app/models/*.rb'].each { |file| require file }
 Dir['./app/serializers/*.rb'].each { |file| require file }
-Dir['./shop_parsers/*.rb'].each { |file| require file }
-Dir['./shop_parsers/**/*.rb'].each { |file| require file }
+Dir['./lib/*.rb'].each { |file| require file }
+# Dir['./shop_parsers/*.rb'].each { |file| require file }
+# Dir['./shop_parsers/**/*.rb'].each { |file| require file }
 set :serializers_path, './models/serializers'
 
 get '/' do
