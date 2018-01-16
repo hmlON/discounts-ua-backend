@@ -14,56 +14,62 @@ end
 Capybara.default_driver = :poltergeist
 Capybara.default_selector = :xpath
 
-class DiscountTypeParser
-  DATA = {
-    name: 'silpo',
-    url: 'https://silpo.ua',
-    discount_types: [
-      {
-        name: 'price_of_the_week',
-        path: '/offers/akciyi-vlasnogo-importu',
-        discounts_xpath: "//ul[contains(@class, 'product-list product-list__per-row-3')]/li[contains(@class, 'normal')]/a[contains(@class, 'product-list__item normal size-normal')]",
-        discount: {
-          name_xpath: "//div[contains(@class, 'product-list__item-description')]",
-          image_xpath: "//div[contains(@class, 'product-list__item-image')]/img",
-          new_price_divided: true,
-          new_price_integer_xpath: "//div[contains(@class, 'product-price__integer')]",
-          new_price_fraction_xpath: "//div[contains(@class, 'product-price__fraction')]",
-          old_price_xpath: "//div[contains(@class, 'product-price__other')]/div[contains(@class, 'product-price__old')]",
-        },
-        pagination: {
-          parameter: 'offset',
-          starts_at: 0,
-          step: 6,
-          pages_count_xpath: "//a[contains(@class, 'pagination-link')][3]"
-        }
+CONFIG = {
+  name: 'silpo',
+  url: 'https://silpo.ua',
+  discount_types: [
+    {
+      name: 'price_of_the_week',
+      path: '/offers/akciyi-vlasnogo-importu',
+      discounts_xpath: "//ul[contains(@class, 'product-list product-list__per-row-3')]/li[contains(@class, 'normal')]/a[contains(@class, 'product-list__item normal size-normal')]",
+      discount: {
+        name_xpath: "//div[contains(@class, 'product-list__item-description')]",
+        image_xpath: "//div[contains(@class, 'product-list__item-image')]/img",
+        new_price_divided: true,
+        new_price_integer_xpath: "//div[contains(@class, 'product-price__integer')]",
+        new_price_fraction_xpath: "//div[contains(@class, 'product-price__fraction')]",
+        old_price_xpath: "//div[contains(@class, 'product-price__other')]/div[contains(@class, 'product-price__old')]",
+      },
+      pagination: {
+        parameter: 'offset',
+        starts_at: 0,
+        step: 6,
+        pages_count_xpath: "//a[contains(@class, 'pagination-link')][3]"
       }
-    ]
-  }
+    }
+  ]
+}
+
+class DiscountTypeParser
+  attr_reader :config
+
+  def initialize(config)
+    @config = config
+  end
 
   def call
     discounts = []
 
-    page = DiscountsPage.new(shop_url: DATA[:url],
+    page = DiscountsPage.new(shop_url: config[:url],
                              discounts_path: discount_type_data[:path],
-                             current_page_number: discount_type_data[:pagination][:starts_at],
+                             current_page_number: discount_type_data.dig(:pagination, :starts_at),
                              **discount_type_data)
     discounts += parse_page(page)
 
-    # if pagination?
-    #   pages_count = page.total_pages_count
-    #   2.upto(pages_count) do
-    #     page = page.next
-    #     discounts += parse_page(page)
-    #   end
-    # end
+    if pagination?
+      pages_count = page.total_pages_count
+      2.upto(pages_count) do
+        page = page.next
+        discounts += parse_page(page)
+      end
+    end
 
     puts discounts.count
     discounts
   end
 
   def page
-     DiscountsPage.new(shop_url: DATA[:url],
+     DiscountsPage.new(shop_url: config[:url],
                              discounts_path: discount_type_data[:path],
                              current_page_number: discount_type_data[:pagination][:starts_at],
                              **discount_type_data)
@@ -83,8 +89,6 @@ class DiscountTypeParser
   end
 
   def discount_type_data
-    DATA[:discount_types].find { |dt| dt[:name] == 'price_of_the_week' }
+    config[:discount_types].first
   end
 end
-
-DiscountTypeParser.new.call.count

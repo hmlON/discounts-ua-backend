@@ -24,7 +24,7 @@ class DiscountsPage
   end
 
   def to_html
-    @to_html = begin
+    @to_html ||= begin
       browser = Capybara.current_session
       browser.visit url
       wait_for_loading
