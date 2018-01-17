@@ -1,12 +1,14 @@
 class DiscountParser
   attr_reader :discount_element, :rules
 
-  def initialize(discount_element, rules)
+  def initialize(rules)
     @discount_element = discount_element
     @rules = rules
   end
 
-  def call
+  def call(discount_element)
+    @discount_element = discount_element
+
     {
       name: name,
       old_price: old_price,
@@ -19,12 +21,12 @@ class DiscountParser
     discount_element.find('.' + rules[:name_xpath]).text
   end
 
-  def new_price
-    parse_price(:new)
-  end
-
   def old_price
     parse_price(:old)
+  end
+
+  def new_price
+    parse_price(:new)
   end
 
   def image

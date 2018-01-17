@@ -48,46 +48,46 @@ class DiscountTypeParser
   end
 
   def call
-    discounts = []
-
     page = DiscountsPage.new(shop_url: config[:url],
                              discounts_path: discount_type_data[:path],
                              current_page_number: discount_type_data.dig(:pagination, :starts_at),
+                             discount_parser: DiscountParser.new(discount_type_data[:discount]),
                              **discount_type_data)
-    discounts += parse_page(page)
+    discounts = page.discounts
 
     if pagination?
       pages_count = page.total_pages_count
       2.upto(pages_count) do
         page = page.next
-        discounts += parse_page(page)
+        discounts += page.discounts
       end
     end
 
     discounts
   end
 
-  def page
-     DiscountsPage.new(shop_url: config[:url],
-                             discounts_path: discount_type_data[:path],
-                             current_page_number: discount_type_data[:pagination][:starts_at],
-                             **discount_type_data)
-  end
+  # def page
+  #    DiscountsPage.new(shop_url: config[:url],
+  #                            discounts_path: discount_type_data[:path],
+  #                            current_page_number: discount_type_data[:pagination][:starts_at],
+  #                            **discount_type_data)
+  # end
 
   def parse_page(page)
-    discounts = page.to_html.all(discount_type_data[:discounts_xpath])
-    discounts.map { |discount| parse_discount(discount) }
+    discounts = page
   end
 
   def pagination?
     discount_type_data[:pagination]
   end
 
-  def parse_discount(discount)
-    DiscountParser.new(discount, discount_type_data[:discount]).call
-  end
+  # def parse_discount(discount)
+  #   DiscountParser.new(discount_type_data[:discount]).call(discount)
+  # end
 
   def discount_type_data
     config[:discount_types].first
   end
 end
+
+DiscountTypeParser.new(CONFIG).call
