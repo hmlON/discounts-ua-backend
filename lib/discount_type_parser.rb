@@ -64,7 +64,6 @@ class DiscountTypeParser
       end
     end
 
-    puts discounts.count
     discounts
   end
 

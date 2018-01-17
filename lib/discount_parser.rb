@@ -20,18 +20,28 @@ class DiscountParser
   end
 
   def new_price
-    if rules[:new_price_divided]
-      integer = discount_element.find('.' + rules[:new_price_integer_xpath]).text
-      fraction = discount_element.find('.' + rules[:new_price_fraction_xpath]).text
-      "#{integer}.#{fraction}"
-    end
+    parse_price(:new)
   end
 
   def old_price
-    discount_element.find('.' + rules[:old_price_xpath]).text
+    parse_price(:old)
   end
 
   def image
     discount_element.find('.' + rules[:image_xpath])[:src]
+  end
+
+  private
+
+  def parse_price(type)
+    price_is_divided = rules[:"#{type}_price_divided"]
+    price = if price_is_divided
+              integer = discount_element.find('.' + rules[:"#{type}_price_integer_xpath"]).text
+              fraction = discount_element.find('.' + rules[:"#{type}_price_fraction_xpath"]).text
+              "#{integer}.#{fraction}"
+            else
+              discount_element.find('.' + rules[:"#{type}_price_xpath"]).text
+            end
+    price.to_f
   end
 end
