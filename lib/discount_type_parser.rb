@@ -66,13 +66,6 @@ class DiscountTypeParser
     discounts
   end
 
-  # def page
-  #    DiscountsPage.new(shop_url: config[:url],
-  #                            discounts_path: discount_type_data[:path],
-  #                            current_page_number: discount_type_data[:pagination][:starts_at],
-  #                            **discount_type_data)
-  # end
-
   def parse_page(page)
     discounts = page
   end
@@ -81,13 +74,7 @@ class DiscountTypeParser
     discount_type_data[:pagination]
   end
 
-  # def parse_discount(discount)
-  #   DiscountParser.new(discount_type_data[:discount]).call(discount)
-  # end
-
   def discount_type_data
     config[:discount_types].first
   end
 end
-
-DiscountTypeParser.new(CONFIG).call

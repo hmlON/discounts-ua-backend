@@ -1,4 +1,4 @@
-# Schema
+# Schema:
 # t.string   "name",                    null: false
 # t.string   "img_url",                 null: false
 # t.string   "small_img_url"
@@ -7,6 +7,7 @@
 # t.datetime "created_at",              null: false
 # t.datetime "updated_at",              null: false
 # t.integer  "discount_type_period_id", null: false
+
 class Discount < ActiveRecord::Base
   belongs_to :discount_type_period
 
