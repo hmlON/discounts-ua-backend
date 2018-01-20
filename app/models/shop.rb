@@ -1,6 +1,7 @@
 # Discounts come from shop
 #
 # Schema:
+# t.string "slug"
 # t.string "name", null: false
 # t.string "url"
 #

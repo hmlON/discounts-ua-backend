@@ -2,6 +2,7 @@
 # e.g. Silpo has "price_of_the_week" and "hot_proposal"
 #
 # Schema:
+# t.string "slug"
 # t.string "name", null: false
 # t.integer "shop_id", null: false
 # t.string "path"

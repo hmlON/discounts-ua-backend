@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170420205317) do
+ActiveRecord::Schema.define(version: 20180120091357) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20170420205317) do
     t.string "name", null: false
     t.integer "shop_id", null: false
     t.string "path"
+    t.string "slug"
     t.index ["shop_id"], name: "index_discount_types_on_shop_id"
   end
 
@@ -44,6 +45,7 @@ ActiveRecord::Schema.define(version: 20170420205317) do
   create_table "shops", id: :serial, force: :cascade do |t|
     t.string "name", null: false
     t.string "url"
+    t.string "slug"
   end
 
   add_foreign_key "discount_type_periods", "discount_types"

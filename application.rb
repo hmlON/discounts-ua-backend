@@ -8,8 +8,17 @@ Dir['./app/serializers/*.rb'].each { |file| require file }
 set :serializers_path, './models/serializers'
 
 SHOP_CONFIGS.each do |shop_slug, shop_data|
-  shop = Shop.find_by()
-  require "byebug"; byebug
+  shop = Shop.find_or_create_by(slug: shop_slug) do |new_shop|
+    new_shop.name = shop_data['name']
+    new_shop.url = shop_data['url']
+  end
+
+  shop_data['discount_types'].each do |discount_type_slug, discount_type_data|
+    dt =shop.discount_types.find_or_create_by(slug: discount_type_slug) do |new_discount_type|
+      new_discount_type.name = discount_type_data['name']
+      new_discount_type.path = discount_type_data['path']
+    end
+  end
 end
 
 get '/' do
