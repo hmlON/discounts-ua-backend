@@ -11,6 +11,9 @@ class DiscountType < ActiveRecord::Base
   belongs_to :shop
   has_many :periods, class_name: 'DiscountTypePeriod', foreign_key: 'discount_type_id', dependent: :destroy
 
+  validates :slug, presence: true
+  validates :name, presence: true
+
   def url
     shop.url + path
   end
