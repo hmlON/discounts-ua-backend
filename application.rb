@@ -1,25 +1,11 @@
 require 'bundler'
 Bundler.require(:default)
 require 'sinatra/reloader' if development?
+Dir['./app/models/*.rb'].each { |file| require file }
 Dir['./config/*.rb'].each { |file| require file }
 Dir['./lib/*.rb'].each { |file| require file }
-Dir['./app/models/*.rb'].each { |file| require file }
 Dir['./app/serializers/*.rb'].each { |file| require file }
 set :serializers_path, './models/serializers'
-
-SHOP_CONFIGS.each do |shop_slug, shop_data|
-  shop = Shop.find_or_create_by(slug: shop_slug)
-  shop.name = shop_data[:name]
-  shop.url = shop_data[:url]
-  shop.save
-
-  shop_data[:discount_types].each do |discount_type_slug, discount_type_data|
-    discount_type = shop.discount_types.find_or_create_by(slug: discount_type_slug)
-    discount_type.name = discount_type_data[:name]
-    discount_type.path = discount_type_data[:path]
-    discount_type.save
-  end
-end
 
 get '/' do
   check_existance_of_shops
