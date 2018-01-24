@@ -1,14 +1,14 @@
 class ShopInitializer
-  attr_reader :shop_data
+  attr_reader :data
 
-  def initialize(**shop_data)
-    @shop_data = shop_data
+  def initialize(**data)
+    @data = data
   end
 
   def call
-    shop = Shop.find_or_create_by(slug: shop_data[:slug])
-    shop.name = shop_data[:name]
-    shop.url = shop_data[:url]
+    shop = Shop.find_or_create_by(slug: data[:slug])
+    shop.name = data[:name]
+    shop.url = data[:url]
     shop.save!
     shop
   end
