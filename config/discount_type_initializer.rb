@@ -1,3 +1,4 @@
+# initializes (creates or updates) discount types from config
 class DiscountTypeInitializer
   attr_reader :shop, :data
 

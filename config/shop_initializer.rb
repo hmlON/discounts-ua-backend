@@ -1,3 +1,4 @@
+# initializes (creates or updates) shops from config
 class ShopInitializer
   attr_reader :data
 
