@@ -14,32 +14,6 @@ end
 Capybara.default_driver = :poltergeist
 Capybara.default_selector = :xpath
 
-CONFIG = {
-  name: 'silpo',
-  url: 'https://silpo.ua',
-  discount_types: [
-    {
-      name: 'price_of_the_week',
-      path: '/offers/akciyi-vlasnogo-importu',
-      discounts_xpath: "//ul[contains(@class, 'product-list product-list__per-row-3')]/li[contains(@class, 'normal')]/a[contains(@class, 'product-list__item normal size-normal')]",
-      discount: {
-        name_xpath: "//div[contains(@class, 'product-list__item-description')]",
-        image_xpath: "//div[contains(@class, 'product-list__item-image')]/img",
-        new_price_divided: true,
-        new_price_integer_xpath: "//div[contains(@class, 'product-price__integer')]",
-        new_price_fraction_xpath: "//div[contains(@class, 'product-price__fraction')]",
-        old_price_xpath: "//div[contains(@class, 'product-price__other')]/div[contains(@class, 'product-price__old')]",
-      },
-      pagination: {
-        parameter: 'offset',
-        starts_at: 0,
-        step: 6,
-        pages_count_xpath: "//a[contains(@class, 'pagination-link')][3]"
-      }
-    }
-  ]
-}
-
 class DiscountTypeParser
   attr_reader :config
 
