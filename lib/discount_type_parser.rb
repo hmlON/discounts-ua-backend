@@ -22,8 +22,7 @@ class DiscountTypeParser
   end
 
   def call
-    page = DiscountsPage.new(shop_url: config[:url],
-                             discounts_path: discount_type_data[:path],
+    page = DiscountsPage.new(discount_type_url: config[:url] + discount_type_data[:path],
                              current_page_number: discount_type_data.dig(:pagination, :starts_at),
                              discount_parser: DiscountParser.new(discount_type_data[:discount]),
                              **discount_type_data)

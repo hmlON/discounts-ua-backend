@@ -2,7 +2,6 @@ class DiscountParser
   attr_reader :discount_element, :rules
 
   def initialize(rules)
-    @discount_element = discount_element
     @rules = rules
   end
 

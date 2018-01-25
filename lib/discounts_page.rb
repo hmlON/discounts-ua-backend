@@ -1,8 +1,8 @@
 class DiscountsPage
-  attr_reader :shop_url, :discounts_path, :discounts_xpath, :discount_parser, :options, :pagination, :pagination
+  attr_reader :discount_type_url, :discounts_path, :discounts_xpath, :discount_parser, :options, :pagination, :pagination
 
-  def initialize(shop_url:, discounts_path:, current_page_number: nil, discount_parser:, **options)
-    @shop_url = shop_url
+  def initialize(discount_type_url:, current_page_number: nil, discount_parser:, **options)
+    @discount_type_url = discount_type_url
     @discounts_path =  discounts_path
     @discount_parser = discount_parser
     @options = options
@@ -11,20 +11,17 @@ class DiscountsPage
     @pagination = options[:pagination]
     if pagination?
       @pagination[:current_page_number] = current_page_number || 1
+      @pagination[:parameter] ||= "page"
       @pagination[:step] ||= 1
     end
   end
 
   def url
-    url = shop_url + discounts_path
+    return discount_type_url unless pagination?
 
-    if pagination?
-      parameter = pagination[:parameter]
-      page_number = pagination[:current_page_number] * pagination[:step]
-      url = "#{url}?#{parameter}=#{page_number}"
-    end
-
-    url
+    parameter = pagination[:parameter]
+    page_number = pagination[:current_page_number] * pagination[:step]
+    "#{discount_type_url}?#{parameter}=#{page_number}"
   end
 
   def discounts
