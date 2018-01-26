@@ -27,6 +27,12 @@ RSpec.describe DiscountsPage do
       end
 
       it { is_expected.to eq "#{url}?page=1" }
+
+      describe 'on the next page' do
+        subject { page.next.url }
+
+        it { is_expected.to eq "#{url}?page=2" }
+      end
     end
   end
 end

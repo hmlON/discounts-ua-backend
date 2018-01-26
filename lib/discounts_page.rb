@@ -38,7 +38,7 @@ class DiscountsPage
     return unless pagination?
 
     self.class.new(
-      shop_url: shop_url,
+      discount_type_url: discount_type_url,
       discounts_path: discounts_path,
       discount_parser: discount_parser,
       current_page_number: pagination[:current_page_number] + 1,
