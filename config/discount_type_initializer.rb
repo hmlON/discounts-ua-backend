@@ -10,7 +10,6 @@ class DiscountTypeInitializer
   def call
     discount_type = shop.discount_types.find_or_create_by(slug: data[:slug])
     discount_type.name = data[:name]
-    discount_type.path = data[:path]
     discount_type.save
   end
 end

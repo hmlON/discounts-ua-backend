@@ -2,21 +2,15 @@ RSpec.describe DiscountTypeParser do
   describe '#call' do
     let(:config) {
       {
-        name: 'myshop',
-        url: 'https://myshop.ua',
-        discount_types: [
-          {
-            name: 'good discounts',
-            path: '/discounts/good',
-            discounts_xpath: "//article[contains(@class, 'Discount')]",
-            discount: {
-              name_xpath: "//div[contains(@class, 'DiscountName')]",
-              image_xpath: "/img[contains(@class, 'DiscountImage')]",
-              new_price_xpath: "//div[contains(@class, 'DiscountNewPrice')]",
-              old_price_xpath: "//div[contains(@class, 'DiscountOldPrice')]",
-            }
-          }
-        ]
+        name: 'good discounts',
+        url: 'https://myshop.ua/discounts/good',
+        discounts_xpath: "//article[contains(@class, 'Discount')]",
+        discount: {
+          name_xpath: "//div[contains(@class, 'DiscountName')]",
+          image_xpath: "/img[contains(@class, 'DiscountImage')]",
+          new_price_xpath: "//div[contains(@class, 'DiscountNewPrice')]",
+          old_price_xpath: "//div[contains(@class, 'DiscountOldPrice')]",
+        }
       }
     }
 
