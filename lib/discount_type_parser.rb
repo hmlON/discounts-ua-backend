@@ -1,18 +1,5 @@
-require 'open-uri'
-require 'capybara/poltergeist'
 require './lib/discounts_page'
 require './lib/discount_parser'
-
-Capybara.register_driver :poltergeist do |app|
-  Capybara::Poltergeist::Driver.new(
-    app,
-    js_errors: false,
-    phantomjs_options: ['--load-images=no']
-  )
-end
-
-Capybara.default_driver = :poltergeist
-Capybara.default_selector = :xpath
 
 class DiscountTypeParser
   attr_reader :config
