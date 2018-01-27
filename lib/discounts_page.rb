@@ -30,8 +30,8 @@ class DiscountsPage
       .map { |discount_element| discount_parser.call(discount_element) }
   end
 
-  def pagination?
-    @pagination
+  def total_pages_count
+    to_html.find(pagination[:pages_count_xpath]).text.to_i
   end
 
   def next
@@ -46,11 +46,11 @@ class DiscountsPage
     )
   end
 
-  def total_pages_count
-    to_html.find(pagination[:pages_count_xpath]).text.to_i
-  end
-
   private
+
+  def pagination?
+    @pagination
+  end
 
   def to_html
     @to_html ||= begin
