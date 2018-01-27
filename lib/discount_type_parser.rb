@@ -9,10 +9,6 @@ class DiscountTypeParser
   end
 
   def call
-    page = DiscountsPage.new(discount_type_url: config[:url],
-                             current_page_number: config.dig(:pagination, :starts_at),
-                             discount_parser: DiscountParser.new(config[:discount]),
-                             **config)
     discounts = page.discounts
 
     if pagination?
@@ -27,6 +23,15 @@ class DiscountTypeParser
   end
 
   private
+
+  def page
+    @page ||= DiscountsPage.new(
+      discount_type_url: config[:url],
+      current_page_number: config.dig(:pagination, :starts_at),
+      discount_parser: DiscountParser.new(config[:discount]),
+      **config
+    )
+  end
 
   def parse_page(page)
     discounts = page
