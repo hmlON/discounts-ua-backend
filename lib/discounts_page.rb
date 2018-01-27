@@ -1,27 +1,20 @@
 class DiscountsPage
-  attr_reader :discount_type_url, :discounts_path, :discounts_xpath, :discount_parser, :options, :pagination, :pagination
+  attr_reader :discounts_url, :discounts_xpath, :discount_parser, :pagination
 
-  def initialize(discount_type_url:, current_page_number: nil, discount_parser:, **options)
-    @discount_type_url = discount_type_url
-    @discounts_path =  discounts_path
+  def initialize(discounts_url:, discount_parser:, discounts_xpath:, pagination: nil)
+    @discounts_url = discounts_url
     @discount_parser = discount_parser
-    @options = options
-    @discounts_xpath = options[:discounts_xpath]
-
-    @pagination = options[:pagination]
-    if pagination?
-      @pagination[:current_page_number] = current_page_number || 1
-      @pagination[:parameter] ||= "page"
-      @pagination[:step] ||= 1
-    end
+    @discounts_xpath = discounts_xpath
+    @pagination = pagination
+    set_pagination_defaults if pagination?
   end
 
   def url
-    return discount_type_url unless pagination?
+    return discounts_url unless pagination?
 
     parameter = pagination[:parameter]
     page_number = pagination[:current_page_number] * pagination[:step]
-    "#{discount_type_url}?#{parameter}=#{page_number}"
+    "#{discounts_url}?#{parameter}=#{page_number}"
   end
 
   def discounts
@@ -35,22 +28,19 @@ class DiscountsPage
   end
 
   def next
-    return unless pagination?
+    next_pagination_config = pagination.merge(
+      current_page_number: pagination[:current_page_number] + 1
+    )
 
     self.class.new(
-      discount_type_url: discount_type_url,
-      discounts_path: discounts_path,
+      discounts_url: discounts_url,
       discount_parser: discount_parser,
-      current_page_number: pagination[:current_page_number] + 1,
-      **options
+      discounts_xpath: discounts_xpath,
+      pagination: next_pagination_config
     )
   end
 
   private
-
-  def pagination?
-    @pagination
-  end
 
   def to_html
     @to_html ||= begin
@@ -59,6 +49,16 @@ class DiscountsPage
       wait_for_loading
       browser
     end
+  end
+
+  def pagination?
+    !pagination.nil?
+  end
+
+  def set_pagination_defaults
+    @pagination[:current_page_number] ||= pagination[:starts_at] || 1
+    @pagination[:parameter] ||= "page"
+    @pagination[:step] ||= 1
   end
 
   # def wait_until

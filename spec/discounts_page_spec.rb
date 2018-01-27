@@ -2,8 +2,9 @@ RSpec.describe DiscountsPage do
   describe '#url' do
     let(:page) do
       described_class.new(
-        discount_type_url: url,
-        discount_parser: discount_parser
+        discounts_url: url,
+        discount_parser: discount_parser,
+        discounts_xpath: "some-xpath"
       )
     end
     let(:url) { 'https://myshop.ua/discounts/good' }
@@ -18,8 +19,9 @@ RSpec.describe DiscountsPage do
     context 'with pagination' do
       let(:page) do
         described_class.new(
-          discount_type_url: url,
+          discounts_url: url,
           discount_parser: discount_parser,
+          discounts_xpath: "some-xpath",
           pagination: {
             pages_count_xpath: "//a[contains(@class, 'pagination')]"
           }

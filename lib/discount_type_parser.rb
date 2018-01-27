@@ -10,15 +10,7 @@ class DiscountTypeParser
 
   def call
     discounts = page.discounts
-
-    if pagination?
-      pages_count = page.total_pages_count
-      2.upto(pages_count) do
-        page = page.next
-        discounts += page.discounts
-      end
-    end
-
+    discounts += parse_next_pages if pagination?
     discounts
   end
 
@@ -26,15 +18,28 @@ class DiscountTypeParser
 
   def page
     @page ||= DiscountsPage.new(
-      discount_type_url: config[:url],
-      current_page_number: config.dig(:pagination, :starts_at),
-      discount_parser: DiscountParser.new(config[:discount]),
-      **config
+      discounts_url: config[:url],
+      discounts_xpath: config[:discounts_xpath],
+      discount_parser: discount_parser,
+      pagination: config[:pagination]
     )
   end
 
-  def parse_page(page)
-    discounts = page
+  def discount_parser
+    DiscountParser.new(config[:discount])
+  end
+
+  def parse_next_pages
+    pages_count = page.total_pages_count
+    current_page = page
+    discounts = []
+
+    2.upto(pages_count) do
+      current_page = current_page.next
+      discounts += current_page.discounts
+    end
+
+    discounts
   end
 
   def pagination?
