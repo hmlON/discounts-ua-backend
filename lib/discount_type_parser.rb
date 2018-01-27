@@ -26,6 +26,8 @@ class DiscountTypeParser
     discounts
   end
 
+  private
+
   def parse_page(page)
     discounts = page
   end
