@@ -4,7 +4,10 @@ silpo:
   discount_types:
     price_of_the_week:
       name: Price of the week
-      url: "https://silpo.ua/offers/akciyi-vlasnogo-importu"
+      url: https://silpo.ua/offers/cina-tizhnya
+      period:
+        starts_at: 18 Jan 2018
+        duration_in_days: 7
       discounts_xpath: "//ul[contains(@class, 'product-list product-list__per-row-3')]/li[contains(@class,
         'normal')]/a[contains(@class, 'product-list__item normal size-normal')]"
       discount:
