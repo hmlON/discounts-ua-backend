@@ -18,10 +18,11 @@ class DiscountTypeParser
 
   def page
     @page ||= DiscountsPage.new(
-      discounts_url: config[:url],
+      discounts_url:   config[:url],
       discounts_xpath: config[:discounts_xpath],
       discount_parser: discount_parser,
-      pagination: config[:pagination]
+      pagination:      config[:pagination],
+      js:              config[:js]
     )
   end
 

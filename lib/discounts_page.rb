@@ -1,11 +1,12 @@
 class DiscountsPage
-  attr_reader :discounts_url, :discounts_xpath, :discount_parser, :pagination
+  attr_reader :discounts_url, :discounts_xpath, :discount_parser, :pagination, :js
 
-  def initialize(discounts_url:, discount_parser:, discounts_xpath:, pagination: nil)
+  def initialize(discounts_url:, discount_parser:, discounts_xpath:, pagination: nil, js: false)
     @discounts_url = discounts_url
     @discount_parser = discount_parser
     @discounts_xpath = discounts_xpath
     @pagination = pagination
+    @js = js
     set_pagination_defaults if pagination?
   end
 
@@ -36,7 +37,8 @@ class DiscountsPage
       discounts_url: discounts_url,
       discount_parser: discount_parser,
       discounts_xpath: discounts_xpath,
-      pagination: next_pagination_config
+      pagination: next_pagination_config,
+      js: true
     )
   end
 
@@ -44,10 +46,15 @@ class DiscountsPage
 
   def to_html
     @to_html ||= begin
-      browser = Capybara.current_session
-      browser.visit url
-      wait_for_loading
-      browser
+      if js
+        browser = Capybara.current_session
+        browser.visit url
+        wait_for_loading
+        browser
+      else
+        body = Net::HTTP.get(URI(url))
+        Capybara.string(body)
+      end
     end
   end
 
