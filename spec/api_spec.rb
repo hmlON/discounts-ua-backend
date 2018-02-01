@@ -3,7 +3,7 @@ RSpec.describe 'API', type: :controller do
     let!(:shops) { Fabricate.times(2, :shop) }
     before { get '/api/shops' }
 
-    let(:json) { JSON.parse last_response.body }
+    let(:json) { JSON.parse(last_response.body)['shops'] }
     let(:shops_count) { 2 }
     let(:shop_discount_types_count) { 4 }
     let(:discount_type_discounts_count) { 10 }
