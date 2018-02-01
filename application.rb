@@ -8,19 +8,6 @@ Dir['./lib/*.rb'].each { |file| require file }
 Dir['./app/serializers/*.rb'].each { |file| require file }
 set :serializers_path, './models/serializers'
 
-SHOP_CONFIGS.each do |shop_slug, shop_data|
-  shop = Shop.find_by(slug: shop_slug)
-  shop_data[:discount_types].each do |discount_type_slug, discount_type_data|
-    discount_type = shop.discount_types.find_by(slug: discount_type_slug)
-    parser = DiscountTypeParser.new(discount_type_data)
-    DiscountsCreator.new(
-      discount_type: discount_type,
-      discount_type_parser: parser,
-      period: discount_type_data[:period]
-    ).call
-  end
-end
-
 get '/' do
   check_existance_of_shops
   check_existance_of_active_periods
@@ -36,7 +23,23 @@ get '/api/shops' do
 
   shops = Shop.includes(discount_types: { periods: :discounts }).all
   serializers = shops.map { |shop| ShopSerializer.new(shop) }
+  Thread.new { parse_discounts }
   json shops: serializers
+end
+
+def parse_discounts
+  SHOP_CONFIGS.each do |shop_slug, shop_data|
+    shop = Shop.find_by(slug: shop_slug)
+    shop_data[:discount_types].each do |discount_type_slug, discount_type_data|
+      discount_type = shop.discount_types.find_by(slug: discount_type_slug)
+      parser = DiscountTypeParser.new(discount_type_data)
+      DiscountsCreator.new(
+        discount_type: discount_type,
+        discount_type_parser: parser,
+        period: discount_type_data[:period]
+      ).call
+    end
+  end
 end
 
 get '/image-proxy/' do
