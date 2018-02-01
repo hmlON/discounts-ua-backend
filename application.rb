@@ -36,7 +36,7 @@ get '/api/shops' do
 
   shops = Shop.includes(discount_types: { periods: :discounts }).all
   serializers = shops.map { |shop| ShopSerializer.new(shop) }
-  json serializers, root: 'niads'
+  json shops: serializers
 end
 
 get '/image-proxy/' do
