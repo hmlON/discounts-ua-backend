@@ -59,6 +59,8 @@ atb:
       discount:
         name_xpath: "//span[contains(@class, 'promo_info_text')]"
         image_xpath: "//a[contains(@class, 'promo_image_link')]/img"
+        image_relative_url: true
+        image_base_url: http://www.atbmarket.com/
         new_price_divided: true
         new_price_integer_xpath: "//div[contains(@class, 'promo_price')]/text()"
         new_price_fraction_xpath: "//div[contains(@class, 'promo_price')]/span[1]"

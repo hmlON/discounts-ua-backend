@@ -29,7 +29,9 @@ class DiscountParser
   end
 
   def image
-    discount_element.find('.' + rules[:image_xpath])[:src]
+    @image = discount_element.find('.' + rules[:image_xpath])[:src]
+    @image = rules[:image_base_url] + @image if rules[:image_relative_url]
+    @image
   end
 
   private
