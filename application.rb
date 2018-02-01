@@ -29,8 +29,6 @@ get '/' do
 end
 
 get '/api/shops' do
-  check_existance_of_shops
-  check_existance_of_active_periods
   headers['Access-Control-Allow-Origin'] = '*'
   headers['Access-Control-Allow-Methods'] = 'GET'
   headers['Access-Control-Request-Method'] = '*'
@@ -50,21 +48,6 @@ end
 
 def image_proxy_url(url)
   "/image-proxy/?url=#{Base64.urlsafe_encode64 url}"
-end
-
-def check_existance_of_shops
-  Shop.create_all
-end
-
-def check_existance_of_active_periods
-  Shop.all.each do |shop|
-    shop.discount_types.each do |discount_type|
-      unless discount_type.active_period
-        shop.name.camelize.constantize
-            .send(discount_type.name.to_sym)
-      end
-    end
-  end
 end
 
 helpers do
