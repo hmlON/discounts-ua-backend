@@ -18,6 +18,8 @@ class DiscountParser
 
   def name
     discount_element.find('.' + rules[:name_xpath]).text
+      .gsub(/\s+/, ' ')
+      .strip
   end
 
   def old_price
