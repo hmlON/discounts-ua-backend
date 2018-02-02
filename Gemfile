@@ -9,7 +9,7 @@ gem 'sinatra-contrib'
 
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'activerecord'
-gem 'pg'
+gem 'pg', '~> 0.21'
 gem 'sinatra-activerecord'
 
 gem 'nokogiri'

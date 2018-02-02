@@ -147,7 +147,7 @@ DEPENDENCIES
   fabrication
   faker
   nokogiri
-  pg
+  pg (~> 0.21)
   poltergeist
   puma
   rake
