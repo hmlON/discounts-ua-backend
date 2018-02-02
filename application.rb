@@ -8,13 +8,6 @@ Dir['./lib/*.rb'].each { |file| require file }
 Dir['./app/serializers/*.rb'].each { |file| require file }
 set :serializers_path, './models/serializers'
 
-get '/' do
-  check_existance_of_shops
-  check_existance_of_active_periods
-  shops = Shop.includes(discount_types: { periods: :discounts }).all
-  slim :index, locals: { shops: shops }
-end
-
 get '/api/shops' do
   headers['Access-Control-Allow-Origin'] = '*'
   headers['Access-Control-Allow-Methods'] = 'GET'
@@ -39,22 +32,5 @@ def parse_discounts
         period: discount_type_data[:period]
       ).call
     end
-  end
-end
-
-get '/image-proxy/' do
-  headers['Content-Type'] = 'image/jpeg'
-  headers['Cache-Control'] = 'public'
-  headers['Expires'] = Date.today + 1.year
-  open(Base64.urlsafe_decode64 params[:url]).read
-end
-
-def image_proxy_url(url)
-  "/image-proxy/?url=#{Base64.urlsafe_encode64 url}"
-end
-
-helpers do
-  def format_price(price)
-    format('%.2f', price)
   end
 end
