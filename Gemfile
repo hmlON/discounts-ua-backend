@@ -20,7 +20,7 @@ gem 'slim'
 
 group :test do
   gem 'database_cleaner'
-  gem 'fabrication'
+  gem 'fabrication', '~> 2.16.2'
   gem 'faker'
   gem 'rspec'
   gem 'vcr'

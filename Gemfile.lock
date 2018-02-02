@@ -144,7 +144,7 @@ DEPENDENCIES
   byebug
   capybara
   database_cleaner
-  fabrication
+  fabrication (~> 2.16.2)
   faker
   nokogiri
   pg (~> 0.21)
