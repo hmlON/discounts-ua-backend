@@ -1,0 +1,1228 @@
+Total allocated: 15918685 bytes (120699 objects)
+Total retained:  1178529 bytes (977 objects)
+
+allocated memory by gem
+-----------------------------------
+   4277104  ruby-2.4.2/lib
+   2964371  capybara-2.14.4
+   2348131  activerecord-5.1.2
+   1614447  poltergeist-1.16.0
+   1213480  websocket-driver-0.7.0
+   1161527  nokogiri-1.8.2
+    682896  activemodel-5.1.2
+    535912  other
+    349737  activesupport-5.1.2
+    342032  backports-3.8.0
+    211442  discounts-ua-backend/lib
+    132392  arel-8.0.0
+     63073  websocket-extensions-0.1.3
+      9861  cliver-0.3.2
+      4968  concurrent-ruby-1.0.5
+      4960  discounts-ua-backend/app
+      1960  rubygems
+       392  config/app
+
+allocated memory by file
+-----------------------------------
+   2228864  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/result.rb
+   1094896  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/client.rb
+   1052249  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/open3.rb
+   1050072  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/timeout.rb
+    992860  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb
+    870884  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/json/common.rb
+    817097  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/sax/push_parser.rb
+    616100  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/net/http/response.rb
+    543504  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/relation/query_methods.rb
+    511090  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/set.rb
+    414376  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/queries/selector_query.rb
+    412684  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb
+    361350  <internal:prelude>
+    356935  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/web_socket_server.rb
+    342032  /Users/hmlon/.gem/ruby/2.4.2/gems/backports-3.8.0/lib/backports/std_lib.rb
+    174504  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/xml/searchable.rb
+    171706  (no name)
+    170631  /Users/hmlon/learn/discounts-ua-backend/lib/discount_parser.rb
+    166272  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/relation.rb
+    150871  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/inflector/methods.rb
+    145064  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/node/finders.rb
+    121760  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute.rb
+    120224  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/type/helpers/time_value.rb
+    114656  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/relation/where_clause.rb
+    114216  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql_adapter.rb
+    108680  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/securerandom.rb
+    108576  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/relation/spawn_methods.rb
+     99019  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb
+     90667  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/document.rb
+     86304  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract_adapter.rb
+     85696  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/type/helpers/numeric.rb
+     84656  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_set/builder.rb
+     80256  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/command.rb
+     77464  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/stream_reader.rb
+     69368  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/relation/predicate_builder.rb
+     67779  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/xml/node.rb
+     64000  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/node/simple.rb
+     63680  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/callbacks.rb
+     62672  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/result.rb
+     57688  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi/message.rb
+     56968  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/querying.rb
+     52256  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/browser.rb
+     50902  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/dependencies.rb
+     49960  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/selector/filter_set.rb
+     48728  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-extensions-0.1.3/lib/websocket/extensions.rb
+     48616  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract/transaction.rb
+     43972  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/net/protocol.rb
+     43280  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/scoping/default.rb
+     39973  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/sanitization.rb
+     38824  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/core.rb
+
+allocated memory by location
+-----------------------------------
+   1735480  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/result.rb:42
+   1049744  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/open3.rb:200
+   1049712  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/client.rb:62
+   1049712  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/timeout.rb:83
+    816985  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/sax/push_parser.rb:23
+    451577  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/json/common.rb:156
+    393256  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/net/http/response.rb:342
+    361350  <internal:prelude>:78
+    355504  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/relation/query_methods.rb:1190
+    342032  /Users/hmlon/.gem/ruby/2.4.2/gems/backports-3.8.0/lib/backports/std_lib.rb:9
+    242592  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/set.rb:84
+    226088  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/result.rb:127
+    223650  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/web_socket_server.rb:81
+    219314  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:382
+    213525  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/net/http/response.rb:382
+    208392  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb:202
+    188571  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/json/common.rb:224
+    183568  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/result.rb:142
+    177304  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb:173
+    177304  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb:225
+    171706  (no name):0
+    137352  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb:340
+    121879  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/inflector/methods.rb:93
+    120384  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/json/common.rb:324
+    116912  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/queries/selector_query.rb:35
+    100896  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/relation/spawn_methods.rb:9
+     93632  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/json/common.rb:212
+     92960  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql_adapter.rb:450
+     87360  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/relation/query_methods.rb:1192
+     87120  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute.rb:5
+     84960  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/type/helpers/numeric.rb:30
+     81920  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/set.rb:89
+     81560  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/document.rb:228
+     80256  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/command.rb:16
+     76800  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/set.rb:381
+     75200  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:374
+     72040  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/stream_reader.rb:22
+     69120  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/relation.rb:32
+     62280  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/xml/node.rb:442
+     61440  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/set.rb:114
+     60930  /Users/hmlon/learn/discounts-ua-backend/lib/discount_parser.rb:21
+     58800  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/web_socket_server.rb:80
+     58520  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/securerandom.rb:242
+     57216  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/queries/selector_query.rb:11
+     56640  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/node/finders.rb:35
+     55904  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi/message.rb:17
+     54432  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract_adapter.rb:603
+     54056  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/xml/searchable.rb:198
+     52448  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/queries/selector_query.rb:23
+     51920  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/node/finders.rb:37
+
+allocated memory by class
+-----------------------------------
+   3771924  String
+   2925576  Array
+   2099104  Thread
+   1710104  Fiber
+   1633824  Hash
+   1049704  Process::Waiter
+    573920  Proc
+    232464  Thread::Backtrace
+    229336  RubyVM::InstructionSequence
+    183824  JSON::Ext::Parser
+    181632  MatchData
+    127024  Class
+     93632  JSON::Ext::Generator::State
+     92752  File
+     88160  ActiveRecord::Attribute::FromDatabase
+     81056  Enumerator::Lazy
+     69121  Regexp
+     62976  Time
+     50520  Set
+     49888  WebSocket::Driver::Hybi::Frame
+     33440  WebSocket::Driver::Hybi::Message
+     33216  Nokogiri::XML::NodeSet
+     29120  ActiveRecord::AssociationRelation
+     28856  ActiveRecord::Relation
+     28608  Capybara::Queries::SelectorQuery
+     26224  Object
+     24320  Rational
+     23808  Enumerator
+     22656  ActiveSupport::HashWithIndifferentAccess
+     21464  Capybara::Result
+     21464  StopIteration
+     21280  ActiveRecord::Relation::WhereClause
+     20760  Nokogiri::XML::XPathContext
+     19072  Enumerator::Yielder
+     16688  Enumerator::Generator
+     14160  ActiveRecord::Attribute::FromUser
+     11352  Discount
+     11320  Capybara::Node::Simple
+     10112  IO
+      9480  Nokogiri::XML::Element
+      8360  Capybara::Poltergeist::Command
+      8360  WebSocket::Driver::MessageEvent
+      8200  Arel::Attributes::Attribute
+      7680  ActiveRecord::Relation::Merger
+      7640  PG::Result
+      6944  ActiveRecord::Relation::QueryAttribute
+      6864  Arel::Nodes::SelectCore
+      6448  ActiveRecord::Associations::BelongsToAssociation
+      5896  ActiveRecord::LazyAttributeHash
+      5808  Arel::Nodes::SelectStatement
+
+allocated objects by gem
+-----------------------------------
+     29818  activerecord-5.1.2
+     24483  nokogiri-1.8.2
+     15695  ruby-2.4.2/lib
+     14805  capybara-2.14.4
+      8008  activemodel-5.1.2
+      7813  websocket-driver-0.7.0
+      5201  poltergeist-1.16.0
+      3453  activesupport-5.1.2
+      3142  other
+      2659  discounts-ua-backend/lib
+      2545  arel-8.0.0
+      2286  backports-3.8.0
+       486  websocket-extensions-0.1.3
+       124  discounts-ua-backend/app
+       116  cliver-0.3.2
+        36  concurrent-ruby-1.0.5
+        25  rubygems
+         4  config/app
+
+allocated objects by file
+-----------------------------------
+     16840  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/sax/push_parser.rb
+      8253  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/json/common.rb
+      5970  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/relation/query_methods.rb
+      4992  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/set.rb
+      4465  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/result.rb
+      4403  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb
+      4378  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/queries/selector_query.rb
+      4220  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb
+      3636  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/xml/searchable.rb
+      3093  (no name)
+      2855  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/relation/where_clause.rb
+      2740  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/web_socket_server.rb
+      2306  /Users/hmlon/learn/discounts-ua-backend/lib/discount_parser.rb
+      2286  /Users/hmlon/.gem/ruby/2.4.2/gems/backports-3.8.0/lib/backports/std_lib.rb
+      2116  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/document.rb
+      1901  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql_adapter.rb
+      1888  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/type/helpers/time_value.rb
+      1881  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/securerandom.rb
+      1782  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/node/finders.rb
+      1699  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute.rb
+      1604  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/xml/node.rb
+      1600  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/node/simple.rb
+      1469  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb
+      1411  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/relation.rb
+      1304  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/browser.rb
+      1262  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/relation/predicate_builder.rb
+      1249  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/selector/filter_set.rb
+      1182  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/stream_reader.rb
+       956  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract_adapter.rb
+       951  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/inflector/methods.rb
+       858  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi/message.rb
+       767  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/result.rb
+       733  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/callbacks.rb
+       715  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/type/helpers/numeric.rb
+       708  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract/transaction.rb
+       658  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/queries/base_query.rb
+       652  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/event_emitter.rb
+       644  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/relation/merger.rb
+       582  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/sanitization.rb
+       580  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/relation/spawn_methods.rb
+       472  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/errors.rb
+       471  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/querying.rb
+       469  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/server.rb
+       461  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract/quoting.rb
+       459  /Users/hmlon/.gem/ruby/2.4.2/gems/arel-8.0.0/lib/arel/visitors/to_sql.rb
+       450  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/node/base.rb
+       448  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_set/builder.rb
+       436  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/scoping/default.rb
+       432  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/node.rb
+       424  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-extensions-0.1.3/lib/websocket/extensions.rb
+
+allocated objects by location
+-----------------------------------
+     16838  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/sax/push_parser.rb:23
+      3648  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/json/common.rb:156
+      3351  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/json/common.rb:224
+      3093  (no name):0
+      2614  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/relation/query_methods.rb:1190
+      2384  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/result.rb:142
+      2286  /Users/hmlon/.gem/ruby/2.4.2/gems/backports-3.8.0/lib/backports/std_lib.rb:9
+      2039  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/document.rb:228
+      1743  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql_adapter.rb:450
+      1728  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:382
+      1557  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/xml/node.rb:442
+      1470  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/web_socket_server.rb:80
+      1463  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/securerandom.rb:242
+      1263  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/set.rb:84
+      1152  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/set.rb:381
+      1089  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute.rb:5
+      1066  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/stream_reader.rb:22
+      1040  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/xml/searchable.rb:198
+      1024  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/set.rb:89
+       894  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/queries/selector_query.rb:182
+       885  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/node/finders.rb:37
+       840  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/relation/query_methods.rb:1192
+       836  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi/message.rb:17
+       770  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/queries/selector_query.rb:145
+       768  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/set.rb:114
+       708  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/type/helpers/numeric.rb:30
+       708  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/type/helpers/time_value.rb:70
+       708  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/type/helpers/time_value.rb:71
+       658  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/queries/selector_query.rb:35
+       652  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/selector/filter_set.rb:36
+       637  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:81
+       633  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/result.rb:126
+       632  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/event_emitter.rb:38
+       627  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/browser.rb:367
+       627  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb:398
+       622  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/inflector/methods.rb:93
+       600  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:374
+       600  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/result.rb:42
+       596  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/queries/base_query.rb:86
+       596  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/selector/filter_set.rb:40
+       590  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/result.rb:62
+       564  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/node/simple.rb:107
+       519  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/xml/searchable.rb:190
+       519  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/xml/searchable.rb:213
+       519  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/xml/searchable.rb:217
+       519  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/xml/searchable.rb:222
+       519  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/xml/searchable.rb:226
+       505  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/sanitization.rb:65
+       472  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/node/simple.rb:174
+       468  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:408
+
+allocated objects by class
+-----------------------------------
+     44070  String
+     42828  Array
+     10458  Hash
+      7174  Proc
+      1263  Set
+      1102  ActiveRecord::Attribute::FromDatabase
+       656  Time
+       644  MatchData
+       608  Rational
+       596  Enumerator::Lazy
+       532  ActiveRecord::Relation::WhereClause
+       519  Nokogiri::XML::NodeSet
+       519  Nokogiri::XML::XPathContext
+       418  JSON::Ext::Generator::State
+       418  JSON::Ext::Parser
+       418  WebSocket::Driver::Hybi::Frame
+       418  WebSocket::Driver::Hybi::Message
+       303  Thread::Backtrace
+       299  Fiber
+       298  Capybara::Queries::SelectorQuery
+       298  Capybara::Result
+       298  Enumerator::Generator
+       298  Enumerator::Yielder
+       298  Object
+       298  StopIteration
+       297  RubyVM::InstructionSequence
+       283  Capybara::Node::Simple
+       266  Class
+       237  Nokogiri::XML::Element
+       211  ActiveRecord::Relation
+       209  Capybara::Poltergeist::Command
+       209  WebSocket::Driver::MessageEvent
+       205  Arel::Attributes::Attribute
+       195  ActiveRecord::AssociationRelation
+       192  ActiveRecord::Relation::Merger
+       191  PG::Result
+       186  Enumerator
+       177  ActiveRecord::Attribute::FromUser
+       143  Arel::Nodes::BindParam
+       128  ActiveRecord::AttributeSet
+       118  ActiveRecord::AttributeMutationTracker
+       118  ActiveSupport::Callbacks::Filters::Environment
+       118  ActiveSupport::HashWithIndifferentAccess
+        94  Regexp
+        79  ActiveRecord::Relation::QueryAttribute
+        77  Arel::Nodes::Equality
+        74  ActiveRecord::Relation::WhereClauseFactory
+        72  Capybara::Node::Element
+        72  Capybara::Poltergeist::Node
+        69  ActiveRecord::Result
+
+retained memory by gem
+-----------------------------------
+   1062865  poltergeist-1.16.0
+     23338  activerecord-5.1.2
+     22078  websocket-driver-0.7.0
+     18268  backports-3.8.0
+     17976  capybara-2.14.4
+     10022  activemodel-5.1.2
+      7785  websocket-extensions-0.1.3
+      6699  discounts-ua-backend/lib
+      3432  concurrent-ruby-1.0.5
+      3079  activesupport-5.1.2
+      1619  ruby-2.4.2/lib
+       496  cliver-0.3.2
+       392  config/app
+       360  arel-8.0.0
+        80  nokogiri-1.8.2
+        40  rubygems
+
+retained memory by file
+-----------------------------------
+   1060312  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/client.rb
+     18268  /Users/hmlon/.gem/ruby/2.4.2/gems/backports-3.8.0/lib/backports/std_lib.rb
+     17464  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/result.rb
+      9830  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb
+      7625  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-extensions-0.1.3/lib/websocket/extensions/parser.rb
+      6659  /Users/hmlon/learn/discounts-ua-backend/lib/discounts_creator.rb
+      4962  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/statement_cache.rb
+      3768  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb
+      3432  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/schema_statements.rb
+      3312  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/server.rb
+      2792  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http/headers.rb
+      2600  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http/request.rb
+      2328  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi/frame.rb
+      2200  /Users/hmlon/.gem/ruby/2.4.2/gems/concurrent-ruby-1.0.5/lib/concurrent/collection/map/non_concurrent_map_backend.rb
+      2113  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/web_socket_server.rb
+      2048  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/model_schema.rb
+      1744  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/relation/predicate_builder.rb
+      1632  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/headers.rb
+      1587  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods/read.rb
+      1384  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi/message.rb
+      1288  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb
+      1262  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http.rb
+      1232  /Users/hmlon/.gem/ruby/2.4.2/gems/concurrent-ruby-1.0.5/lib/concurrent/collection/map/mri_map_backend.rb
+      1184  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods.rb
+      1149  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/set.rb
+      1120  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute.rb
+      1104  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/event_emitter.rb
+      1096  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/callbacks.rb
+      1011  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods/write.rb
+       952  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver.rb
+       944  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/stream_reader.rb
+       912  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/schema_cache.rb
+       768  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/core_ext/hash/except.rb
+       672  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/relation/delegation.rb
+       656  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/statement_pool.rb
+       496  /Users/hmlon/.gem/ruby/2.4.2/gems/cliver-0.3.2/lib/cliver/dependency.rb
+       440  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/type/type_map.rb
+       392  /Users/hmlon/learn/discounts-ua-backend/config/application.rb
+       390  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/json/common.rb
+       384  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/concurrency/share_lock.rb
+       360  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/core.rb
+       352  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara.rb
+       346  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/quoting.rb
+       320  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/driver.rb
+       304  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract_adapter.rb
+       272  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/type_metadata.rb
+       240  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql_adapter.rb
+       232  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/scoping.rb
+       199  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/core_ext/module/delegation.rb
+       192  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/type/helpers/numeric.rb
+
+retained memory by location
+-----------------------------------
+   1049712  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/client.rb:62
+     18268  /Users/hmlon/.gem/ruby/2.4.2/gems/backports-3.8.0/lib/backports/std_lib.rb:9
+     17464  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/result.rb:42
+      9750  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:382
+      8672  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/client.rb:61
+      6659  /Users/hmlon/learn/discounts-ua-backend/lib/discounts_creator.rb:33
+      2369  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-extensions-0.1.3/lib/websocket/extensions/parser.rb:12
+      2232  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb:4
+      1536  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-extensions-0.1.3/lib/websocket/extensions/parser.rb:11
+      1507  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods/read.rb:33
+      1440  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/server.rb:4
+      1416  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/statement_cache.rb:28
+      1368  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi/frame.rb:5
+      1352  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/schema_statements.rb:154
+      1232  /Users/hmlon/.gem/ruby/2.4.2/gems/concurrent-ruby-1.0.5/lib/concurrent/collection/map/mri_map_backend.rb:14
+      1208  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:22
+      1204  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-extensions-0.1.3/lib/websocket/extensions/parser.rb:10
+      1168  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-extensions-0.1.3/lib/websocket/extensions/parser.rb:6
+      1104  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/event_emitter.rb:6
+      1065  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/client.rb:63
+      1065  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/web_socket_server.rb:81
+      1040  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute.rb:83
+      1040  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/schema_statements.rb:608
+      1040  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/schema_statements.rb:615
+      1040  /Users/hmlon/.gem/ruby/2.4.2/gems/concurrent-ruby-1.0.5/lib/concurrent/collection/map/non_concurrent_map_backend.rb:16
+      1000  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods.rb:30
+       984  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi/message.rb:5
+       960  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi/frame.rb:6
+       928  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http/request.rb:21
+       864  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/headers.rb:4
+       864  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/stream_reader.rb:4
+       816  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http/request.rb:4
+       808  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http/headers.rb:4
+       792  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-extensions-0.1.3/lib/websocket/extensions/parser.rb:83
+       768  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/core_ext/hash/except.rb:11
+       754  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/statement_cache.rb:31
+       754  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/statement_cache.rb:69
+       752  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/schema_cache.rb:73
+       752  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/model_schema.rb:388
+       706  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods/write.rb:17
+       672  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/model_schema.rb:354
+       672  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/relation/delegation.rb:5
+       656  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/statement_pool.rb:33
+       640  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/relation/predicate_builder.rb:60
+       640  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/server.rb:27
+       602  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/statement_cache.rb:41
+       602  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/statement_cache.rb:65
+       584  /Users/hmlon/.gem/ruby/2.4.2/gems/concurrent-ruby-1.0.5/lib/concurrent/collection/map/non_concurrent_map_backend.rb:24
+       573  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/set.rb:331
+       568  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http.rb:2
+
+retained memory by class
+-----------------------------------
+   1049552  Thread
+     36933  String
+     19700  Regexp
+     17464  Fiber
+     15304  Class
+     11640  Hash
+      8672  IO
+      5200  Array
+      2320  Proc
+      1584  Thread::Mutex
+      1352  ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+      1248  Module
+      1040  ActiveRecord::Attribute::FromDatabase
+      1040  ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+      1040  ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+       280  Concurrent::Map
+       240  TCPServer
+       240  TCPSocket
+       216  ActiveSupport::Callbacks::CallTemplate
+       176  WebSocket::Driver::Hybi
+       160  ActiveRecord::PredicateBuilder::RangeHandler
+       160  ActiveSupport::Callbacks::CallbackSequence
+       152  WebSocket::Driver::Headers
+       120  Capybara::Poltergeist::Client
+       120  Capybara::Poltergeist::Driver
+       120  Capybara::Poltergeist::WebSocketServer
+       120  Capybara::Session
+       120  Range
+       120  WebSocket::Driver::Server
+        96  WebSocket::Extensions
+        80  ActiveRecord::Attribute::WithCastValue
+        80  ActiveRecord::AttributeSet
+        80  ActiveRecord::AttributeSet::Builder
+        80  ActiveRecord::AttributeSet::YAMLEncoder
+        80  ActiveRecord::ConnectionAdapters::PostgreSQL::OID::DateTime
+        80  ActiveRecord::PredicateBuilder
+        80  ActiveRecord::PredicateBuilder::ArrayHandler
+        80  ActiveRecord::PredicateBuilder::AssociationQueryHandler
+        80  ActiveRecord::PredicateBuilder::BaseHandler
+        80  ActiveRecord::PredicateBuilder::BasicObjectHandler
+        80  ActiveRecord::PredicateBuilder::PolymorphicArrayHandler
+        80  ActiveRecord::PredicateBuilder::RelationHandler
+        80  ActiveRecord::Relation::QueryAttribute
+        80  ActiveRecord::TableMetadata
+        80  ActiveRecord::TypeCaster::Map
+        80  Arel::Table
+        80  Capybara::Poltergeist::Browser
+        80  Capybara::Poltergeist::Server
+        80  Set
+        80  StringIO
+
+retained objects by gem
+-----------------------------------
+       279  activerecord-5.1.2
+       193  websocket-driver-0.7.0
+       181  backports-3.8.0
+       171  activemodel-5.1.2
+        34  activesupport-5.1.2
+        29  poltergeist-1.16.0
+        28  concurrent-ruby-1.0.5
+        17  websocket-extensions-0.1.3
+        13  ruby-2.4.2/lib
+        11  discounts-ua-backend/lib
+         8  capybara-2.14.4
+         4  arel-8.0.0
+         4  config/app
+         2  cliver-0.3.2
+         2  nokogiri-1.8.2
+         1  rubygems
+
+retained objects by file
+-----------------------------------
+       181  /Users/hmlon/.gem/ruby/2.4.2/gems/backports-3.8.0/lib/backports/std_lib.rb
+       170  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb
+        39  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/schema_statements.rb
+        35  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/relation/predicate_builder.rb
+        33  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/server.rb
+        30  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb
+        30  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http/headers.rb
+        26  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi/frame.rb
+        22  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods.rb
+        22  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods/read.rb
+        22  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http/request.rb
+        21  /Users/hmlon/.gem/ruby/2.4.2/gems/concurrent-ruby-1.0.5/lib/concurrent/collection/map/non_concurrent_map_backend.rb
+        20  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/statement_cache.rb
+        18  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/callbacks.rb
+        18  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/event_emitter.rb
+        18  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/headers.rb
+        17  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods/write.rb
+        16  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/model_schema.rb
+        16  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb
+        14  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute.rb
+        14  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/client.rb
+        13  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-extensions-0.1.3/lib/websocket/extensions/parser.rb
+        12  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi/message.rb
+        11  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/type/type_map.rb
+        10  /Users/hmlon/learn/discounts-ua-backend/lib/discounts_creator.rb
+         9  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/core.rb
+         9  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver.rb
+         9  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/set.rb
+         8  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/quoting.rb
+         8  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/schema_cache.rb
+         8  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/web_socket_server.rb
+         7  /Users/hmlon/.gem/ruby/2.4.2/gems/concurrent-ruby-1.0.5/lib/concurrent/collection/map/mri_map_backend.rb
+         6  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql_adapter.rb
+         6  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/driver.rb
+         5  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract_adapter.rb
+         5  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http.rb
+         4  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/type_metadata.rb
+         4  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/core_ext/hash/keys.rb
+         4  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/stream_reader.rb
+         4  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-extensions-0.1.3/lib/websocket/extensions.rb
+         4  /Users/hmlon/learn/discounts-ua-backend/config/application.rb
+         3  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/inflector/methods.rb
+         3  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara.rb
+         3  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/session.rb
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/utils.rb
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/statement_pool.rb
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/relation/delegation.rb
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/scoping.rb
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/concurrency/share_lock.rb
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/core_ext/class/attribute.rb
+
+retained objects by location
+-----------------------------------
+       181  /Users/hmlon/.gem/ruby/2.4.2/gems/backports-3.8.0/lib/backports/std_lib.rb:9
+       168  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:382
+        28  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:22
+        24  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi/frame.rb:6
+        20  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods.rb:30
+        20  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods/read.rb:33
+        18  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/event_emitter.rb:6
+        16  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/relation/predicate_builder.rb:60
+        13  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute.rb:83
+        13  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/schema_statements.rb:154
+        13  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/schema_statements.rb:608
+        13  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/schema_statements.rb:615
+        12  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http/headers.rb:96
+        11  /Users/hmlon/.gem/ruby/2.4.2/gems/concurrent-ruby-1.0.5/lib/concurrent/collection/map/non_concurrent_map_backend.rb:24
+        10  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods/write.rb:17
+        10  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi/message.rb:6
+        10  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http/request.rb:34
+        10  /Users/hmlon/learn/discounts-ua-backend/lib/discounts_creator.rb:33
+         9  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http/headers.rb:101
+         8  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/server.rb:26
+         8  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/server.rb:27
+         7  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods/write.rb:22
+         7  /Users/hmlon/.gem/ruby/2.4.2/gems/concurrent-ruby-1.0.5/lib/concurrent/collection/map/mri_map_backend.rb:14
+         7  /Users/hmlon/.gem/ruby/2.4.2/gems/concurrent-ruby-1.0.5/lib/concurrent/collection/map/non_concurrent_map_backend.rb:16
+         6  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/quoting.rb:45
+         6  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/type/type_map.rb:14
+         6  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/set.rb:331
+         5  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/type/type_map.rb:9
+         5  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/headers.rb:5
+         5  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/server.rb:5
+         4  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/type_metadata.rb:17
+         4  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql_adapter.rb:450
+         4  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/schema_cache.rb:73
+         4  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/model_schema.rb:335
+         4  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/model_schema.rb:388
+         4  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/core_ext/hash/keys.rb:26
+         4  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/client.rb:62
+         4  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/server.rb:54
+         3  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/statement_cache.rb:28
+         3  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/callbacks.rb:411
+         3  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/headers.rb:28
+         3  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb:4
+         3  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb:54
+         3  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http/request.rb:9
+         3  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-extensions-0.1.3/lib/websocket/extensions/parser.rb:6
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:352
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods.rb:164
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods/read.rb:41
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract_adapter.rb:166
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract_adapter.rb:566
+
+retained objects by class
+-----------------------------------
+       600  String
+       109  Array
+        54  Hash
+        29  Proc
+        23  Regexp
+        21  Class
+        13  ActiveRecord::Attribute::FromDatabase
+        13  ActiveRecord::ConnectionAdapters::PostgreSQLColumn
+        13  ActiveRecord::ConnectionAdapters::PostgreSQLTypeMetadata
+        13  ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+         9  Thread::Mutex
+         7  Concurrent::Map
+         4  ActiveRecord::PredicateBuilder::RangeHandler
+         3  ActiveSupport::Callbacks::CallTemplate
+         3  Range
+         2  ActiveRecord::AttributeSet
+         2  ActiveRecord::AttributeSet::Builder
+         2  ActiveRecord::AttributeSet::YAMLEncoder
+         2  ActiveRecord::ConnectionAdapters::PostgreSQL::OID::DateTime
+         2  ActiveRecord::PredicateBuilder
+         2  ActiveRecord::PredicateBuilder::ArrayHandler
+         2  ActiveRecord::PredicateBuilder::AssociationQueryHandler
+         2  ActiveRecord::PredicateBuilder::BaseHandler
+         2  ActiveRecord::PredicateBuilder::BasicObjectHandler
+         2  ActiveRecord::PredicateBuilder::PolymorphicArrayHandler
+         2  ActiveRecord::PredicateBuilder::RelationHandler
+         2  ActiveRecord::TableMetadata
+         2  ActiveRecord::TypeCaster::Map
+         2  ActiveSupport::Callbacks::CallbackSequence
+         2  Arel::Table
+         2  IO
+         2  Module
+         2  Set
+         2  WebSocket::Driver::Headers
+         2  WebSocket::Driver::StreamReader
+         1  ActiveRecord::Attribute::WithCastValue
+         1  ActiveRecord::Relation::QueryAttribute
+         1  ActiveRecord::StatementCache
+         1  ActiveRecord::StatementCache::BindMap
+         1  ActiveRecord::StatementCache::Query
+         1  ActiveRecord::StatementCache::Substitute
+         1  Capybara::Node::Document
+         1  Capybara::Poltergeist::Browser
+         1  Capybara::Poltergeist::Client
+         1  Capybara::Poltergeist::Driver
+         1  Capybara::Poltergeist::Server
+         1  Capybara::Poltergeist::WebSocketServer
+         1  Capybara::ReadOnlySessionConfig
+         1  Capybara::Session
+         1  Fiber
+
+
+Allocated String Report
+-----------------------------------
+      2045  "meta"
+      2039  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/document.rb:228
+         6  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/sax/push_parser.rb:23
+
+      1646  "div"
+      1646  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/sax/push_parser.rb:23
+
+      1407  "span"
+      1266  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/sax/push_parser.rb:23
+       141  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/node/simple.rb:60
+
+      1379  "class"
+      1379  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/sax/push_parser.rb:23
+
+      1087  ""
+       627  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi/message.rb:17
+       200  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:377
+        71  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/sanitization.rb:65
+        58  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/sax/push_parser.rb:23
+        26  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/net/protocol.rb:190
+        18  /Users/hmlon/.gem/ruby/2.4.2/gems/arel-8.0.0/lib/arel/table.rb:22
+        16  /Users/hmlon/.gem/ruby/2.4.2/gems/backports-3.8.0/lib/backports/std_lib.rb:9
+        13  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http.rb:11
+        13  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/net/http/response.rb:55
+         9  <internal:prelude>:78
+         3  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/inheritance.rb:155
+         3  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/inheritance.rb:160
+         3  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/inflector/methods.rb:95
+         3  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/stream_reader.rb:9
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/model_schema.rb:518
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/inflector/methods.rb:74
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara.rb:370
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/node/simple.rb:32
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/cliver-0.3.2/lib/cliver/shell_capture.rb:19
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/core_ext/module/delegation.rb:168
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/cliver-0.3.2/lib/cliver/dependency.rb:202
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/cliver-0.3.2/lib/cliver/dependency.rb:208
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/cliver-0.3.2/lib/cliver/shell_capture.rb:15
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/headers.rb:40
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb:242
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/stream_reader.rb:47
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http/headers.rb:107
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http/request.rb:22
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http/request.rb:24
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-extensions-0.1.3/lib/websocket/extensions/parser.rb:19
+         1  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/net/http/response.rb:366
+         1  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/net/protocol.rb:87
+         1  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/uri/rfc3986_parser.rb:44
+
+       879  "name"
+       418  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/json/common.rb:224
+       118  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/core_ext/hash/keys.rb:26
+        64  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:81
+        64  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/result.rb:126
+        59  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:219
+        59  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/reflection.rb:64
+        59  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/relation/predicate_builder.rb:42
+        18  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/sax/push_parser.rb:23
+        16  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:382
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/document.rb:229
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:408
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:22
+
+       836  "command_id"
+       836  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/json/common.rb:156
+
+       836  "response"
+       836  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/json/common.rb:156
+
+       787  "id"
+       418  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/json/common.rb:224
+        75  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/sax/push_parser.rb:23
+        67  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_set/builder.rb:118
+        67  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:81
+        67  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/result.rb:126
+        62  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:219
+        24  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:382
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:408
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:22
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:87
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract/quoting.rb:90
+
+       515  "Discount"
+       125  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/scoping.rb:92
+       124  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/scoping.rb:83
+        59  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/querying.rb:39
+        59  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/querying.rb:46
+        59  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/reflection.rb:612
+        59  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/suppressor.rb:46
+         5  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/inflector/methods.rb:70
+         4  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/inheritance.rb:155
+         4  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/inflector/methods.rb:259
+         3  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/inflector/methods.rb:314
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/inheritance.rb:160
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/reflection.rb:639
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/dependencies.rb:494
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/concurrent-ruby-1.0.5/lib/concurrent/collection/map/non_concurrent_map_backend.rb:24
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods/primary_key.rb:86
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/model_schema.rb:518
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/core_ext/module/anonymous.rb:26
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/core_ext/module/introspection.rb:11
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/dependencies.rb:487
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/dependencies.rb:680
+
+       433  "C*"
+       209  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb:175
+       209  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb:228
+        12  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http/headers.rb:107
+         3  /Users/hmlon/.gem/ruby/2.4.2/gems/backports-3.8.0/lib/backports/std_lib.rb:9
+
+       418  "args"
+       418  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/json/common.rb:224
+
+       365  "\n                        "
+       365  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/sax/push_parser.rb:23
+
+       362  "a"
+       350  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/sax/push_parser.rb:23
+        12  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/node.rb:60
+
+       334  "img"
+       204  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/sax/push_parser.rb:23
+        94  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/node/simple.rb:60
+        24  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/browser.rb:109
+        12  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/node.rb:60
+
+       298  "iteration reached an end"
+       298  (no name):0
+
+       295  "."
+        59  /Users/hmlon/learn/discounts-ua-backend/lib/discount_parser.rb:20
+        59  /Users/hmlon/learn/discounts-ua-backend/lib/discount_parser.rb:34
+        59  /Users/hmlon/learn/discounts-ua-backend/lib/discount_parser.rb:44
+        59  /Users/hmlon/learn/discounts-ua-backend/lib/discount_parser.rb:45
+        59  /Users/hmlon/learn/discounts-ua-backend/lib/discount_parser.rb:48
+
+       277  "(?:(?<=([A-Za-z\\d]))|\\b)((?-mix:(?=a)b))(?=\\b|[^a-z])"
+       277  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/inflector/methods.rb:93
+
+       265  "li"
+       218  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/sax/push_parser.rb:23
+        47  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/node/simple.rb:60
+
+       258  "\n"
+       198  /Users/hmlon/.gem/ruby/2.4.2/gems/backports-3.8.0/lib/backports/std_lib.rb:9
+        47  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/sax/push_parser.rb:23
+        12  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/net/http/response.rb:55
+         1  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/net/protocol.rb:164
+
+       248  "xpath"
+       248  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/core_ext/object/json.rb:36
+
+       240  "\n                                "
+       240  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/sax/push_parser.rb:23
+
+       223  "\n                    "
+       223  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/sax/push_parser.rb:23
+
+       218  "message"
+       209  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/event_emitter.rb:38
+         3  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/sax/push_parser.rb:23
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/backports-3.8.0/lib/backports/std_lib.rb:9
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/event_emitter.rb:6
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/event_emitter.rb:11
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/server.rb:5
+
+       216  "visible"
+       144  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/json/common.rb:224
+        72  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/browser.rb:113
+
+       215  "visit"
+       209  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/server.rb:39
+         4  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/json/common.rb:224
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/browser.rb:36
+
+       209  "\x81"
+       209  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/stream_reader.rb:22
+
+       207  "            end\n"
+       200  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:382
+         7  /Users/hmlon/.gem/ruby/2.4.2/gems/backports-3.8.0/lib/backports/std_lib.rb:9
+
+       200  "*args"
+       200  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:374
+
+       200  "/Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb"
+       200  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:382
+
+       194  "\n                            "
+       194  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/sax/push_parser.rb:23
+
+       193  "?"
+       192  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/sanitization.rb:65
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/backports-3.8.0/lib/backports/std_lib.rb:9
+
+       189  "sql.active_record"
+       189  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract_adapter.rb:604
+
+       188  "p"
+       188  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/sax/push_parser.rb:23
+
+       183  "href"
+       183  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/sax/push_parser.rb:23
+
+       180  "find_within"
+       120  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/json/common.rb:224
+        60  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/browser.rb:69
+
+       177  "new"
+        59  /Users/hmlon/learn/discounts-ua-backend/lib/discount_parser.rb:42
+        59  /Users/hmlon/learn/discounts-ua-backend/lib/discount_parser.rb:44
+        59  /Users/hmlon/learn/discounts-ua-backend/lib/discount_parser.rb:45
+
+       164  "src"
+        69  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/sax/push_parser.rb:23
+        47  /Users/hmlon/.gem/ruby/2.4.2/gems/capybara-2.14.4/lib/capybara/node/simple.rb:45
+        24  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/json/common.rb:224
+        12  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/browser.rb:85
+        12  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/node.rb:60
+
+       151  "\n                                    "
+       151  /Users/hmlon/.gem/ruby/2.4.2/gems/nokogiri-1.8.2/lib/nokogiri/html/sax/push_parser.rb:23
+
+       149  "\xC5"
+       149  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/stream_reader.rb:22
+
+       144  "visible_text"
+        96  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/json/common.rb:224
+        48  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/browser.rb:77
+
+       142  "acts_like_time?"
+       142  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/core_ext/object/acts_like.rb:8
+
+       142  "time"
+       142  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/core_ext/object/acts_like.rb:8
+
+       141  "discount_type_period_id"
+        59  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:81
+        59  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/result.rb:126
+        17  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:382
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:408
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods.rb:30
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods/read.rb:41
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:22
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/reflection.rb:668
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/inflector/methods.rb:237
+
+       138  "(?-mix:(?=a)b)"
+       138  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/inflector/methods.rb:93
+
+       138  "img_url"
+        59  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:81
+        59  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/result.rb:126
+        17  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:382
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:408
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods.rb:30
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:22
+
+       138  "price_new"
+        59  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:81
+        59  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/result.rb:126
+        17  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:382
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:408
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods.rb:30
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:22
+
+       138  "price_old"
+        59  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:81
+        59  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/result.rb:126
+        17  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:382
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:408
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods.rb:30
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:22
+
+       138  "small_img_url"
+        59  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:81
+        59  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/result.rb:126
+        17  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:382
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:408
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods.rb:30
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:22
+
+       137  "created_at"
+        59  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:81
+        59  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/result.rb:126
+        16  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:382
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:408
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods.rb:30
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:22
+
+
+Retained String Report
+-----------------------------------
+         8  "timestamp without time zone"
+         4  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:22
+         4  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/type_metadata.rb:17
+
+         6  "discount_type_period_id"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:382
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods.rb:30
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods/read.rb:41
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:22
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/reflection.rb:668
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/inflector/methods.rb:237
+
+         6  "discount_type_periods"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/quoting.rb:31
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/schema_cache.rb:41
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/schema_cache.rb:67
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/schema_cache.rb:73
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/model_schema.rb:518
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/sanitization.rb:90
+
+         5  ""
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/stream_reader.rb:47
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/stream_reader.rb:9
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http/headers.rb:107
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http/request.rb:22
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http/request.rb:24
+
+         5  "discount_type_id"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:382
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/associations/association_scope.rb:69
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods.rb:30
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods/read.rb:41
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:22
+
+         5  "discounts"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/quoting.rb:31
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/schema_cache.rb:41
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/schema_cache.rb:67
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/schema_cache.rb:73
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/model_schema.rb:518
+
+         4  "Discount"
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/concurrent-ruby-1.0.5/lib/concurrent/collection/map/non_concurrent_map_backend.rb:24
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/scoping.rb:92
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/inflector/methods.rb:70
+
+         4  "DiscountTypePeriod"
+         3  /Users/hmlon/.gem/ruby/2.4.2/gems/concurrent-ruby-1.0.5/lib/concurrent/collection/map/non_concurrent_map_backend.rb:24
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/inflector/methods.rb:70
+
+         4  "end_date"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:382
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods.rb:30
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:22
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/core_ext/hash/keys.rb:26
+
+         4  "id"
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:22
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:87
+
+         4  "integer"
+         4  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:22
+
+         4  "open"
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/event_emitter.rb:6
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/backports-3.8.0/lib/backports/std_lib.rb:9
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/server.rb:5
+
+         4  "start_date"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:382
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods.rb:30
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:22
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/core_ext/hash/keys.rb:26
+
+         3  "character varying"
+         3  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:22
+
+         3  "close"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/event_emitter.rb:6
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/server.rb:26
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/server.rb:5
+
+         3  "img_url"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:382
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods.rb:30
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:22
+
+         3  "message"
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/event_emitter.rb:6
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/server.rb:5
+
+         3  "price_new"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:382
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods.rb:30
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:22
+
+         3  "price_old"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:382
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods.rb:30
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:22
+
+         3  "small_img_url"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activemodel-5.1.2/lib/active_model/attribute_methods.rb:382
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods.rb:30
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:22
+
+         2  "//ul[contains(@class, 'product-list product-list__per-row-3')]/li[contains(@class, 'normal')]/a[contains(@class, 'product-list__item normal size-normal')]"
+         2  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/json/common.rb:224
+
+         2  "/usr/local/bin/phantomjs"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/cliver-0.3.2/lib/cliver/dependency.rb:209
+         1  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/set.rb:331
+
+         2  "127.0.0.1"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/poltergeist-1.16.0/lib/capybara/poltergeist/web_socket_server.rb:36
+         1  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/uri/rfc3986_parser.rb:41
+
+         2  "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/backports-3.8.0/lib/backports/std_lib.rb:9
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/hybi.rb:14
+
+         2  "HTTP_SEC_WEBSOCKET_EXTENSIONS"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/backports-3.8.0/lib/backports/std_lib.rb:9
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http/request.rb:34
+
+         2  "HTTP_SEC_WEBSOCKET_KEY"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/backports-3.8.0/lib/backports/std_lib.rb:9
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http/request.rb:34
+
+         2  "Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1"
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http/headers.rb:96
+
+         2  "SELECT  \"shops\".* FROM \"shops\" WHERE \"shops\".\"slug\" = $1 LIMIT $2"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract/database_statements.rb:15
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/arel-8.0.0/lib/arel/collectors/plain_string.rb:6
+
+         2  "Upgrade"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/backports-3.8.0/lib/backports/std_lib.rb:9
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http/headers.rb:96
+
+         2  "connection"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http/headers.rb:101
+         1  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/set.rb:331
+
+         2  "created_at"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods.rb:30
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:22
+
+         2  "double precision"
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:22
+
+         2  "eirOa03g5gVQcJpFSzVMDw=="
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http/headers.rb:96
+
+         2  "error"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/event_emitter.rb:6
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/server.rb:5
+
+         2  "frame"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/backports-3.8.0/lib/backports/std_lib.rb:9
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/server.rb:26
+
+         2  "name"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:22
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activesupport-5.1.2/lib/active_support/core_ext/hash/keys.rb:26
+
+         2  "no-cache"
+         2  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http/headers.rb:96
+
+         2  "ping"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/backports-3.8.0/lib/backports/std_lib.rb:9
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/server.rb:26
+
+         2  "protocol"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/backports-3.8.0/lib/backports/std_lib.rb:9
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/server.rb:37
+
+         2  "set_header"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/backports-3.8.0/lib/backports/std_lib.rb:9
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/driver/server.rb:26
+
+         2  "updated_at"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/attribute_methods.rb:30
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:22
+
+         2  "upgrade"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/websocket-driver-0.7.0/lib/websocket/http/headers.rb:101
+         1  /Users/hmlon/.rubies/ruby-2.4.2/lib/ruby/2.4.0/set.rb:331
+
+         1  "\"$user\", public-SELECT  \"discount_type_periods\".* FROM \"discount_type_periods\" WHERE \"discount_type_periods\".\"discount_type_id\" = $1 AND \"discount_type_periods\".\"start_date\" = $2 AND \"discount_type_per"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/statement_pool.rb:33
+
+         1  "\"$user\", public-SELECT  \"discounts\".* FROM \"discounts\" WHERE \"discounts\".\"discount_type_period_id\" = $1 AND \"discounts\".\"name\" = $2 ORDER BY \"discounts\".\"id\" ASC LIMIT $3"
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/statement_pool.rb:33
+
+         1  "\"((?:\\\\[\\x00-\\x7f]|[^\\x00-\\x08\\x0a-\\x1f\\x7f\"])*)\""
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/backports-3.8.0/lib/backports/std_lib.rb:9
+
+         1  "\"discount_type_id\""
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/quoting.rb:45
+
+         1  "\"discount_type_period_id\""
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/quoting.rb:45
+
+         1  "\"discount_type_periods\""
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/utils.rb:24
+
+         1  "\"discounts\""
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/utils.rb:24
+
+         1  "\"end_date\""
+         1  /Users/hmlon/.gem/ruby/2.4.2/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql/quoting.rb:45
+

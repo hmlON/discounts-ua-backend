@@ -12,9 +12,9 @@ end
 Capybara.default_driver = :poltergeist
 Capybara.default_selector = :xpath
 
-SHOP_CONFIGS = YAML.load(File.open './config/shops.yml').deep_symbolize_keys.freeze
+shop_configs = ShopsConfigs.new(path_to_config: './config/shops.yml')
 
-SHOP_CONFIGS.each do |shop_slug, shop_data|
+shop_configs.each do |shop_slug, shop_data|
   shop = ShopInitializer.new(slug: shop_slug, **shop_data).call
 
   shop_data[:discount_types].each do |discount_type_slug, discount_type_data|
