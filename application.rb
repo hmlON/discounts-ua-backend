@@ -17,28 +17,11 @@ end
 
 get '/api/shops' do
   shops = Shop.includes(discount_types: { periods: :discounts }).all
-  serializers = shops.map { |shop| ShopSerializer.new(shop) }
-  Thread.new { parse_discounts }
-  json shops: serializers
+  json shops: shops.as_json
 end
 
 get '/api/shops/:slug' do
   shop = Shop.includes(discount_types: { periods: :discounts }).find_by(slug: params[:slug])
-  Thread.new { parse_discounts }
+  Thread.new { ShopParser.new(shop).call }
   json ShopSerializer.new(shop)
-end
-
-def parse_discounts
-  SHOP_CONFIGS.each do |shop_slug, shop_data|
-    shop = Shop.find_by(slug: shop_slug)
-    shop_data[:discount_types].each do |discount_type_slug, discount_type_data|
-      discount_type = shop.discount_types.find_by(slug: discount_type_slug)
-      parser = DiscountTypeParser.new(discount_type_data)
-      DiscountsCreator.new(
-        discount_type: discount_type,
-        discount_type_parser: parser,
-        period: discount_type_data[:period]
-      ).call
-    end
-  end
 end

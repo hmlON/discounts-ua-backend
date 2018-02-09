@@ -19,6 +19,10 @@ class ShopConfigs
     end
   end
 
+  def find_shop_data(shop)
+    find { |shop_slug, shop_data| shop.slug == shop_slug.to_s }[1]
+  end
+
   private
 
   attr_reader :shop_configs
