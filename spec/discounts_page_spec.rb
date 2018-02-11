@@ -23,7 +23,7 @@ RSpec.describe DiscountsPage do
           discount_parser: discount_parser,
           discounts_xpath: "some-xpath",
           pagination: {
-            pages_count_xpath: "//a[contains(@class, 'pagination')]"
+            pages_count: 3
           }
         )
       end

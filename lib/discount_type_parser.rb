@@ -31,11 +31,10 @@ class DiscountTypeParser
   end
 
   def parse_next_pages
-    pages_count = page.total_pages_count
-    current_page = page
     discounts = []
+    current_page = page
 
-    2.upto(pages_count) do
+    while current_page.has_next? do
       current_page = current_page.next
       discounts += current_page.discounts
     end

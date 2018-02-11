@@ -24,13 +24,14 @@ class DiscountsPage
       .map { |discount_element| discount_parser.call(discount_element) }
   end
 
-  def total_pages_count
-    to_html.find(pagination[:pages_count_xpath]).text.to_i
+  def has_next?
+    pagination[:current_page_number] < total_pages_count
   end
 
   def next
     next_pagination_config = pagination.merge(
-      current_page_number: pagination[:current_page_number] + 1
+      current_page_number: pagination[:current_page_number] + 1,
+      pages_count: total_pages_count
     )
 
     self.class.new(
@@ -45,16 +46,14 @@ class DiscountsPage
   private
 
   def to_html
-    @to_html ||= begin
-      if js
-        browser = Capybara.current_session
-        browser.visit url
-        wait_for_loading
-        browser
-      else
-        body = Net::HTTP.get(URI(url))
-        Capybara.string(body)
-      end
+    @to_html ||= if js
+      browser = Capybara.current_session
+      browser.visit url
+      wait_for_loading
+      browser
+    else
+      body = Net::HTTP.get(URI(url))
+      Capybara.string(body)
     end
   end
 
@@ -66,6 +65,10 @@ class DiscountsPage
     @pagination[:current_page_number] ||= pagination[:starts_at] || 1
     @pagination[:parameter] ||= "page"
     @pagination[:step] ||= 1
+  end
+
+  def total_pages_count
+    pagination[:pages_count] || to_html.find(pagination[:pages_count_xpath]).text.to_i
   end
 
   # def wait_until
