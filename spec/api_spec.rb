@@ -28,7 +28,7 @@ RSpec.describe 'API', type: :controller do
     it 'should return json with all active discounts' do
       expect(last_response.status).to eq 200
       expect(json['discount_types'].count).to eq discount_types_count
-      expect(json['discount_types'][0]['active_period']['discounts'].count).to eq discounts_count
+      expect(json['discount_types'][0]['discounts'].count).to eq discounts_count
     end
   end
 end

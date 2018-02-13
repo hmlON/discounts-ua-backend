@@ -14,6 +14,8 @@ class DiscountType < ActiveRecord::Base
   validates :slug, presence: true
   validates :name, presence: true
 
+  delegate :discounts, :start_date, :end_date, to: :active_period
+
   def url
     shop.url + path
   end
