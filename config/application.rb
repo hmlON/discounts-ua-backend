@@ -2,14 +2,23 @@ Dir['./config/*.rb'].each { |file| require file }
 
 Time.zone = 'Europe/Kiev'
 
-Capybara.register_driver :poltergeist do |app|
-  Capybara::Poltergeist::Driver.new(
-    app,
-    js_errors: false,
-    phantomjs_options: ['--load-images=false']
-  )
+require "selenium/webdriver"
+
+Capybara.register_driver :chrome do |app|
+  Capybara::Selenium::Driver.new(app, browser: :chrome)
 end
-Capybara.default_driver = :poltergeist
+
+Capybara.register_driver :headless_chrome do |app|
+  capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
+    chromeOptions: { args: %w(headless disable-gpu) }
+  )
+
+  Capybara::Selenium::Driver.new app,
+    browser: :chrome,
+    desired_capabilities: capabilities
+end
+
+Capybara.default_driver = :chrome
 Capybara.default_selector = :xpath
 
 SHOP_CONFIGS = ShopConfigs.new(path_to_config: './config/shops.yml')

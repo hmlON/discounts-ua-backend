@@ -1,7 +1,6 @@
 require 'bundler'
 Bundler.require(:default)
 require 'sinatra/reloader' if development?
-require 'capybara/poltergeist'
 Dir['./app/models/*.rb'].each { |file| require file }
 Dir['./config/*.rb'].each { |file| require file }
 Dir['./lib/*.rb'].each { |file| require file }

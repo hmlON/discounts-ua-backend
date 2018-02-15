@@ -15,7 +15,7 @@ gem 'sinatra-activerecord'
 
 gem 'nokogiri'
 gem 'capybara'
-gem 'poltergeist'
+gem 'capybara-selenium'
 
 gem 'slim'
 

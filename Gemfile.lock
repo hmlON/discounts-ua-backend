@@ -43,9 +43,13 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    capybara-selenium (0.0.6)
+      capybara
+      selenium-webdriver
     case_transform (0.2)
       activesupport
-    cliver (0.3.2)
+    childprocess (0.8.0)
+      ffi (~> 1.0, >= 1.0.11)
     concurrent-ruby (1.0.5)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
@@ -55,6 +59,7 @@ GEM
     fabrication (2.16.2)
     faker (1.8.4)
       i18n (~> 0.5)
+    ffi (1.9.21)
     hashdiff (0.3.4)
     i18n (0.8.6)
     jsonapi-renderer (0.1.3)
@@ -70,10 +75,6 @@ GEM
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     pg (0.21.0)
-    poltergeist (1.16.0)
-      capybara (~> 2.1)
-      cliver (~> 0.3.1)
-      websocket-driver (>= 0.2.0)
     public_suffix (2.0.5)
     puma (3.9.1)
     rack (2.0.3)
@@ -100,7 +101,11 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.6.0)
     rspec-support (3.6.0)
+    rubyzip (1.2.1)
     safe_yaml (1.0.4)
+    selenium-webdriver (3.9.0)
+      childprocess (~> 0.5)
+      rubyzip (~> 1.2)
     sinatra (2.0.0)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -129,9 +134,6 @@ GEM
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
-    websocket-driver (0.7.0)
-      websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.3)
     xpath (2.1.0)
       nokogiri (~> 1.3)
 
@@ -143,12 +145,12 @@ DEPENDENCIES
   activerecord
   byebug
   capybara
+  capybara-selenium
   database_cleaner
   fabrication (~> 2.16.2)
   faker
   nokogiri
   pg (~> 0.21)
-  poltergeist
   puma
   rake
   rspec
