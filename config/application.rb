@@ -18,7 +18,7 @@ Capybara.register_driver :headless_chrome do |app|
     desired_capabilities: capabilities
 end
 
-Capybara.default_driver = :chrome
+Capybara.default_driver = :headless_chrome
 Capybara.default_selector = :xpath
 
 SHOP_CONFIGS = ShopConfigs.new(path_to_config: './config/shops.yml')

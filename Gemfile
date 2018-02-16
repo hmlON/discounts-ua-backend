@@ -28,4 +28,9 @@ group :test do
   gem 'webmock'
 end
 
+group :development do
+  gem 'byebug'
+  gem 'memory_profiler'
+end
+
 gem 'byebug', require: false
