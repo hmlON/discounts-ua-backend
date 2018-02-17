@@ -22,8 +22,8 @@ end
 
 get '/api/shops/:slug' do
   shop = Shop.includes(discount_types: { periods: :discounts }).find_by(slug: params[:slug])
+  Thread.new { ShopParser.new(shop).call }
   if shop.discount_types.none?(&:active_period)
-    Thread.new { ShopParser.new(shop).call }
     json(started_parsing: true)
   else
     json ShopSerializer.new(shop)

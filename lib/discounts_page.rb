@@ -19,6 +19,7 @@ class DiscountsPage
   end
 
   def discounts
+    puts "DiscountsPage: parsing #{url}"
     to_html
       .all(discounts_xpath)
       .map { |discount_element| discount_parser.call(discount_element) }

@@ -9,8 +9,10 @@ class DiscountTypeParser
   end
 
   def call
+    puts "DiscountTypeParser: started parsing #{config[:url]}"
     discounts = page.discounts
     discounts += parse_next_pages if pagination?
+    puts "DiscountTypeParser: finished parsing #{config[:url]}"
     discounts
   end
 

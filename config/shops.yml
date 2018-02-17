@@ -45,7 +45,7 @@ silpo:
 
 atb:
   name: АТБ
-  url: https://silpo.ua
+  url: http://www.atbmarket.com
   discount_types:
     economy:
       name: Економія
