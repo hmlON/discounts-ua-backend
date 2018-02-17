@@ -6,7 +6,6 @@ class ShopParser
   end
 
   def call
-    puts "parsing #{shop.name}"
     shop_data = SHOP_CONFIGS.find_shop_data(shop)
 
     shop_data[:discount_types].map do |discount_type_slug, discount_type_data|
