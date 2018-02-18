@@ -9,8 +9,11 @@ Capybara.register_driver :chrome do |app|
 end
 
 Capybara.register_driver :headless_chrome do |app|
+  chrome_binary = ENV.fetch('GOOGLE_CHROME_SHIM', nil)
+  chrome_binary_opts = chrome_binary ? { binary: chrome_binary } : {}
+
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
-    chromeOptions: { args: %w(headless disable-gpu) }
+    chromeOptions: { args: %w(headless disable-gpu) }.merge(chrome_binary_opts)
   )
 
   Capybara::Selenium::Driver.new app,
