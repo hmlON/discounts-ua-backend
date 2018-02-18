@@ -2,6 +2,7 @@ require 'bundler'
 Bundler.require(:default)
 Bundler.require(:development) if development?
 require 'sinatra/reloader' if development?
+require 'sidekiq/web'
 Dir['./app/models/*.rb'].each { |file| require file }
 Dir['./config/*.rb'].each { |file| require file }
 Dir['./lib/*.rb'].each { |file| require file }
