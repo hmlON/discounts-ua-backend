@@ -6,16 +6,26 @@ class ShopParser
   end
 
   def call
-    shop_data = SHOP_CONFIGS.find_shop_data(shop)
-
     shop_data[:discount_types].map do |discount_type_slug, discount_type_data|
-      discount_type = shop.discount_types.find_by(slug: discount_type_slug)
-      parser = DiscountTypeParser.new(discount_type_data)
-      DiscountsCreator.new(
-        discount_type: discount_type,
-        discount_type_parser: parser,
-        period: discount_type_data[:period]
-      ).call
+      PeriodicAction.not_often_than(15.minutes, ['parsing', shop.slug, discount_type_slug]) do
+        parse_discount_type(discount_type_slug, discount_type_data)
+      end
     end
+  end
+
+  private
+
+  def shop_data
+    SHOP_CONFIGS.find_shop_data(shop)
+  end
+
+  def parse_discount_type(discount_type_slug, discount_type_data)
+    discount_type = shop.discount_types.find_by(slug: discount_type_slug)
+    parser = DiscountTypeParser.new(discount_type_data)
+    DiscountsCreator.new(
+      discount_type: discount_type,
+      discount_type_parser: parser,
+      period: discount_type_data[:period]
+    ).call
   end
 end
