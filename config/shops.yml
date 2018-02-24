@@ -28,7 +28,7 @@ silpo:
       js: true
       period:
         starts_at: 18 Jan 2018
-        duration_in_days: 7
+        duration_in_days: 1
       discounts_xpath: (//ul[contains(@class, 'product-list')])[1]//a[contains(@class, 'product-list__item')]
       discount:
         name_xpath: //div[contains(@class, 'product-list__item-description')]
