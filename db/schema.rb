@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180120091357) do
+ActiveRecord::Schema.define(version: 20180224194401) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20180120091357) do
     t.integer "shop_id", null: false
     t.string "path"
     t.string "slug"
+    t.boolean "periodic", default: false
     t.index ["shop_id"], name: "index_discount_types_on_shop_id"
   end
 

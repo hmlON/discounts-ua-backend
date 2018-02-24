@@ -3,6 +3,7 @@
 #
 # Schema:
 # t.string "slug"
+# t.boolean "periodic", default: false
 # t.string "name", null: false
 # t.integer "shop_id", null: false
 # t.string "path"
