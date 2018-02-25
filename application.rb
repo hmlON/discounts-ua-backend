@@ -21,9 +21,9 @@ class ShopParserWorker
 
     PeriodicAction.not_often_than(1.day, ['parsing', shop.slug, Date.today]) do
       ShopParser.new(shop).call
-    end
 
-    self.class.perform_at(Date.tomorrow.beginning_of_day + (shop.id.seconds * 5), shop_id)
+      self.class.perform_at(Date.tomorrow.beginning_of_day + (shop.id.seconds * 5), shop_id)
+    end
   end
 end
 
