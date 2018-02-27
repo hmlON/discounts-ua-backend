@@ -8,6 +8,6 @@
 class Shop < ActiveRecord::Base
   has_many :discount_types, dependent: :destroy
 
-  validates :slug, presence: true
+  validates :slug, presence: true, uniqueness: true
   validates :name, presence: true
 end

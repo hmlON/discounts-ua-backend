@@ -1,3 +1,5 @@
+Dir['./config/initializers/*.rb'].each { |file| require file }
+
 class ShopConfigs
   include Enumerable
 

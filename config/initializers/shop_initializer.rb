@@ -7,7 +7,7 @@ class ShopInitializer
   end
 
   def call
-    shop = Shop.find_or_create_by(slug: data[:slug])
+    shop = Shop.find_or_initialize_by(slug: data[:slug])
     shop.name = data[:name]
     shop.url = data[:url]
     shop.save!
