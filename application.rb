@@ -11,11 +11,20 @@ Dir['./app/services/*.rb'].each { |file| require file }
 set :serializers_path, './models/serializers'
 
 class ShopParserWorker
-  include Sidekiq::Worker
+  # Run to start jobs
+  # Shop.find_each.with_index(1) do |shop, i|
+  #   ShopParserWorker.perform_in(i.minutes, shop.id)
+  # end
+  include Sidekiq::Worker 
 
   def perform(shop_id)
     shop = Shop.find(shop_id)
-    ShopParser.new(shop).call
+
+    PeriodicAction.not_often_than(1.day, ['parsing', shop.slug, Date.today]) do
+      ShopParser.new(shop).call
+
+      self.class.perform_at(Date.tomorrow.beginning_of_day + (shop.id.seconds * 5), shop_id)
+    end
   end
 end
 

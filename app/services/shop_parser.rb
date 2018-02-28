@@ -7,9 +7,7 @@ class ShopParser
 
   def call
     shop_data[:discount_types].map do |discount_type_slug, discount_type_data|
-      PeriodicAction.not_often_than(15.minutes, ['parsing', shop.slug, discount_type_slug, Date.today]) do
-        parse_discount_type(discount_type_slug, discount_type_data)
-      end
+      parse_discount_type(discount_type_slug, discount_type_data)
     end
   end
 
