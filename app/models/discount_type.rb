@@ -24,4 +24,8 @@ class DiscountType < ActiveRecord::Base
   def active_period
     periods.find_by('end_date >= ?', Date.today)
   end
+
+  def last_updated_at
+    discounts.pluck(:created_at).max
+  end
 end
