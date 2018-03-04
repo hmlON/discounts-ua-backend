@@ -17,11 +17,11 @@ silpo:
         new_price_integer_xpath: //div[contains(@class, 'product-price__integer')]
         new_price_fraction_xpath: //div[contains(@class, 'product-price__fraction')]
         old_price_xpath: //div[contains(@class, 'product-price__other')]/div[contains(@class, 'product-price__old')]
-      pagination:
-        parameter: offset
-        starts_at: 0
-        step: 6
-        pages_count_xpath: //a[contains(@class, 'pagination-link')][3]
+      # pagination:
+      #   parameter: offset
+      #   starts_at: 0
+      #   step: 6
+      #   pages_count_xpath: //a[contains(@class, 'pagination-link')][3]
     own_import_discounts:
       name: Акції Власного імпорту
       url: https://silpo.ua/offers/akciyi-vlasnogo-importu
@@ -34,11 +34,11 @@ silpo:
         new_price_integer_xpath: //div[contains(@class, 'product-price__integer')]
         new_price_fraction_xpath: //div[contains(@class, 'product-price__fraction')]
         old_price_xpath: //div[contains(@class, 'product-price__other')]/div[contains(@class, 'product-price__old')]
-      pagination:
-        parameter: offset
-        starts_at: 0
-        step: 6
-        pages_count_xpath: //a[contains(@class, 'pagination-link')][3]
+      # pagination:
+      #   parameter: offset
+      #   starts_at: 0
+      #   step: 6
+      #   pages_count_xpath: //a[contains(@class, 'pagination-link')][3]
 
 atb:
   name: АТБ
