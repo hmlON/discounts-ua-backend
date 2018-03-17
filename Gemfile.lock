@@ -62,9 +62,13 @@ GEM
     faker (1.8.7)
       i18n (>= 0.7)
     ffi (1.9.21)
+    haml (5.0.4)
+      temple (>= 0.8.0)
+      tilt
     hashdiff (0.3.7)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
+    json (2.1.0)
     jsonapi-renderer (0.2.0)
     loofah (2.2.0)
       crass (~> 1.0.2)
@@ -86,6 +90,10 @@ GEM
       rack
     rack-test (0.8.2)
       rack (>= 1.0, < 3)
+    raddocs (2.2.0)
+      haml (>= 4.0)
+      json
+      sinatra (~> 2.0)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -135,6 +143,7 @@ GEM
       rack-protection (= 2.0.1)
       sinatra (= 2.0.1)
       tilt (>= 1.3, < 3)
+    temple (0.8.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
     tzinfo (1.2.5)
@@ -163,6 +172,7 @@ DEPENDENCIES
   nokogiri
   pg (~> 0.21)
   puma
+  raddocs
   rake
   rspec
   rspec_api_documentation

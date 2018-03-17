@@ -14,7 +14,9 @@ require File.expand_path '../../application.rb', __FILE__
 RSpec.configure do |config|
   include Rack::Test::Methods
   def app
-    Sinatra::Application
+    Rack::URLMap.new(
+      '/api' => ApiController
+    )
   end
 
   Capybara.app = app

@@ -1,6 +1,7 @@
 require './application'
-# run Sinatra::Application
+
 run Rack::URLMap.new(
-  '/' => Sinatra::Application,
+  '/' => Raddocs::App,
+  '/api' => ApiController,
   '/sidekiq' => Sidekiq::Web
 )

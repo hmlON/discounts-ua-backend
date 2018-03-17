@@ -18,6 +18,7 @@ gem 'capybara'
 gem 'capybara-selenium'
 gem 'nokogiri'
 
+gem 'raddocs'
 gem 'rspec_api_documentation'
 
 group :test do
