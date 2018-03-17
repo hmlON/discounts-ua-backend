@@ -1,34 +1,35 @@
-RSpec.describe 'API', type: :controller do
-  describe 'GET /api/shops' do
-    let!(:shops) do
-      Shop.destroy_all
-      Fabricate.times(2, :shop)
+require 'rspec_api_documentation/dsl'
+
+RSpec.describe 'API' do
+  let(:json) { JSON.parse(response_body) }
+
+  resource 'Shops' do
+    get '/api/shops' do
+      before { DatabaseCleaner.clean_with(:truncation) }
+      let!(:shops) { Fabricate.times(shops_count, :shop) }
+      let(:shops_count) { 2 }
+
+      before { do_request }
+      example 'Receive a list of shops' do
+        expect(status).to eq 200
+        expect(json['shops'].count).to eq shops_count
+        expect(json['shops'][0]['slug']).to eq Shop.first.slug
+      end
     end
-    subject! { get '/api/shops' }
 
-    let(:json) { JSON.parse(last_response.body)['shops'] }
-    let(:shops_count) { 2 }
+    get '/api/shops/:slug' do
+      let(:slug) { 'shopik' }
+      let!(:shop) { Fabricate(:shop, slug: slug) }
+      let(:discount_types_count) { 4 }
+      let(:discounts_count) { 10 }
 
-    it 'should return json with all active discounts' do
-      expect(last_response.status).to eq 200
-      expect(json.count).to eq shops_count
-      expect(json[0]['slug']).to eq Shop.first.slug
-    end
-  end
+      before { do_request }
 
-  describe 'GET /api/shops/:shop' do
-    let(:slug) { 'shopik' }
-    let!(:shops) { Fabricate(:shop, slug: slug) }
-    subject! { get "/api/shops/#{slug}" }
-
-    let(:json) { JSON.parse(last_response.body) }
-    let(:discount_types_count) { 4 }
-    let(:discounts_count) { 10 }
-
-    it 'should return json with all active discounts' do
-      expect(last_response.status).to eq 200
-      expect(json['discount_types'].count).to eq discount_types_count
-      expect(json['discount_types'][0]['discounts'].count).to eq discounts_count
+      example 'Receive a single shop' do
+        expect(status).to eq 200
+        expect(json['discount_types'].count).to eq discount_types_count
+        expect(json['discount_types'][0]['discounts'].count).to eq discounts_count
+      end
     end
   end
 end
