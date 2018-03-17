@@ -1,0 +1,24 @@
+{
+  "resources": [
+    {
+      "name": "Shops",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Receive a list of shops",
+          "link": "shops/receive_a_list_of_shops.json",
+          "groups": "all",
+          "route": "/api/shops",
+          "method": "get"
+        },
+        {
+          "description": "Receive a single shop",
+          "link": "shops/receive_a_single_shop.json",
+          "groups": "all",
+          "route": "/api/shops/:slug",
+          "method": "get"
+        }
+      ]
+    }
+  ]
+}

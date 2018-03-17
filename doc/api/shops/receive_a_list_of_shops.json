@@ -1,0 +1,42 @@
+{
+  "resource": "Shops",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/api/shops",
+  "description": "Receive a list of shops",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/shops",
+      "request_body": null,
+      "request_headers": {
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"shops\": [\n    {\n      \"id\": 1,\n      \"name\": \"Bruen, Schultz and Buckridge\",\n      \"url\": null,\n      \"slug\": \"bruen-schultz-and-buckridge\"\n    },\n    {\n      \"id\": 2,\n      \"name\": \"D'Amore-Weissnat\",\n      \"url\": null,\n      \"slug\": \"d-amore-weissnat\"\n    }\n  ]\n}",
+      "response_headers": {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET",
+        "Access-Control-Request-Method": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization",
+        "Content-Length": "178",
+        "X-Content-Type-Options": "nosniff"
+      },
+      "response_content_type": "application/json",
+      "curl": null
+    }
+  ]
+}
