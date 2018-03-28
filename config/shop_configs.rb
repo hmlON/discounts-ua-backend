@@ -4,7 +4,7 @@ class ShopConfigs
   include Enumerable
 
   def initialize(path_to_config:)
-    @shop_configs = YAML.load(File.open path_to_config).deep_symbolize_keys
+    @shop_configs = YAML.safe_load(File.open(path_to_config)).deep_symbolize_keys
   end
 
   def each
@@ -22,7 +22,7 @@ class ShopConfigs
   end
 
   def find_shop_data(shop)
-    find { |shop_slug, shop_data| shop.slug == shop_slug.to_s }[1]
+    find { |shop_slug, _shop_data| shop.slug == shop_slug.to_s }[1]
   end
 
   private
