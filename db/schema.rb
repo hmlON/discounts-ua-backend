@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180224194401) do
+ActiveRecord::Schema.define(version: 20180328195745) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20180224194401) do
     t.string "name", null: false
     t.string "url"
     t.string "slug"
+    t.index ["slug"], name: "index_shops_on_slug", unique: true
   end
 
   add_foreign_key "discount_type_periods", "discount_types"
