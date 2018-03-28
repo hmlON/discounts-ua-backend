@@ -25,5 +25,3 @@ Capybara.default_driver = :headless_chrome
 Capybara.default_selector = :xpath
 
 SHOP_CONFIGS = ShopConfigs.new(path_to_config: './config/shops.yml')
-
-SHOP_CONFIGS.initialize_shops
