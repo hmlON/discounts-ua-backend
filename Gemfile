@@ -18,6 +18,8 @@ gem 'capybara'
 gem 'capybara-selenium'
 gem 'nokogiri'
 
+gem 'bugsnag'
+
 gem 'raddocs'
 gem 'rspec_api_documentation'
 

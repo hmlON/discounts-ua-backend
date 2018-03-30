@@ -34,6 +34,8 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
     backports (3.11.1)
+    bugsnag (6.6.4)
+      concurrent-ruby (~> 1.0)
     builder (3.2.3)
     byebug (10.0.0)
     capybara (2.18.0)
@@ -162,6 +164,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers (~> 0.10.0)
   activerecord
+  bugsnag
   byebug
   capybara
   capybara-selenium
