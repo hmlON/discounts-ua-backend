@@ -11,9 +11,14 @@ Dir['./app/services/*.rb'].each { |file| require file }
 
 desc 'Parse shops'
 task :parse do
+  start = Time.current
+
   Shop.find_each do |shop|
     ShopParser.new(shop).call
   end
+
+  finish = Time.current
+  Snitcher.snitch('88b31783c3', message: "Finished in #{(finish - start).round(3)} seconds.")
 end
 
 desc 'Generate API request documentation from API specs'
