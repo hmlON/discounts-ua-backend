@@ -26,3 +26,8 @@ RSpec::Core::RakeTask.new('docs:generate') do |t|
   t.pattern = 'spec/api_spec.rb'
   t.rspec_opts = ['--format RspecApiDocumentation::ApiFormatter']
 end
+
+desc 'Parse shops'
+task :seed_shops do
+  SHOP_CONFIGS.initialize_shops
+end
