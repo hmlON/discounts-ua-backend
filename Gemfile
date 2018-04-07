@@ -28,6 +28,7 @@ group :test do
   gem 'database_cleaner'
   gem 'fabrication', '~> 2.16.2'
   gem 'faker'
+  gem 'json_spec'
   gem 'rspec'
   gem 'vcr'
   gem 'webmock'

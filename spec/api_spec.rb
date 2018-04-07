@@ -1,7 +1,7 @@
 require 'rspec_api_documentation/dsl'
 
 RSpec.describe 'API' do
-  let(:json) { JSON.parse(response_body) }
+  let(:json) { response_body }
 
   resource 'Shops' do
     get '/api/shops' do
@@ -12,8 +12,11 @@ RSpec.describe 'API' do
       before { do_request }
       example 'Receive a list of shops' do
         expect(status).to eq 200
-        expect(json['shops'].count).to eq shops_count
-        expect(json['shops'][0]['slug']).to eq Shop.first.slug
+        expect(json).to have_json_path('shops')
+        expect(json).to have_json_size(shops_count).at_path('shops')
+        Shop.all.each do |shop|
+          expect(json).to include(shop.to_json)
+        end
       end
     end
 
@@ -27,8 +30,8 @@ RSpec.describe 'API' do
 
       example 'Receive a single shop' do
         expect(status).to eq 200
-        expect(json['discount_types'].count).to eq discount_types_count
-        expect(json['discount_types'][0]['discounts'].count).to eq discounts_count
+        expect(json).to have_json_size(discount_types_count).at_path('discount_types')
+        expect(json).to have_json_size(discounts_count).at_path('discount_types/0/discounts')
       end
     end
   end

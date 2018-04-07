@@ -51,4 +51,6 @@ RSpec.configure do |config|
     config.app = app
     config.format = :json
   end
+
+  config.include JsonSpec::Helpers
 end

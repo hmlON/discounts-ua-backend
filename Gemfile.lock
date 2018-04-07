@@ -71,6 +71,9 @@ GEM
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     json (2.1.0)
+    json_spec (1.1.5)
+      multi_json (~> 1.0)
+      rspec (>= 2.0, < 4.0)
     jsonapi-renderer (0.2.0)
     loofah (2.2.0)
       crass (~> 1.0.2)
@@ -172,6 +175,7 @@ DEPENDENCIES
   database_cleaner
   fabrication (~> 2.16.2)
   faker
+  json_spec
   memory_profiler
   nokogiri
   pg (~> 0.21)
