@@ -37,4 +37,6 @@ end
 group :development do
   gem 'byebug'
   gem 'memory_profiler'
+
+  gem 'rubocop', require: false
 end

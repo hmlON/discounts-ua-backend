@@ -6,6 +6,6 @@ class DiscountTypeSerializer < ActiveModel::Serializer
     :last_updated_at,
     :start_date,
     :end_date,
-    :discounts,
+    :discounts
   )
 end

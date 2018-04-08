@@ -48,13 +48,13 @@ class DiscountsPage
 
   def to_html
     @to_html ||= if js
-      browser = Capybara.current_session
-      browser.visit url
-      wait_for_loading
-      browser
-    else
-      body = Net::HTTP.get(URI(url))
-      Capybara.string(body)
+                   browser = Capybara.current_session
+                   browser.visit url
+                   wait_for_loading
+                   browser
+                 else
+                   body = Net::HTTP.get(URI(url))
+                   Capybara.string(body)
     end
   end
 
@@ -64,7 +64,7 @@ class DiscountsPage
 
   def set_pagination_defaults
     @pagination[:current_page_number] ||= pagination[:starts_at] || 1
-    @pagination[:parameter] ||= "page"
+    @pagination[:parameter] ||= 'page'
     @pagination[:step] ||= 1
   end
 

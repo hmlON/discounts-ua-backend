@@ -1,18 +1,40 @@
+Style/Documentation:
+  Enabled: false
+  # Exclude:
+  #   - 'shop_parsers/*/*.rb'
+
 Metrics/LineLength:
   Max: 120
+  Exclude:
+    - 'spec/**/*'
+
+# Metrics/AbcSize:
+#   Max: 20
+#   Exclude:
+#     - 'app/models/user.rb'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
 
 Style/Documentation:
   Exclude:
-    - 'shop_parsers/*/*.rb'
+    - 'spec/**/*'
+    - 'app/controllers/*.rb'
+    - 'app/models/application_record.rb'
+    - 'config/application.rb'
 
-Style/MutableConstant:
-  Enabled: false
+Style/BlockDelimiters:
+  Exclude:
+    - 'spec/**/*'
 
 Metrics/BlockLength:
   Exclude:
-    - 'spec/spec_helper.rb'
+    - 'spec/**/*'
+    - 'config/initializers/simple_form_bootstrap.rb'
+    - 'config/environments/*'
 
 AllCops:
   Exclude:
     - 'db/schema.rb'
     - 'db/migrate/*.rb'
+    - 'spec/spec_helper.rb'

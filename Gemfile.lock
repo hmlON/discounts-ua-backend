@@ -33,6 +33,7 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
+    ast (2.4.0)
     backports (3.11.1)
     bugsnag (6.6.4)
       concurrent-ruby (~> 1.0)
@@ -87,7 +88,11 @@ GEM
     mustermann (1.0.2)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
+    parallel (1.12.1)
+    parser (2.5.0.5)
+      ast (~> 2.4.0)
     pg (0.21.0)
+    powerpack (0.1.1)
     public_suffix (3.0.2)
     puma (3.11.2)
     rack (2.0.4)
@@ -104,6 +109,7 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rainbow (3.0.0)
     rake (12.3.0)
     redis (4.0.1)
     rspec (3.7.0)
@@ -123,6 +129,14 @@ GEM
       activesupport (>= 3.0.0)
       mustache (~> 1.0, >= 0.99.4)
       rspec (~> 3.0)
+    rubocop (0.54.0)
+      parallel (~> 1.10)
+      parser (>= 2.5)
+      powerpack (~> 0.1)
+      rainbow (>= 2.2.2, < 4.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (~> 1.0, >= 1.0.1)
+    ruby-progressbar (1.9.0)
     rubyzip (1.2.1)
     safe_yaml (1.0.4)
     selenium-webdriver (3.9.0)
@@ -154,6 +168,7 @@ GEM
     tilt (2.0.8)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
+    unicode-display_width (1.3.0)
     vcr (4.0.0)
     webmock (3.3.0)
       addressable (>= 2.3.6)
@@ -184,6 +199,7 @@ DEPENDENCIES
   rake
   rspec
   rspec_api_documentation
+  rubocop
   sidekiq
   sinatra
   sinatra-activerecord

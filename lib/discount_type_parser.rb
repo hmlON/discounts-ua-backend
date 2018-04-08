@@ -36,7 +36,7 @@ class DiscountTypeParser
     discounts = []
     current_page = page
 
-    while current_page.has_next? do
+    while current_page.has_next?
       current_page = current_page.next
       discounts += current_page.discounts
     end
