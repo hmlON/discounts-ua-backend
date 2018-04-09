@@ -40,13 +40,17 @@ class DiscountParser
 
   def parse_price(type)
     price_is_divided = rules[:"#{type}_price_divided"]
-    price = if price_is_divided
-              integer = discount_element.find('.' + rules[:"#{type}_price_integer_xpath"]).text
-              fraction = discount_element.find('.' + rules[:"#{type}_price_fraction_xpath"]).text
-              "#{integer}.#{fraction}"
-            else
-              discount_element.find('.' + rules[:"#{type}_price_xpath"]).text
-            end
+    price = price_is_divided ? parse_divided_price(type) : parse_regular_price(type)
     price.to_f
+  end
+
+  def parse_divided_price(type)
+    integer = discount_element.find('.' + rules[:"#{type}_price_integer_xpath"]).text
+    fraction = discount_element.find('.' + rules[:"#{type}_price_fraction_xpath"]).text
+    "#{integer}.#{fraction}"
+  end
+
+  def parse_regular_price(type)
+    discount_element.find('.' + rules[:"#{type}_price_xpath"]).text
   end
 end
