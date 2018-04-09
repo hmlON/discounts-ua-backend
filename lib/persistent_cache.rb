@@ -10,6 +10,6 @@ class PersistentCache
   end
 
   def self.cache
-    @@cache ||= Redis.new
+    @cache ||= Redis.new
   end
 end

@@ -55,7 +55,7 @@ class DiscountsPage
                  else
                    body = Net::HTTP.get(URI(url))
                    Capybara.string(body)
-    end
+                 end
   end
 
   def pagination?

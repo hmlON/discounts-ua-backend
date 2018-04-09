@@ -5,6 +5,7 @@ class DiscountsCreator
     @discount_type = discount_type
     @discount_type_parser = discount_type_parser
     @period = period
+    @period = { starts_at: Date.today.to_s, duration_in_days: 1 } unless period
   end
 
   def call
@@ -29,14 +30,9 @@ class DiscountsCreator
   end
 
   def current_period_date_range
-    if period
-      global_starts_at = Date.parse(period[:starts_at])
-      starts_at = Date.today - ((Date.today - global_starts_at).to_i % period[:duration_in_days]).days
-      ends_at = starts_at + period[:duration_in_days].days
-    else
-      starts_at = Date.today
-      ends_at = Date.tomorrow
-    end
+    global_starts_at = Date.parse(period[:starts_at])
+    starts_at = Date.today - ((Date.today - global_starts_at).to_i % period[:duration_in_days]).days
+    ends_at = starts_at + period[:duration_in_days].days
 
     starts_at..ends_at
   end

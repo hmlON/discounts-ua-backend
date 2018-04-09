@@ -7,7 +7,6 @@
 # t.datetime "created_at",              null: false
 # t.datetime "updated_at",              null: false
 # t.integer  "discount_type_period_id", null: false
-
 class Discount < ActiveRecord::Base
   belongs_to :discount_type_period
 
