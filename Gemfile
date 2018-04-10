@@ -39,4 +39,5 @@ group :development do
   gem 'memory_profiler'
 
   gem 'rubocop', require: false
+  gem 'reek', require: false
 end

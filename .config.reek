@@ -1,0 +1,49 @@
+DuplicateMethodCall:
+  max_calls: 2
+
+TooManyStatements:
+  max_statements: 6
+
+"config/":
+  IrresponsibleModule:
+    enabled: false
+  NestedIterators:
+    enabled: false
+  UtilityFunction:
+    enabled: false
+
+"app/controllers":
+  IrresponsibleModule:
+    enabled: false
+
+"app/workers":
+  IrresponsibleModule:
+    enabled: false
+  UtilityFunction:
+    enabled: false
+
+"app/serializers":
+  IrresponsibleModule:
+    enabled: false
+
+"db/migrate":
+  IrresponsibleModule:
+    enabled: false
+  TooManyStatements:
+    enabled: false
+  DuplicateMethodCall:
+    enabled: false
+  FeatureEnvy:
+    enabled: false
+  UncommunicativeVariableName:
+    enabled: false
+
+"spec/":
+  IrresponsibleModule:
+    enabled: false
+  UncommunicativeMethodName:
+    enabled: false
+  DuplicateMethodCall:
+    enabled: false
+  UtilityFunction:
+    enabled: false
