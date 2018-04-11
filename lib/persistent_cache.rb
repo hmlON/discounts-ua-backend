@@ -1,3 +1,4 @@
+# Persistent cache that uses redis
 class PersistentCache
   def self.write(key, value, expires_in:)
     cache.set(key, value)

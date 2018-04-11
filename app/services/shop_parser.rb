@@ -1,3 +1,4 @@
+# Prepares all necessary modules for DiscountTypeParser and parses every discount type
 class ShopParser
   attr_reader :shop
 

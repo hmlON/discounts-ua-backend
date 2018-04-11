@@ -1,3 +1,4 @@
+# Parses discount by rules specified in config
 class DiscountParser
   attr_reader :discount_element, :rules
 

@@ -1,3 +1,4 @@
+# Parses discounts page by rules specified in config
 class DiscountsPage
   attr_reader :discounts_url, :discounts_xpath, :discount_parser, :pagination, :js
 

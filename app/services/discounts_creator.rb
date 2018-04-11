@@ -1,3 +1,4 @@
+# Creates discounts from hash passed from discounts parser
 class DiscountsCreator
   attr_reader :discount_type, :discount_type_parser, :period
 

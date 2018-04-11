@@ -1,6 +1,7 @@
 require './lib/discounts_page'
 require './lib/discount_parser'
 
+# Parses discount type by rules specified in config
 class DiscountTypeParser
   attr_reader :config
 

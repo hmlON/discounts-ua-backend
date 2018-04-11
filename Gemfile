@@ -38,6 +38,6 @@ group :development do
   gem 'byebug'
   gem 'memory_profiler'
 
-  gem 'rubocop', require: false
   gem 'reek', require: false
+  gem 'rubocop', require: false
 end
