@@ -91,7 +91,7 @@ class DiscountsPage
     new_discounts_are_being_loaded = true
     min_down_presses = stop_down_presses = 20
 
-    while new_discounts_are_being_loaded do
+    while new_discounts_are_being_loaded
       first_discount.send_keys(:page_down)
       sleep(0.01)
 
