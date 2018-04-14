@@ -25,7 +25,8 @@ class DiscountTypeParser
       discounts_xpath: config[:discounts_xpath],
       discount_parser: discount_parser,
       pagination:      config[:pagination],
-      js:              config[:js]
+      js:              config[:js],
+      scroll_to_load:  config[:scroll_to_load]
     )
   end
 
