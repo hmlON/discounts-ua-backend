@@ -18,6 +18,8 @@ class DiscountParser
   end
 
   def name
+    return unless rules[:name_xpath]
+
     discount_element.find('.' + rules[:name_xpath]).text
                     .gsub(/\s+/, ' ')
                     .strip
@@ -32,6 +34,8 @@ class DiscountParser
   end
 
   def image
+    return unless rules[:image_xpath]
+
     @image = discount_element.find('.' + rules[:image_xpath])[:src]
     @image = rules[:image_base_url] + @image if rules[:image_relative_url]
     @image
@@ -40,6 +44,8 @@ class DiscountParser
   private
 
   def parse_price(type)
+    return unless rules[:"#{type}_price_xpath"] || rules[:"#{type}_price_divided"]
+
     price_is_divided = rules[:"#{type}_price_divided"]
     price = price_is_divided ? parse_divided_price(type) : parse_regular_price(type)
     price.to_f

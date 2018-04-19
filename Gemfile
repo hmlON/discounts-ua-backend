@@ -36,6 +36,7 @@ end
 
 group :development do
   gem 'byebug'
+  gem 'hirb', require: true
   gem 'memory_profiler'
 
   gem 'reek', require: false
