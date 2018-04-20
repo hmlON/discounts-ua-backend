@@ -37,7 +37,7 @@ class DiscountParser
     return unless rules[:image_xpath]
 
     @image = discount_element.find('.' + rules[:image_xpath])[:src]
-    @image = rules[:image_base_url] + @image if rules[:image_relative_url]
+    @image = rules[:image_base_url] + @image unless @image.starts_with?('http')
     @image
   end
 
