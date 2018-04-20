@@ -52,3 +52,16 @@ atb:
         new_price_integer_xpath: //div[contains(@class, 'promo_price')]/text()
         new_price_fraction_xpath: //div[contains(@class, 'promo_price')]/span[1]
         old_price_xpath: //span[contains(@class, 'promo_old_price')]
+
+megamarket:
+  name: Мегамаркет
+  url: https://megamarket.ua
+  discount_types:
+    discounts:
+      name: Акції
+      url: https://megamarket.ua/ua/actions
+      discounts_xpath: //a[contains(@class, 'action')]
+      discount:
+        image_xpath: //img
+      pagination:
+        pages_count_xpath: //li[contains(@class, 'page_no')][last()]
