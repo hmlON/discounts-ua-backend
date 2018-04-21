@@ -21,6 +21,7 @@ class DiscountsCreator
     )
     discount.price_old = discount_data[:old_price]
     discount.price_new = discount_data[:new_price]
+    discount.width_on_mobile = discount_data[:width_on_mobile]
     discount.save!
     discount
   end

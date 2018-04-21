@@ -28,7 +28,8 @@ RSpec.describe DiscountTypeParser do
         image: 'http://www.atbmarket.com/attachments/product/d/0/7/5/5/d07558e0a9d07eea6bb86930cab1d4b8.jpg',
         name: 'Ветчина Куриная, варёная ТМ «Своя Лінія» - 500 г',
         new_price: 39.95,
-        old_price: 46.95
+        old_price: 46.95,
+        width_on_mobile: nil
       )
       expect(subject.count).to eq 5
     end

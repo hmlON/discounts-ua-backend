@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180418215330) do
+ActiveRecord::Schema.define(version: 20180421115546) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20180418215330) do
     t.datetime "updated_at", null: false
     t.integer "discount_type_period_id", null: false
     t.string "small_img_url"
+    t.float "width_on_mobile"
     t.index ["discount_type_period_id"], name: "index_discounts_on_discount_type_period_id"
   end
 

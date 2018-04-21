@@ -18,6 +18,7 @@ silpo:
         new_price_integer_xpath: //div[contains(@class, 'product-price__integer')]
         new_price_fraction_xpath: //div[contains(@class, 'product-price__fraction')]
         old_price_xpath: //div[contains(@class, 'product-price__other')]/div[contains(@class, 'product-price__old')]
+        width_on_mobile: 0.5
     own_import_discounts:
       name: Акції Власного імпорту
       url: https://silpo.ua/offers/akciyi-vlasnogo-importu
@@ -31,6 +32,7 @@ silpo:
         new_price_integer_xpath: //div[contains(@class, 'product-price__integer')]
         new_price_fraction_xpath: //div[contains(@class, 'product-price__fraction')]
         old_price_xpath: //div[contains(@class, 'product-price__other')]/div[contains(@class, 'product-price__old')]
+        width_on_mobile: 0.5
 
 atb:
   name: АТБ
@@ -51,6 +53,7 @@ atb:
         new_price_integer_xpath: //div[contains(@class, 'promo_price')]/text()
         new_price_fraction_xpath: //div[contains(@class, 'promo_price')]/span[1]
         old_price_xpath: //span[contains(@class, 'promo_old_price')]
+        width_on_mobile: 0.5
 
 megamarket:
   name: Мегамаркет
@@ -63,5 +66,6 @@ megamarket:
       discount:
         image_base_url: https://megamarket.ua
         image_xpath: //img
+        width_on_mobile: 1
       pagination:
         pages_count_xpath: //li[contains(@class, 'page_no')][last()]

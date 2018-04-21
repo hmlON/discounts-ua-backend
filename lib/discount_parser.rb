@@ -13,7 +13,8 @@ class DiscountParser
       name: name,
       old_price: old_price,
       new_price: new_price,
-      image: image
+      image: image,
+      width_on_mobile: rules[:width_on_mobile]
     }
   end
 
