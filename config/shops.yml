@@ -69,3 +69,16 @@ megamarket:
         width_on_mobile: 1
       pagination:
         pages_count_xpath: //li[contains(@class, 'page_no')][last()]
+
+fora:
+  name: Фора
+  url: http://fora.ua
+  discount_types:
+    prodavaka:
+      name: Продавака знайшла!
+      url: http://fora.ua/ascii/prodavaka/
+      discounts_xpath: //div[contains(@class, 'slide')]
+      discount:
+        image_base_url: https://megamarket.ua
+        image_xpath: //a/img
+        width_on_mobile: 1
