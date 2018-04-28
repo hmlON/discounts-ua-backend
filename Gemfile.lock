@@ -70,6 +70,7 @@ GEM
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.3)
+    dotenv (2.4.0)
     equalizer (0.0.11)
     erubi (1.7.0)
     fabrication (2.16.3)
@@ -210,6 +211,7 @@ DEPENDENCIES
   capybara
   capybara-selenium
   database_cleaner
+  dotenv
   fabrication (~> 2.16.2)
   faker
   hirb

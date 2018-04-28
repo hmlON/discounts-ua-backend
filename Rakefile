@@ -3,6 +3,7 @@ require 'sinatra/activerecord/rake'
 require 'rspec/core/rake_task'
 require 'bundler'
 Bundler.require(:default)
+require 'dotenv/load'
 Dir['./app/models/*.rb'].each { |file| require file }
 Dir['./config/*.rb'].each { |file| require file }
 Dir['./lib/*.rb'].each { |file| require file }

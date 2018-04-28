@@ -1,6 +1,8 @@
 require 'bundler'
 Bundler.require(:default)
 
+require 'dotenv/load'
+
 Bundler.require(:development) if development?
 require 'sinatra/reloader' if development?
 

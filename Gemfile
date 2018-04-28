@@ -3,6 +3,7 @@
 source 'https://rubygems.org'
 ruby '2.4.2'
 
+gem 'dotenv'
 gem 'puma'
 gem 'rake'
 gem 'sidekiq'

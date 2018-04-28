@@ -1,3 +1,4 @@
 /config/database.yml
 /spec/cassettes/*.yml
 .byebug_history
+.env
