@@ -79,6 +79,6 @@ fora:
       url: http://fora.ua/ascii/prodavaka/
       discounts_xpath: //div[contains(@class, 'slide')]
       discount:
-        image_base_url: https://megamarket.ua
+        image_base_url: http://fora.ua
         image_xpath: //a/img
         width_on_mobile: 1
