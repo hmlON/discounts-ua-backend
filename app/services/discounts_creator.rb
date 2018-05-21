@@ -15,12 +15,15 @@ class DiscountsCreator
   end
 
   def find_or_create_discount(discount_data)
-    discount = current_period.discounts.find_or_initialize_by(
-      name: discount_data[:name],
-      img_url: discount_data[:image]
-    )
-    discount.price_old = discount_data[:old_price]
-    discount.price_new = discount_data[:new_price]
+    find_by_params   = { name:    discount_data[:name] } if discount_data[:name]
+    find_by_params ||= { img_url: discount_data[:img_url] }
+
+    discount = current_period.discounts.find_or_initialize_by(find_by_params)
+
+    discount.name            = discount_data[:name]
+    discount.img_url         = discount_data[:image]
+    discount.price_old       = discount_data[:old_price]
+    discount.price_new       = discount_data[:new_price]
     discount.width_on_mobile = discount_data[:width_on_mobile]
     discount.save!
     discount
