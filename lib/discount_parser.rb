@@ -21,9 +21,9 @@ class DiscountParser
   def name
     return unless rules[:name_xpath]
 
-    discount_element.find('.' + rules[:name_xpath]).text
-                    .gsub(/\s+/, ' ')
-                    .strip
+    find_by(rules[:name_xpath]).text
+                               .gsub(/\s+/, ' ')
+                               .strip
   end
 
   def old_price
@@ -37,7 +37,7 @@ class DiscountParser
   def image
     return unless rules[:image_xpath]
 
-    @image = discount_element.find('.' + rules[:image_xpath])[:src]
+    @image = find_by(rules[:image_xpath])[:src]
     @image = rules[:image_base_url] + @image unless @image.starts_with?('http')
     @image
   end
@@ -53,12 +53,18 @@ class DiscountParser
   end
 
   def parse_divided_price(type)
-    integer = discount_element.find('.' + rules[:"#{type}_price_integer_xpath"]).text
-    fraction = discount_element.find('.' + rules[:"#{type}_price_fraction_xpath"]).text
+    integer = find_by(rules[:"#{type}_price_integer_xpath"]).text
+    fraction = find_by(rules[:"#{type}_price_fraction_xpath"]).text
     "#{integer}.#{fraction}"
   end
 
   def parse_regular_price(type)
-    discount_element.find('.' + rules[:"#{type}_price_xpath"]).text
+    find_by(rules[:"#{type}_price_xpath"]).text
+  end
+
+  def find_by(xpath)
+    discount_element.find('.' + xpath)
+  rescue Capybara::ElementNotFound
+    Capybara::Node::Simple.new('')
   end
 end
