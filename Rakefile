@@ -32,3 +32,8 @@ desc 'Parse shops'
 task :seed_shops do
   SHOP_CONFIGS.initialize_shops
 end
+
+desc 'Remove all not active periods to save DB space'
+task :cleanup_old_periods do
+  DiscountTypePeriod.where('end_date < ?', Date.today).destroy_all
+end
